@@ -30,6 +30,7 @@ export function DamOperatorDashboard() {
   const reservoirDisplay = typeof reservoirPercentage === 'number' ? `${reservoirPercentage}%` : '--';
   const inflowDisplay = typeof sensor?.flow_rate === 'number' ? `${sensor.flow_rate} m3/s` : '--';
   const reservoirGaugePct = typeof reservoirPercentage === 'number' ? reservoirPercentage : 0;
+  const telemetryStatus = sensor ? 'LIVE' : '--';
   const level = prediction ? getPredictionAlertLevel(prediction) : 'GREEN';
   const systemStatus = level === 'RED' ? 'CRITICAL' : (level === 'YELLOW' || level === 'ORANGE') ? 'WARNING' : 'NORMAL';
 
@@ -72,7 +73,7 @@ export function DamOperatorDashboard() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <StatCard icon={<Droplets />} label="Reservoir Level" value={reservoirDisplay} subtext="Live Sensor" glassType="glass-card" />
           <StatCard icon={<Zap />} label="Inflow Pulse" value={inflowDisplay} subtext="Live Sensor" glassType="glass-card" />
-          <StatCard icon={<Activity />} label="Sensor Grid Accuracy" value="98.2%" subtext="Network Latency: 4ms" glassType="glass-card" />
+          <StatCard icon={<Activity />} label="Sensor Telemetry" value={telemetryStatus} subtext="Live Sensor" glassType="glass-card" />
           <StatCard icon={<Wind />} label="Downstream Impact" value={systemStatus} subtext="Lead Window: Active" glassType="glass-card" />
         </div>
 

@@ -178,11 +178,11 @@ export function PublicPortal() {
             <div className="pt-12 sm:pt-20 border-t border-black/5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
            <div className="space-y-2">
               <div className="text-[16px] font-black text-gray-600 uppercase">Model Ver.</div>
-               <div className="text-lg sm:text-xl font-black text-gray-950 break-all">LSTM_CASCADE_V3</div>
+               <div className="text-lg sm:text-xl font-black text-gray-950 break-all">API Derived</div>
            </div>
            <div className="space-y-2">
               <div className="text-[16px] font-black text-gray-600 uppercase">Live Sync</div>
-              <div className="text-xl font-black text-emerald-700 px-3 bg-emerald-50 rounded-lg inline-block">SECURE</div>
+              <div className="text-xl font-black text-emerald-700 px-3 bg-emerald-50 rounded-lg inline-block">{globalRisks.length > 0 ? 'ONLINE' : 'OFFLINE'}</div>
            </div>
            <div className="space-y-2">
               <div className="text-[16px] font-black text-gray-600 uppercase">Zones Online</div>

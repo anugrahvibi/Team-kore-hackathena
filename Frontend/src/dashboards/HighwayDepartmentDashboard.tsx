@@ -25,6 +25,7 @@ export function HighwayDepartmentDashboard() {
   const avgLeadTime = predictions.length > 0 
     ? (predictions.reduce((acc, p) => acc + (p.lead_time_hours || 0), 0) / predictions.length).toFixed(1)
     : '--';
+  const assetsReady = alerts.length > 0 ? 'ACTIVE' : '--';
 
   return (
     <div ref={containerRef} className="pt-20 sm:pt-24 lg:pt-26 p-4 sm:p-6 lg:p-8 h-full bg-transparent overflow-y-auto w-full custom-scrollbar">
@@ -59,7 +60,7 @@ export function HighwayDepartmentDashboard() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <StatCard icon={<Hammer />} label="Active Closures" value={criticalRoads.toString()} subtext="System Logged" glassType="glass-blue" />
           <StatCard icon={<TrendingDown />} label="Avg. Response" value={`${avgLeadTime}h`} subtext="Lead Projection" glassType="glass-blue" />
-          <StatCard icon={<Shield />} label="Assets Ready" value="ALPHA_08" subtext="Standby Protocols" glassType="glass-blue" />
+          <StatCard icon={<Shield />} label="Assets Ready" value={assetsReady} subtext="Live Directives" glassType="glass-blue" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-10">

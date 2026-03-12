@@ -1,5 +1,5 @@
 """
-CascadeNet 2.0 — Model 3: Cascade Propagator
+Cascadenet — Model 3: Cascade Propagator
 Event-driven simulation of infrastructure failure cascades.
 Runs 100 scenarios using multiprocessing for speed.
 """
@@ -43,7 +43,7 @@ def _simulate_one(args: tuple) -> dict:
 
     import pandas as pd
     data_dir = os.path.join(BASE_DIR, "data")
-    gen.flood_map = pd.read_csv(os.path.join(data_dir, "flood_map_2018.csv"))
+    gen.flood_map = pd.read_csv(os.path.join(data_dir, "flood_map_2024.csv"))
 
     # Node working copy
     node_status = {n["id"]: "OPERATIONAL" for n in nodes_data}
@@ -219,7 +219,7 @@ if __name__ == "__main__":
     from src.models.dependency_graph import DependencyGraph
     from src.models.hazard_generator import HazardGenerator
 
-    print("=== CascadeNet 2.0 — Full Pipeline Test ===\n")
+    print("=== Cascadenet — Full Pipeline Test ===\n")
 
     # Build graph
     dg = DependencyGraph()

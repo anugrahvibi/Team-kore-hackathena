@@ -4,7 +4,7 @@ import json
 
 class GraphAnalytics:
     """
-    Advanced Network Science Engine for CascadeNet 3.0.
+    Advanced Network Science Engine for Cascadenet 3.0.
     Calculates structural vulnerabilities using graph theory (Centrality measures).
     """
 

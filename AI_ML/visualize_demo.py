@@ -1,5 +1,5 @@
 """
-CascadeNet 2.0 — Hackathon Demo Visualizer
+Cascadenet — Hackathon Demo Visualizer
 Run: python visualize_demo.py
 Generates 5 charts in /visuals/ — open them in VS Code to show judges.
 """
@@ -196,13 +196,13 @@ river    = 0.3 + 3.5 * (1 / (1 + np.exp(-0.3 * (days - 0.5 - PEAK) + 1.5))) + np
 outflow  = 850 + 2800 * flood_intensity + np.random.normal(0, 80, 60)
 
 fig, axes = plt.subplots(3, 1, figsize=(13, 9), sharex=True)
-fig.suptitle("LAYER 1 — LSTM Training Data: Wayanad Climate Proxy  |  2018 Kerala Flood", fontsize=13, fontweight="bold", color=TEXT)
+fig.suptitle("LAYER 1 — LSTM Training Data: Wayanad Climate Proxy  |  2024 Kerala Flood", fontsize=13, fontweight="bold", color=TEXT)
 
 axes[0].plot(days, rainfall, color="#60a5fa", linewidth=2)
 axes[0].fill_between(days, rainfall, alpha=0.2, color="#60a5fa")
 axes[0].set_ylabel("Rainfall (mm/hr)", fontsize=10, fontweight="bold")
 axes[0].set_title("NASA GPM IMERG — Rainfall Proxy", fontsize=10, color=MUTED)
-axes[0].axvline(PEAK, color=RED, linestyle="--", linewidth=1.5, alpha=0.7, label="2018 Flood Peak")
+axes[0].axvline(PEAK, color=RED, linestyle="--", linewidth=1.5, alpha=0.7, label="2024 Flood Peak")
 axes[0].legend(facecolor=CARD, edgecolor=MUTED, fontsize=9)
 axes[0].grid()
 
@@ -218,7 +218,7 @@ axes[1].grid()
 axes[2].plot(days, outflow, color=GREEN, linewidth=2)
 axes[2].fill_between(days, outflow, alpha=0.2, color=GREEN)
 axes[2].set_ylabel("Outflow (cumecs)", fontsize=10, fontweight="bold")
-axes[2].set_xlabel("Day (July 1 → Aug 29, 2018)", fontsize=10, fontweight="bold")
+axes[2].set_xlabel("Day (July 1 → Aug 29, 2024)", fontsize=10, fontweight="bold")
 axes[2].set_title("CWC Reservoir Outflow — Banasura Sagar Proxy", fontsize=10, color=MUTED)
 axes[2].grid()
 

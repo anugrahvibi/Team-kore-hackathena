@@ -1,5 +1,5 @@
 """
-CascadeNet 2.0 — FastAPI Application
+Cascadenet — FastAPI Application
 Exposes the full cascade simulation pipeline via HTTP endpoints.
 """
 
@@ -28,7 +28,7 @@ from src.models.graph_analytics import GraphAnalytics
 # ─── App ─────────────────────────────────────────────────────────────────────
 
 app = FastAPI(
-    title="CascadeNet 2.0 API",
+    title="Cascadenet API",
     description="Infrastructure cascade failure prediction for Wayanad, Kerala. Asthrava Hackathon.",
     version="1.0.0",
 )
@@ -175,7 +175,7 @@ def health():
     lstm_ready = _lstm_predictor is not None and _lstm_predictor._trained
     return {
         "status": "online",
-        "project": "CascadeNet 2.0",
+        "project": "Cascadenet",
         "description": "Infrastructure cascade failure prediction — Wayanad, Kerala",
         "team": "Asthrava Hackathon",
         "ready": pipeline_ready and lstm_ready,
@@ -417,7 +417,7 @@ def flood_grid(hour: int, multiplier: float = 1.0):
 
     Args:
         hour: Simulation hour (0-24)
-        multiplier: Flood peak multiplier (0.8-1.2). Defaults to 1.0 (2018 baseline).
+        multiplier: Flood peak multiplier (0.8-1.2). Defaults to 1.0 (2024 baseline).
     """
     if hour < 0 or hour > 24:
         raise HTTPException(status_code=400, detail="Hour must be between 0 and 24")
@@ -612,7 +612,7 @@ def predict_all_zones(scenario: str = 'current'):
     if cached is not None:
         return cached
     lstm = _get_lstm()
-    if scenario in ('2018_peak', 'moderate'):
+    if scenario in ('2024_peak', 'moderate'):
         results = lstm.simulate_scenario(scenario)
     else:
         results = lstm.predict_all_zones()
@@ -637,7 +637,7 @@ def predict_single_zone(zone_id: str, scenario: str = 'current'):
     valid_zones = ['ZONE_KALPETTA', 'ZONE_SULTHAN_BATHERY', 'ZONE_MANANTHAVADY', 'ZONE_VYTHIRI', 'ZONE_PANAMARAM', 'ZONE_AMBALAVAYAL']
     if zone_id not in valid_zones:
         raise HTTPException(status_code=404, detail=f'Zone not found. Valid: {valid_zones}')
-    if scenario in ('2018_peak', 'moderate'):
+    if scenario in ('2024_peak', 'moderate'):
         all_preds = lstm.simulate_scenario(scenario)
         pred = next((p for p in all_preds if p['zone_id'] == zone_id), None)
     else:
@@ -652,7 +652,7 @@ def trigger_alert(zone_id: str, scenario: str = 'current', reservoir_pct: float 
     valid_zones = ['ZONE_KALPETTA', 'ZONE_SULTHAN_BATHERY', 'ZONE_MANANTHAVADY', 'ZONE_VYTHIRI', 'ZONE_PANAMARAM', 'ZONE_AMBALAVAYAL']
     if zone_id not in valid_zones:
         raise HTTPException(status_code=404, detail='Zone not found.')
-    if scenario in ('2018_peak', 'moderate'):
+    if scenario in ('2024_peak', 'moderate'):
         all_preds = lstm.simulate_scenario(scenario)
         pred = next((p for p in all_preds if p['zone_id'] == zone_id), None)
     else:
@@ -679,7 +679,7 @@ def get_alert_summary(scenario: str = 'current'):
         return cached
     lstm = _get_lstm()
     router = _get_router()
-    if scenario in ('2018_peak', 'moderate'):
+    if scenario in ('2024_peak', 'moderate'):
         predictions = lstm.simulate_scenario(scenario)
     else:
         predictions = lstm.predict_all_zones()
@@ -698,7 +698,7 @@ def get_lead_times(scenario: str = 'current'):
     if cached is not None:
         return cached
     lstm = _get_lstm()
-    if scenario in ('2018_peak', 'moderate'):
+    if scenario in ('2024_peak', 'moderate'):
         predictions = lstm.simulate_scenario(scenario)
     else:
         predictions = lstm.predict_all_zones()

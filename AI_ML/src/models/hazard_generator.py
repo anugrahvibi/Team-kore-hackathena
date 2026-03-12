@@ -1,6 +1,6 @@
 """
-CascadeNet 2.0 — Model 2: Hazard Scenario Generator
-Generates 100 flood depth scenarios based on 2018 Kochi flood data.
+Cascadenet — Model 2: Hazard Scenario Generator
+Generates 100 flood depth scenarios based on 2024 Kochi flood data.
 Uses a sine temporal model peaking at hour 12.
 """
 
@@ -13,7 +13,7 @@ import numpy as np
 # ─── Paths ───────────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(BASE_DIR, "data")
-FLOOD_MAP_FILE = os.path.join(DATA_DIR, "flood_map_2018.csv")
+FLOOD_MAP_FILE = os.path.join(DATA_DIR, "flood_map_2024_wayanad.csv")
 
 
 class HazardGenerator:
@@ -26,7 +26,7 @@ class HazardGenerator:
 
     Ensemble:
         100 scenarios, each with a random peak_multiplier in [0.8, 1.2]
-        representing ±20% variation from the 2018 flood baseline.
+        representing ±20% variation from the 2024 flood baseline.
     """
 
     def __init__(self, n_scenarios: int = 100, random_seed: int = 42):
@@ -40,7 +40,7 @@ class HazardGenerator:
     # ── Loader ────────────────────────────────────────────────────────────────
 
     def _load_flood_map(self) -> pd.DataFrame:
-        """Load the base 2018 flood depth CSV."""
+        """Load the base 2024 flood depth CSV."""
         df = pd.read_csv(FLOOD_MAP_FILE)
         print(f"[HazardGenerator] Loaded flood map: {len(df)} grid cells")
         return df
@@ -53,7 +53,7 @@ class HazardGenerator:
         Calculate flood depth at a given hour using sine curve.
 
         Args:
-            base_depth: The baseline 2018 flood depth at this location (meters)
+            base_depth: The baseline 2024 flood depth at this location (meters)
             hour: Current simulation hour (0-24)
             peak_multiplier: Ensemble variation factor (0.8 to 1.2)
 
@@ -141,6 +141,6 @@ if __name__ == "__main__":
     for s in scenarios[:5]:
         print(f"  Scenario {s['scenario_id']}: multiplier={s['peak_multiplier']}, severity={s['severity']}")
 
-    # Test depth at centre of Ernakulam at hour 12
-    depth = gen.get_node_depth_at_hour(9.9816, 76.2999, 12, 1.0)
-    print(f"\nDepth at Ernakulam center (hour 12, 1.0x): {depth}m")
+    # Test depth at central Wayanad (Kalpetta region) at hour 12
+    depth = gen.get_node_depth_at_hour(11.61, 76.08, 12, 1.0)
+    print(f"\nDepth at Wayanad (Kalpetta) center (hour 12, 1.0x): {depth}m")

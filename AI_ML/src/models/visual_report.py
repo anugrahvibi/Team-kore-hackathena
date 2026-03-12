@@ -47,7 +47,7 @@ class VisualReportGenerator:
         """
         Generates a chart showing 'Before vs After' impact based on Knapsack optimization.
         """
-        labels = ['Baseline (Unprotected)', 'Optimized (CascadeNet)']
+        labels = ['Baseline (Unprotected)', 'Optimized (Cascadenet)']
         # We calculate the reduction in impact
         planned = budget_analysis['recommended_hardening_plan']
         total_saved = sum(item['lives_saved'] for item in planned)

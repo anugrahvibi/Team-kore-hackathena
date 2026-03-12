@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CascadeNet 2.0 — Quick Pipeline Runner
+Cascadenet — Quick Pipeline Runner
 Run this to test the entire pipeline end-to-end without the API server.
 """
 import sys
@@ -17,7 +17,7 @@ from src.models.roi_calculator import ROICalculator
 
 def main():
     print("=" * 60)
-    print("  CascadeNet 2.0 — Infrastructure Cascade Predictor")
+    print("  Cascadenet — Infrastructure Cascade Predictor")
     print("  Asthrava Hackathon | Wayanad, Kerala")
     print("=" * 60)
 
@@ -29,7 +29,7 @@ def main():
     print(f"      ✓ {G.number_of_nodes()} nodes, {G.number_of_edges()} edges loaded")
 
     # ── Step 2: Generate flood scenarios ────────────────────────
-    print("\n[2/4] Generating 100 flood scenarios (±20% of 2018 baseline)...")
+    print("\n[2/4] Generating 100 flood scenarios (±20% of 2024 baseline)...")
     gen = HazardGenerator(n_scenarios=100)
     scenarios = gen.generate_scenarios()
     print(f"      ✓ {len(scenarios)} scenarios ready")

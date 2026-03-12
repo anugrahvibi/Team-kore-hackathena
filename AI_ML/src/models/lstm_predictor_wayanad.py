@@ -1,5 +1,5 @@
 """
-CascadeNet 2.0 — LSTM Flood Predictor
+Cascadenet — LSTM Flood Predictor
 Predicts flood probability, projected water level, and lead time per zone.
 Trained on synthetic multi-source time-series data mimicking:
   - NASA GPM IMERG rainfall (mm/hr)
@@ -48,7 +48,7 @@ ZONE_FLOOD_THRESHOLDS = {
 
 def _generate_synthetic_timeseries(n_days: int = 60, seed: int = 42) -> pd.DataFrame:
     """
-    Generate synthetic multi-source time-series data for Wayanad, 2018 flood pattern.
+    Generate synthetic multi-source time-series data for Wayanad, 2024 flood pattern.
     6-hourly observations over n_days.
 
     Columns:
@@ -60,10 +60,10 @@ def _generate_synthetic_timeseries(n_days: int = 60, seed: int = 42) -> pd.DataF
     np.random.seed(seed)
 
     records = []
-    base_time = datetime(2018, 7, 1)
+    base_time = datetime(2024, 7, 1)
     zone_ids = list(ZONE_FLOOD_THRESHOLDS.keys())
 
-    # Flood peak: around day 47 (2018 Kerala flood peak ~Aug 17)
+    # Flood peak: around day 47 (2024 Kerala flood peak ~Aug 17)
     PEAK_DAY = 47
 
     for day in range(n_days):
@@ -316,12 +316,12 @@ class LSTMFloodPredictor:
         results.sort(key=lambda x: order[x["alert_level"]])
         return results
 
-    def simulate_scenario(self, scenario: str = "2018_peak") -> list[dict]:
+    def simulate_scenario(self, scenario: str = "2024_peak") -> list[dict]:
         """
         Override conditions to simulate a historical flood scenario for demo.
         """
         scenarios = {
-            "2018_peak": {
+            "2024_peak": {
                 "ZONE_KALPETTA":        {"rainfall_mmhr": 6.8, "river_level_m": 1.0, "reservoir_outflow_cumecs": 2400},
                 "ZONE_SULTHAN_BATHERY": {"rainfall_mmhr": 5.5, "river_level_m": 1.6, "reservoir_outflow_cumecs": 2400},
                 "ZONE_MANANTHAVADY":    {"rainfall_mmhr": 7.1, "river_level_m": 2.3, "reservoir_outflow_cumecs": 2400},

@@ -4,40 +4,40 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ZONE_ERNAKULAM",
-        "name": "Ernakulam City Center",
-        "lat": 9.9816,
-        "lon": 76.2999,
-        "elevation_m": 1.5,
-        "area_km2": 4.2,
-        "population": 120000,
-        "river_proximity_km": 0.8,
-        "reservoir_upstream": "Idukki",
-        "description": "CBD zone, dense population, low elevation"
+        "id": "ZONE_KALPETTA",
+        "name": "Kalpetta Town",
+        "lat": 11.6100,
+        "lon": 76.0800,
+        "elevation_m": 780.0,
+        "area_km2": 40.7,
+        "population": 31580,
+        "river_proximity_km": 1.5,
+        "reservoir_upstream": "Banasura Sagar",
+        "description": "District headquarters, moderate elevation, urban center"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              76.2794,
-              9.9611
+              76.06,
+              11.59
             ],
             [
-              76.32039999999999,
-              9.9611
+              76.10,
+              11.59
             ],
             [
-              76.32039999999999,
-              10.0021
+              76.10,
+              11.63
             ],
             [
-              76.2794,
-              10.0021
+              76.06,
+              11.63
             ],
             [
-              76.2794,
-              9.9611
+              76.06,
+              11.59
             ]
           ]
         ]
@@ -46,40 +46,40 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ZONE_FORT_KOCHI",
-        "name": "Fort Kochi & Mattancherry",
-        "lat": 9.9632,
-        "lon": 76.249,
-        "elevation_m": 0.5,
-        "area_km2": 3.1,
-        "population": 85000,
-        "river_proximity_km": 0.2,
-        "reservoir_upstream": "Idukki",
-        "description": "Coastal zone, extreme flood risk, minimal elevation"
+        "id": "ZONE_SULTHAN_BATHERY",
+        "name": "Sulthan Bathery",
+        "lat": 11.6600,
+        "lon": 76.2600,
+        "elevation_m": 880.0,
+        "area_km2": 55.2,
+        "population": 42150,
+        "river_proximity_km": 3.0,
+        "reservoir_upstream": "Kabini Tributary",
+        "description": "Highland plateau, major commerce hub"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              76.23124999999999,
-              9.945450000000001
+              76.24,
+              11.64
             ],
             [
-              76.26675,
-              9.945450000000001
+              76.28,
+              11.64
             ],
             [
-              76.26675,
-              9.98095
+              76.28,
+              11.68
             ],
             [
-              76.23124999999999,
-              9.98095
+              76.24,
+              11.68
             ],
             [
-              76.23124999999999,
-              9.945450000000001
+              76.24,
+              11.64
             ]
           ]
         ]
@@ -88,40 +88,40 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ZONE_VYTTILA",
-        "name": "Vyttila & Thevara",
-        "lat": 9.9674,
-        "lon": 76.3164,
-        "elevation_m": 1,
-        "area_km2": 3.8,
-        "population": 95000,
+        "id": "ZONE_MANANTHAVADY",
+        "name": "Mananthavady",
+        "lat": 11.8000,
+        "lon": 76.0200,
+        "elevation_m": 750.0,
+        "area_km2": 48.5,
+        "population": 38900,
         "river_proximity_km": 0.5,
-        "reservoir_upstream": "Idukki",
-        "description": "Low-lying interchange zone, backwater influence"
+        "reservoir_upstream": "Kabini",
+        "description": "Northern hub, riverside location, high flood risk"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              76.29690000000001,
-              9.947899999999999
+              76.00,
+              11.78
             ],
             [
-              76.3359,
-              9.947899999999999
+              76.04,
+              11.78
             ],
             [
-              76.3359,
-              9.9869
+              76.04,
+              11.82
             ],
             [
-              76.29690000000001,
-              9.9869
+              76.00,
+              11.82
             ],
             [
-              76.29690000000001,
-              9.947899999999999
+              76.00,
+              11.78
             ]
           ]
         ]
@@ -130,40 +130,40 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ZONE_KALAMASSERY",
-        "name": "Kalamassery & Edapally",
-        "lat": 10.0537,
-        "lon": 76.3171,
-        "elevation_m": 3.5,
-        "area_km2": 5.1,
-        "population": 75000,
-        "river_proximity_km": 2.1,
-        "reservoir_upstream": "Idukki",
-        "description": "Industrial belt, higher elevation, moderate risk"
+        "id": "ZONE_VYTHIRI",
+        "name": "Vythiri",
+        "lat": 11.5500,
+        "lon": 76.0400,
+        "elevation_m": 700.0,
+        "area_km2": 32.1,
+        "population": 18400,
+        "river_proximity_km": 0.8,
+        "reservoir_upstream": "Banasura Sagar Spillway",
+        "description": "Valley location, high rainfall zone, flash flood prone"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              76.29435,
-              10.030949999999999
+              76.02,
+              11.53
             ],
             [
-              76.33985,
-              10.030949999999999
+              76.06,
+              11.53
             ],
             [
-              76.33985,
-              10.07645
+              76.06,
+              11.57
             ],
             [
-              76.29435,
-              10.07645
+              76.02,
+              11.57
             ],
             [
-              76.29435,
-              10.030949999999999
+              76.02,
+              11.53
             ]
           ]
         ]
@@ -172,40 +172,40 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ZONE_ALUVA",
-        "name": "Aluva",
-        "lat": 10.1004,
-        "lon": 76.3469,
-        "elevation_m": 5.2,
-        "area_km2": 6.3,
-        "population": 55000,
-        "river_proximity_km": 0.3,
-        "reservoir_upstream": "Idukki",
-        "description": "Periyar River bank, critical upstream monitoring point"
+        "id": "ZONE_PANAMARAM",
+        "name": "Panamaram Basin",
+        "lat": 11.7200,
+        "lon": 76.0700,
+        "elevation_m": 740.0,
+        "area_km2": 42.1,
+        "population": 25600,
+        "river_proximity_km": 0.2,
+        "reservoir_upstream": "Banasura Sagar",
+        "description": "River confluence point, extremely high inundation risk"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              76.32115,
-              10.07465
+              76.05,
+              11.70
             ],
             [
-              76.37265000000001,
-              10.07465
+              76.09,
+              11.70
             ],
             [
-              76.37265000000001,
-              10.12615
+              76.09,
+              11.74
             ],
             [
-              76.32115,
-              10.12615
+              76.05,
+              11.74
             ],
             [
-              76.32115,
-              10.07465
+              76.05,
+              11.70
             ]
           ]
         ]
@@ -214,40 +214,40 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "ZONE_KAKKANAD",
-        "name": "Kakkanad & Thrippunithura",
-        "lat": 10.01,
-        "lon": 76.35,
-        "elevation_m": 4,
-        "area_km2": 4.9,
-        "population": 65000,
-        "river_proximity_km": 1.8,
-        "reservoir_upstream": "Idukki",
-        "description": "IT corridor, eastern suburbs, moderate risk"
+        "id": "ZONE_AMBALAVAYAL",
+        "name": "Ambalavayal",
+        "lat": 11.6200,
+        "lon": 76.2100,
+        "elevation_m": 820.0,
+        "area_km2": 35.8,
+        "population": 21300,
+        "river_proximity_km": 2.5,
+        "reservoir_upstream": "Karapuzha",
+        "description": "Agricultural belt, moderate risk"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              76.32775,
-              9.98775
+              76.19,
+              11.60
             ],
             [
-              76.37225,
-              9.98775
+              76.23,
+              11.60
             ],
             [
-              76.37225,
-              10.03225
+              76.23,
+              11.64
             ],
             [
-              76.32775,
-              10.03225
+              76.19,
+              11.64
             ],
             [
-              76.32775,
-              9.98775
+              76.19,
+              11.60
             ]
           ]
         ]

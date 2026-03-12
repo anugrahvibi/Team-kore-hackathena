@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState, useRef } from 'react';
-// CascadeNet: Advanced Intelligence & Response Control System
+// Cascadenet: Advanced Intelligence & Response Control System
 import { BrowserRouter, Routes, Route, useLocation, Navigate, useNavigate } from 'react-router-dom';
 import { Bell, LogOut, X, ArrowRight, Clock } from 'lucide-react';
 
@@ -154,7 +154,7 @@ function Navigation() {
         <div className="flex items-center gap-3 md:gap-4">
           <div className="flex items-center gap-1.5 sm:gap-2">
             <div className="w-10 h-10 flex items-center justify-center">
-              <img src="/logo.svg" alt="CascadeNet logo" className="w-7 h-7" />
+              <img src="/logo.svg" alt="Cascadenet logo" className="w-7 h-7" />
             </div>
             <h1 className="text-lg sm:text-xl font-black text-gray-950 brand-font leading-none">
               Cascade<span className="text-blue-700 ending-serif">Net</span>
@@ -275,17 +275,17 @@ function AppContent() {
 
   useEffect(() => {
     const routeTitles: Record<string, string> = {
-      '/': 'CascadeNet | Login',
-      '/login': 'CascadeNet | Login',
-      '/signup': 'CascadeNet | Sign Up',
-      '/public': 'CascadeNet | Public Dashboard',
-      '/ndrf': 'CascadeNet | NDRF Dashboard',
-      '/dam': 'CascadeNet | Dam Controller Dashboard',
-      '/admin': 'CascadeNet | District Collector Dashboard',
-      '/highway': 'CascadeNet | Highway Department Dashboard',
+      '/': 'Cascadenet | Login',
+      '/login': 'Cascadenet | Login',
+      '/signup': 'Cascadenet | Sign Up',
+      '/public': 'Cascadenet | Public Dashboard',
+      '/ndrf': 'Cascadenet | NDRF Dashboard',
+      '/dam': 'Cascadenet | Dam Controller Dashboard',
+      '/admin': 'Cascadenet | District Collector Dashboard',
+      '/highway': 'Cascadenet | Highway Department Dashboard',
     };
 
-    document.title = routeTitles[location.pathname] ?? 'CascadeNet | Flood Intelligence';
+    document.title = routeTitles[location.pathname] ?? 'Cascadenet | Flood Intelligence';
   }, [location.pathname]);
   
   return (

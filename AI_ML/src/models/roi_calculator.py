@@ -1,5 +1,5 @@
 """
-CascadeNet 2.0 — ROI Calculator
+Cascadenet — ROI Calculator
 Computes Lives-Saved-Per-Rupee metric for node hardening decisions.
 """
 

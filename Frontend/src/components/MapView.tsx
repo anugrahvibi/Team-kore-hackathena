@@ -4,12 +4,12 @@ import { getPredictionAlertLevel, getAlertColor } from '../utils/schemaHelpers';
 
 // ─── Zone IDs exactly match ZONE_FLOOD_THRESHOLDS in lstm_predictor.py ────────
 const ZONE_COORDS: Record<string, [number, number]> = {
-  "ZONE_FORT_KOCHI": [9.963, 76.243],
-  "ZONE_VYTTILA": [9.972, 76.303],
-  "ZONE_ERNAKULAM": [9.983, 76.290],
-  "ZONE_KALAMASSERY": [10.054, 76.320],
-  "ZONE_ALUVA": [10.098, 76.356],
-  "ZONE_KAKKANAD": [10.021, 76.341],
+  "ZONE_KALPETTA": [11.6100, 76.0800],
+  "ZONE_SULTHAN_BATHERY": [11.6600, 76.2500],
+  "ZONE_MANANTHAVADY": [11.8000, 75.9700],
+  "ZONE_VYTHIRI": [11.5500, 76.0200],
+  "ZONE_PANAMARAM": [11.7900, 76.0300],
+  "ZONE_AMBALAVAYAL": [11.7200, 76.1500],
 };
 
 function getZoneCoords(zoneId: string): [number, number] | null {
@@ -58,8 +58,8 @@ export function MapView({ infrastructureNodes, predictions, onZoneClick, selecte
       // Guard against React Strict Mode double-invoking effects
       if ((containerRef.current as any)._leaflet_id) return;
       const map = L.map(containerRef.current!, {
-        center: [9.993, 76.295],
-        zoom: 12,
+        center: [11.68, 76.08],
+        zoom: 11,
         zoomControl: true,
       });
       mapRef.current = map;

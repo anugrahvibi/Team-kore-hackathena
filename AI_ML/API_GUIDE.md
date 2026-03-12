@@ -1,4 +1,4 @@
-# CascadeNet 2.0 — API Integration Guide
+# Cascadenet — API Integration Guide
 > For the Frontend Developer · Base URL: `http://localhost:8000`
 
 ## Quick Start
@@ -184,8 +184,8 @@ const data = await res.json();
 
 ### 12. Single Zone Prediction (supports Historical Mode)
 ```js
-// GET /predict/zone/ZONE_FORT_KOCHI?scenario=2018_peak
-const res = await fetch(`${API}/predict/zone/ZONE_FORT_KOCHI?scenario=2018_peak`);
+// GET /predict/zone/ZONE_FORT_KOCHI?scenario=2024_peak
+const res = await fetch(`${API}/predict/zone/ZONE_FORT_KOCHI?scenario=2024_peak`);
 ```
 
 ---
@@ -195,8 +195,8 @@ const res = await fetch(`${API}/predict/zone/ZONE_FORT_KOCHI?scenario=2018_peak`
 
 ### 13. Trigger All-Stakeholder Action Plan
 ```js
-// POST /alerts/trigger?zone_id=ZONE_FORT_KOCHI&reservoir_pct=88.5
-const res = await fetch(`${API}/alerts/trigger?zone_id=ZONE_FORT_KOCHI`, { method: 'POST' });
+// POST /alerts/trigger?zone_id=ZONE_KALPETTA&reservoir_pct=88.5
+const res = await fetch(`${API}/alerts/trigger?zone_id=ZONE_KALPETTA`, { method: 'POST' });
 const data = await res.json();
 // Each item in data.action_plan.action_plans:
 // {
@@ -246,7 +246,7 @@ const data = await res.json();
 // data.singularity_analysis.top_singularities -> [{ node_id, name, singularity_index, scores: { bottleneck_centrality, influence_pagerank } }, ...]
 // data.tactical_recommendations -> ["CRITICAL: Substation 4 is a high-centrality singularity...", ...]
 ```
-**Why this matters:** These nodes are the "Structural Singularities." If they fail, they trigger the most massive non-linear cascades across the entire city's infrastructure.
+**Why this matters:** These nodes are the "Structural Singularities." If they fail, they trigger the most massive non-linear cascades across the entire district's infrastructure.
 
 ---
 
@@ -254,11 +254,11 @@ const data = await res.json();
 
 | ID | Type | Pop. Impact | Risk | Description |
 |----|------|-------------|------|-------------|
-| SUB_1-5 | substation | 30k-50k | Varies | Power Grid |
-| PUMP_1-10 | water_pump | 12k-28k | Varies | Water Supply |
-| HOSP_1-3 | hospital | 40k-80k | Varies | Healthcare |
-| ROAD_1-4 | road | 80k-150k | High | Transport |
-| TOWER_1-3 | comm_tower | 50k-200k | Medium | Communications |
+| SUB_1-5 | substation | 12k-35k | Varies | Power Grid |
+| PUMP_1-10 | water_pump | 5k-15k | Varies | Water Supply |
+| HOSP_1-3 | hospital | 20k-50k | Varies | Healthcare |
+| ROAD_1-4 | road | 40k-80k | High | Transport |
+| TOWER_1-3 | comm_tower | 20k-60k | Medium | Communications |
 
 ---
 

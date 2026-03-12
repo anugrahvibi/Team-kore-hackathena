@@ -1,0 +1,7421 @@
+[
+  {
+    "scenario_id": 1,
+    "peak_multiplier": 0.9498,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ],
+      "11": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 2,
+    "peak_multiplier": 1.1803,
+    "severity": "EXTREME",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "7": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 3,
+    "peak_multiplier": 1.0928,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 4,
+    "peak_multiplier": 1.0395,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 8,
+    "peak_multiplier": 1.1465,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "PUMP_8"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 9,
+    "peak_multiplier": 1.0404,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 10,
+    "peak_multiplier": 1.0832,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 12,
+    "peak_multiplier": 1.188,
+    "severity": "EXTREME",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "7": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 13,
+    "peak_multiplier": 1.133,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "PUMP_8"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 18,
+    "peak_multiplier": 1.0099,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 19,
+    "peak_multiplier": 0.9728,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "10": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 21,
+    "peak_multiplier": 1.0447,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 24,
+    "peak_multiplier": 0.9465,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ],
+      "11": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 25,
+    "peak_multiplier": 0.9824,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "10": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 26,
+    "peak_multiplier": 1.1141,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "PUMP_8"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 28,
+    "peak_multiplier": 1.0057,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+        
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 29,
+    "peak_multiplier": 1.037,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 31,
+    "peak_multiplier": 1.043,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 34,
+    "peak_multiplier": 1.1796,
+    "severity": "EXTREME",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "7": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 35,
+    "peak_multiplier": 1.1863,
+    "severity": "EXTREME",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "7": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 36,
+    "peak_multiplier": 1.1234,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "PUMP_8"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 39,
+    "peak_multiplier": 1.0737,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 40,
+    "peak_multiplier": 0.9761,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "10": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 42,
+    "peak_multiplier": 0.9981,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "10": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 44,
+    "peak_multiplier": 1.1637,
+    "severity": "EXTREME",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "SUB_2",
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 46,
+    "peak_multiplier": 1.065,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5",
+        "PUMP_10"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 47,
+    "peak_multiplier": 0.9247,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ],
+      "12": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 48,
+    "peak_multiplier": 1.008,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 49,
+    "peak_multiplier": 1.0187,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 51,
+    "peak_multiplier": 1.1878,
+    "severity": "EXTREME",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "7": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 52,
+    "peak_multiplier": 1.1101,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 53,
+    "peak_multiplier": 1.1758,
+    "severity": "EXTREME",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "SUB_2",
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 54,
+    "peak_multiplier": 1.1579,
+    "severity": "EXTREME",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "PUMP_8"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 55,
+    "peak_multiplier": 1.0392,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 56,
+    "peak_multiplier": 1.1687,
+    "severity": "EXTREME",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "SUB_2",
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 60,
+    "peak_multiplier": 0.9301,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ],
+      "12": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 61,
+    "peak_multiplier": 0.9555,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ],
+      "11": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 63,
+    "peak_multiplier": 1.1315,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "PUMP_8"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 64,
+    "peak_multiplier": 0.9427,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ],
+      "11": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 66,
+    "peak_multiplier": 1.0171,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 68,
+    "peak_multiplier": 1.1209,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "PUMP_8"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 70,
+    "peak_multiplier": 1.1948,
+    "severity": "EXTREME",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "7": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 71,
+    "peak_multiplier": 1.1089,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 74,
+    "peak_multiplier": 1.1262,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "PUMP_8"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 75,
+    "peak_multiplier": 1.0827,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 76,
+    "peak_multiplier": 1.0916,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 77,
+    "peak_multiplier": 1.1085,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 79,
+    "peak_multiplier": 0.9434,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ],
+      "11": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 81,
+    "peak_multiplier": 1.1452,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "PUMP_8"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 82,
+    "peak_multiplier": 1.0493,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 83,
+    "peak_multiplier": 0.9324,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ],
+      "11": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 85,
+    "peak_multiplier": 0.9244,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ],
+      "12": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 86,
+    "peak_multiplier": 0.9301,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ],
+      "12": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 87,
+    "peak_multiplier": 1.0918,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 88,
+    "peak_multiplier": 1.055,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 89,
+    "peak_multiplier": 1.1549,
+    "severity": "EXTREME",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6",
+        "ROAD_3"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "6": [
+        "TOWER_2"
+      ],
+      "7": [
+        "PUMP_8"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 90,
+    "peak_multiplier": 0.9889,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "10": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 92,
+    "peak_multiplier": 1.0853,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 93,
+    "peak_multiplier": 1.1043,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 94,
+    "peak_multiplier": 1.0245,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 95,
+    "peak_multiplier": 1.1084,
+    "severity": "HIGH",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_1",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_5"
+      ],
+      "7": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "8": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 96,
+    "peak_multiplier": 0.9975,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "10": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 97,
+    "peak_multiplier": 1.0091,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2",
+        "ROAD_1"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "7": [
+        "TOWER_2"
+      ],
+      "8": [
+        "PUMP_8"
+      ],
+      "9": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 98,
+    "peak_multiplier": 0.971,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "PUMP_3",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "PUMP_8",
+        "TOWER_2"
+      ],
+      "10": [
+        "SUB_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_2",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 24,
+    "total_population_impact": 1365000
+  },
+  {
+    "scenario_id": 5,
+    "peak_multiplier": 0.8624,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "11": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 6,
+    "peak_multiplier": 0.8624,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "11": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 14,
+    "peak_multiplier": 0.8849,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "10": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 15,
+    "peak_multiplier": 0.8727,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "10": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 16,
+    "peak_multiplier": 0.8734,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "10": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 17,
+    "peak_multiplier": 0.9217,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 20,
+    "peak_multiplier": 0.9165,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 22,
+    "peak_multiplier": 0.8558,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "11": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 23,
+    "peak_multiplier": 0.9169,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 27,
+    "peak_multiplier": 0.8799,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "10": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 32,
+    "peak_multiplier": 0.8682,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "10": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 37,
+    "peak_multiplier": 0.9218,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 38,
+    "peak_multiplier": 0.8391,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ],
+      "12": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 41,
+    "peak_multiplier": 0.8488,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ],
+      "11": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 45,
+    "peak_multiplier": 0.9035,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "PUMP_8",
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 50,
+    "peak_multiplier": 0.8739,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "10": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 57,
+    "peak_multiplier": 0.8354,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ],
+      "12": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 58,
+    "peak_multiplier": 0.8784,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "10": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 62,
+    "peak_multiplier": 0.9085,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 65,
+    "peak_multiplier": 0.9124,
+    "severity": "MODERATE",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_5"
+      ],
+      "8": [
+        "TOWER_2"
+      ],
+      "9": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 67,
+    "peak_multiplier": 0.8564,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "11": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 72,
+    "peak_multiplier": 0.8795,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_3",
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "9": [
+        "TOWER_2"
+      ],
+      "10": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 80,
+    "peak_multiplier": 0.8463,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ],
+      "11": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 91,
+    "peak_multiplier": 0.8478,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ],
+      "11": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 100,
+    "peak_multiplier": 0.8432,
+    "severity": "LOW",
+    "failures_timeline": {
+      "1": [
+        "PUMP_6"
+      ],
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "SUB_1",
+        "ROAD_1"
+      ],
+      "5": [
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ],
+      "11": [
+        "PUMP_8"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_8",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 23,
+    "total_population_impact": 1325000
+  },
+  {
+    "scenario_id": 7,
+    "peak_multiplier": 0.8232,
+    "severity": "LOW",
+    "failures_timeline": {
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_6",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "ROAD_1"
+      ],
+      "5": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 22,
+    "total_population_impact": 1313000
+  },
+  {
+    "scenario_id": 11,
+    "peak_multiplier": 0.8082,
+    "severity": "LOW",
+    "failures_timeline": {
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_6",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "ROAD_1"
+      ],
+      "5": [
+        "SUB_1",
+        "PUMP_3"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "8": [
+        "PUMP_5"
+      ],
+      "11": [
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 22,
+    "total_population_impact": 1313000
+  },
+  {
+    "scenario_id": 30,
+    "peak_multiplier": 0.8186,
+    "severity": "LOW",
+    "failures_timeline": {
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_6",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "ROAD_1"
+      ],
+      "5": [
+        "SUB_1",
+        "PUMP_3"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 22,
+    "total_population_impact": 1313000
+  },
+  {
+    "scenario_id": 33,
+    "peak_multiplier": 0.826,
+    "severity": "LOW",
+    "failures_timeline": {
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_6",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "ROAD_1"
+      ],
+      "5": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 22,
+    "total_population_impact": 1313000
+  },
+  {
+    "scenario_id": 43,
+    "peak_multiplier": 0.8138,
+    "severity": "LOW",
+    "failures_timeline": {
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_6",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "ROAD_1"
+      ],
+      "5": [
+        "SUB_1",
+        "PUMP_3"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 22,
+    "total_population_impact": 1313000
+  },
+  {
+    "scenario_id": 59,
+    "peak_multiplier": 0.8181,
+    "severity": "LOW",
+    "failures_timeline": {
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_6",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "ROAD_1"
+      ],
+      "5": [
+        "SUB_1",
+        "PUMP_3"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 22,
+    "total_population_impact": 1313000
+  },
+  {
+    "scenario_id": 69,
+    "peak_multiplier": 0.8298,
+    "severity": "LOW",
+    "failures_timeline": {
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_6",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "ROAD_1"
+      ],
+      "5": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 22,
+    "total_population_impact": 1313000
+  },
+  {
+    "scenario_id": 73,
+    "peak_multiplier": 0.8022,
+    "severity": "LOW",
+    "failures_timeline": {
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_6",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "ROAD_1"
+      ],
+      "5": [
+        "SUB_1",
+        "PUMP_3"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "8": [
+        "PUMP_5"
+      ],
+      "11": [
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 22,
+    "total_population_impact": 1313000
+  },
+  {
+    "scenario_id": 78,
+    "peak_multiplier": 0.8296,
+    "severity": "LOW",
+    "failures_timeline": {
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_6",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "ROAD_1"
+      ],
+      "5": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 22,
+    "total_population_impact": 1313000
+  },
+  {
+    "scenario_id": 84,
+    "peak_multiplier": 0.8254,
+    "severity": "LOW",
+    "failures_timeline": {
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_6",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "ROAD_1"
+      ],
+      "5": [
+        "SUB_1",
+        "PUMP_3",
+        "TOWER_1"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4"
+      ],
+      "7": [
+        "PUMP_5"
+      ],
+      "10": [
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 22,
+    "total_population_impact": 1313000
+  },
+  {
+    "scenario_id": 99,
+    "peak_multiplier": 0.8102,
+    "severity": "LOW",
+    "failures_timeline": {
+      "2": [
+        "SUB_4",
+        "PUMP_2",
+        "PUMP_4",
+        "PUMP_6",
+        "PUMP_7",
+        "PUMP_9",
+        "HOSP_3",
+        "ROAD_2",
+        "ROAD_3",
+        "TOWER_3"
+      ],
+      "3": [
+        "SUB_3",
+        "PUMP_1",
+        "HOSP_1",
+        "HOSP_2"
+      ],
+      "4": [
+        "ROAD_1"
+      ],
+      "5": [
+        "SUB_1",
+        "PUMP_3"
+      ],
+      "6": [
+        "PUMP_10",
+        "ROAD_4",
+        "TOWER_1"
+      ],
+      "8": [
+        "PUMP_5"
+      ],
+      "11": [
+        "TOWER_2"
+      ]
+    },
+    "failed_nodes": [
+      "SUB_1",
+      "SUB_3",
+      "SUB_4",
+      "PUMP_1",
+      "PUMP_2",
+      "PUMP_3",
+      "PUMP_4",
+      "PUMP_5",
+      "PUMP_6",
+      "PUMP_7",
+      "PUMP_9",
+      "PUMP_10",
+      "HOSP_1",
+      "HOSP_2",
+      "HOSP_3",
+      "ROAD_1",
+      "ROAD_2",
+      "ROAD_3",
+      "ROAD_4",
+      "TOWER_1",
+      "TOWER_2",
+      "TOWER_3"
+    ],
+    "total_failed_nodes": 22,
+    "total_population_impact": 1313000
+  }
+]

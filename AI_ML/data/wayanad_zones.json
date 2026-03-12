@@ -1,0 +1,76 @@
+{
+    "zones": [
+        {
+            "id": "ZONE_KALPETTA",
+            "name": "Kalpetta Town",
+            "lat": 11.6100,
+            "lon": 76.0800,
+            "elevation_m": 780.0,
+            "area_km2": 40.7,
+            "population": 31580,
+            "river_proximity_km": 1.5,
+            "reservoir_upstream": "Banasura Sagar",
+            "description": "District headquarters, moderate elevation, urban center"
+        },
+        {
+            "id": "ZONE_SULTHAN_BATHERY",
+            "name": "Sulthan Bathery",
+            "lat": 11.6600,
+            "lon": 76.2500,
+            "elevation_m": 930.0,
+            "area_km2": 46.5,
+            "population": 45417,
+            "river_proximity_km": 3.0,
+            "reservoir_upstream": "Karapuzha",
+            "description": "Commercial hub, higher elevation, lesser river flood risk"
+        },
+        {
+            "id": "ZONE_MANANTHAVADY",
+            "name": "Mananthavady",
+            "lat": 11.8000,
+            "lon": 75.9700,
+            "elevation_m": 760.0,
+            "area_km2": 80.1,
+            "population": 37836,
+            "river_proximity_km": 0.5,
+            "reservoir_upstream": "Banasura Sagar",
+            "description": "Kabini tributary bank, high flash flood risk"
+        },
+        {
+            "id": "ZONE_VYTHIRI",
+            "name": "Vythiri",
+            "lat": 11.5500,
+            "lon": 76.0200,
+            "elevation_m": 700.0,
+            "area_km2": 35.2,
+            "population": 20169,
+            "river_proximity_km": 0.8,
+            "reservoir_upstream": "Banasura Sagar",
+            "description": "Valley floor, very high rainfall area, landslide risk"
+        },
+        {
+            "id": "ZONE_PANAMARAM",
+            "name": "Panamaram",
+            "lat": 11.7900,
+            "lon": 76.0300,
+            "elevation_m": 750.0,
+            "area_km2": 28.4,
+            "population": 14000,
+            "river_proximity_km": 0.3,
+            "reservoir_upstream": "Banasura Sagar",
+            "description": "River confluence area, extremely high flood risk during dam release"
+        },
+        {
+            "id": "ZONE_AMBALAVAYAL",
+            "name": "Ambalavayal",
+            "lat": 11.7200,
+            "lon": 76.1500,
+            "elevation_m": 900.0,
+            "area_km2": 42.1,
+            "population": 16000,
+            "river_proximity_km": 2.5,
+            "reservoir_upstream": "Karapuzha",
+            "description": "Highland agricultural area, moderate flood risk, mostly landslide prone"
+        }
+    ]
+}

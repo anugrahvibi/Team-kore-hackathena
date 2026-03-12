@@ -3,7 +3,7 @@
  * This file defines the structured data models for communication 
  * between the Python backend and the TypeScript/JavaScript frontend.
  */
-
+// schema is read only
 // --- Base Infrastructure Types ---
 
 export type NodeType = 'substation' | 'water_pump' | 'hospital' | 'road' | 'comm_tower';
@@ -137,6 +137,31 @@ export interface SingularityPoint {
 export interface VulnerabilityAnalysis {
     top_singularities: SingularityPoint[];
     tactical_recommendations: string[];
+}
+
+// --- Real-time Sensor & Ticker Types ---
+
+export interface SensorReading {
+    node_id: string;
+    zone_id: string;
+    timestamp: string;
+    rainfall_mmhr: number;
+    river_level_m: number;
+    reservoir_pct: number;
+    reservoir_inflow_m3s: number;
+    reservoir_outflow_m3s: number;
+    flow_rate?: number;
+    is_active?: boolean;
+    last_updated?: string;
+}
+
+export interface LeadTimeTicker {
+    zone_id: string;
+    alert_level: AlertLevel;
+    flood_probability_pct: number;
+    hours_until_peak: number;
+    stakeholder_action_windows: Record<string, number>;
+    status: 'CRITICAL' | 'URGENT' | 'MONITORING';
 }
 
 // --- API Response Wrappers ---

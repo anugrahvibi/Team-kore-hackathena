@@ -1,0 +1,257 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ZONE_ERNAKULAM",
+        "name": "Ernakulam City Center",
+        "lat": 9.9816,
+        "lon": 76.2999,
+        "elevation_m": 1.5,
+        "area_km2": 4.2,
+        "population": 120000,
+        "river_proximity_km": 0.8,
+        "reservoir_upstream": "Idukki",
+        "description": "CBD zone, dense population, low elevation"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2794,
+              9.9611
+            ],
+            [
+              76.32039999999999,
+              9.9611
+            ],
+            [
+              76.32039999999999,
+              10.0021
+            ],
+            [
+              76.2794,
+              10.0021
+            ],
+            [
+              76.2794,
+              9.9611
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ZONE_FORT_KOCHI",
+        "name": "Fort Kochi & Mattancherry",
+        "lat": 9.9632,
+        "lon": 76.249,
+        "elevation_m": 0.5,
+        "area_km2": 3.1,
+        "population": 85000,
+        "river_proximity_km": 0.2,
+        "reservoir_upstream": "Idukki",
+        "description": "Coastal zone, extreme flood risk, minimal elevation"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.23124999999999,
+              9.945450000000001
+            ],
+            [
+              76.26675,
+              9.945450000000001
+            ],
+            [
+              76.26675,
+              9.98095
+            ],
+            [
+              76.23124999999999,
+              9.98095
+            ],
+            [
+              76.23124999999999,
+              9.945450000000001
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ZONE_VYTTILA",
+        "name": "Vyttila & Thevara",
+        "lat": 9.9674,
+        "lon": 76.3164,
+        "elevation_m": 1,
+        "area_km2": 3.8,
+        "population": 95000,
+        "river_proximity_km": 0.5,
+        "reservoir_upstream": "Idukki",
+        "description": "Low-lying interchange zone, backwater influence"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.29690000000001,
+              9.947899999999999
+            ],
+            [
+              76.3359,
+              9.947899999999999
+            ],
+            [
+              76.3359,
+              9.9869
+            ],
+            [
+              76.29690000000001,
+              9.9869
+            ],
+            [
+              76.29690000000001,
+              9.947899999999999
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ZONE_KALAMASSERY",
+        "name": "Kalamassery & Edapally",
+        "lat": 10.0537,
+        "lon": 76.3171,
+        "elevation_m": 3.5,
+        "area_km2": 5.1,
+        "population": 75000,
+        "river_proximity_km": 2.1,
+        "reservoir_upstream": "Idukki",
+        "description": "Industrial belt, higher elevation, moderate risk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.29435,
+              10.030949999999999
+            ],
+            [
+              76.33985,
+              10.030949999999999
+            ],
+            [
+              76.33985,
+              10.07645
+            ],
+            [
+              76.29435,
+              10.07645
+            ],
+            [
+              76.29435,
+              10.030949999999999
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ZONE_ALUVA",
+        "name": "Aluva",
+        "lat": 10.1004,
+        "lon": 76.3469,
+        "elevation_m": 5.2,
+        "area_km2": 6.3,
+        "population": 55000,
+        "river_proximity_km": 0.3,
+        "reservoir_upstream": "Idukki",
+        "description": "Periyar River bank, critical upstream monitoring point"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.32115,
+              10.07465
+            ],
+            [
+              76.37265000000001,
+              10.07465
+            ],
+            [
+              76.37265000000001,
+              10.12615
+            ],
+            [
+              76.32115,
+              10.12615
+            ],
+            [
+              76.32115,
+              10.07465
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ZONE_KAKKANAD",
+        "name": "Kakkanad & Thrippunithura",
+        "lat": 10.01,
+        "lon": 76.35,
+        "elevation_m": 4,
+        "area_km2": 4.9,
+        "population": 65000,
+        "river_proximity_km": 1.8,
+        "reservoir_upstream": "Idukki",
+        "description": "IT corridor, eastern suburbs, moderate risk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.32775,
+              9.98775
+            ],
+            [
+              76.37225,
+              9.98775
+            ],
+            [
+              76.37225,
+              10.03225
+            ],
+            [
+              76.32775,
+              10.03225
+            ],
+            [
+              76.32775,
+              9.98775
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

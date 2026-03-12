@@ -2,12 +2,15 @@ import React, { createContext, useContext, useState } from 'react';
 import type { ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export type Role = 'Dam Controller' | 'NDRF' | 'District Collector' | 'Highway Department' | null;
+export type Role = 'Dam Controller' | 'NDRF' | 'District Collector' | 'Highway Department' | 'Developer' | null;
 
 interface AuthContextType {
   role: Role;
   login: (role?: Role) => Role;
   logout: () => void;
+  setRoleDirectly: (role: Role) => void;
+  simulationMode: 'NORMAL' | 'FLOOD';
+  toggleSimulation: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -44,6 +47,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return loginRole;
   };
 
+  const [simulationMode, setSimulationMode] = useState<'NORMAL' | 'FLOOD'>('NORMAL');
+
+  const setRoleDirectly = (r: Role) => {
+    setRole(r);
+    if (r) localStorage.setItem('cascade_role', r);
+    else localStorage.removeItem('cascade_role');
+  };
+
+  const toggleSimulation = () => {
+    setSimulationMode(prev => prev === 'NORMAL' ? 'FLOOD' : 'NORMAL');
+  };
+
   const logout = () => {
     setRole(null);
     localStorage.removeItem('cascade_role');
@@ -51,7 +66,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ role, login, logout }}>
+    <AuthContext.Provider value={{ role, login, logout, setRoleDirectly, simulationMode, toggleSimulation }}>
       {children}
     </AuthContext.Provider>
   );

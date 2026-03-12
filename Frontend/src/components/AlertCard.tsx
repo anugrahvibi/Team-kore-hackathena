@@ -14,7 +14,7 @@ export function AlertCard({ prediction }: AlertCardProps) {
 
   if (!prediction) {
     return (
-      <div className="bg-blue-50/5 border border-blue-100/50 p-10 rounded-[2.8rem] text-center space-y-6 shadow-sm">
+      <div className="glass-card p-10 rounded-[2.8rem] text-center space-y-6">
         <Activity size={36} className="mx-auto text-blue-400 animate-pulse" />
         <p className="text-[16px] font-black text-blue-800/40 uppercase">Awaiting Tactical Handshake</p>
       </div>

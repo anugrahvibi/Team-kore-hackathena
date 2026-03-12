@@ -39,7 +39,7 @@ export function CascadeTimeline({ events }: { events: TimelineEvent[] }) {
             {/* Timeline Dot */}
             <div className={`absolute -left-[31px] top-5 w-3.5 h-3.5 rounded-full ${activeDot} border-4 border-white shadow-xl ring-1 ring-blue-100 transition-transform group-hover:scale-125 z-10`} />
             
-            <div className={`p-6 rounded-[2.2rem] border border-white/40 shadow-sm hover:shadow-lg transition-all ${activeGlass} backdrop-blur-xl space-y-4`}>
+            <div className={`p-6 rounded-[2.2rem] border border-white/40 shadow-sm hover:shadow-lg transition-all ${activeGlass} space-y-4`} style={{ backdropFilter: 'blur(var(--glass-blur))' }}>
               <div className="flex justify-between items-start">
                 <div className="flex items-center gap-3">
                    <span className="text-[14px] font-black text-blue-900/60 uppercase">{evt.hour}H PULSE</span>

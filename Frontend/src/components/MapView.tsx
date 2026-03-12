@@ -239,7 +239,7 @@ export function MapView({ infrastructureNodes, predictions, onZoneClick, selecte
         html: `<div style="
           width:24px;height:24px;border-radius:8px;
           background:${c.color}20; border:1.5px solid ${c.color}80;
-          backdrop-filter:blur(8px);
+          backdrop-filter:blur(var(--glass-blur));
           display:flex;align-items:center;justify-content:center;
           font-size:7px; font-weight:900; color:${c.color};
           box-shadow:0 4px 12px ${c.color}15;
@@ -267,8 +267,8 @@ export function MapView({ infrastructureNodes, predictions, onZoneClick, selecte
       <div className="glass-card" style={{
         position: 'absolute', bottom: 20, right: 20, zIndex: 1000,
         borderRadius: 20, padding: '12px 16px',
-        border: '1px solid rgba(255,255,255,0.4)',
-        background: 'rgba(255,255,255,0.7)',
+        background: 'var(--glass-bg)',
+        backdropFilter: 'blur(var(--glass-blur))',
       }}>
         <div style={{ fontSize: 9, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.15em', color: '#334155', marginBottom: 10, opacity: 1 }}>
           Risk Matrix
@@ -285,8 +285,8 @@ export function MapView({ infrastructureNodes, predictions, onZoneClick, selecte
 
       {/* Loading overlay while predictions not yet arrived */}
       {predictions.length === 0 && (
-        <div className="absolute inset-0 z-[999] flex items-center justify-center bg-white/20 backdrop-blur-md pointer-events-none">
-          <div className="flex items-center justify-center glass-card px-8 py-5 rounded-2xl shadow-xl min-w-[260px] border border-white/60 bg-white/95 backdrop-blur-3xl shrink-0">
+        <div className="absolute inset-0 z-[999] flex items-center justify-center bg-transparent pointer-events-none">
+          <div className="flex items-center justify-center glass-card px-8 py-5 rounded-2xl shrink-0">
             <span className="text-[13px] font-black text-blue-600 uppercase whitespace-nowrap animate-pulse">
               Synchronizing AI Data...
             </span>

@@ -42,7 +42,7 @@ export function Signup() {
 
       <div className="w-full max-w-md relative z-10 space-y-8">
         <header className="text-center space-y-4">
-           <div className="w-20 h-20 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60 rounded-3xl mx-auto flex items-center justify-center shadow-2xl shadow-blue-500/20 border border-blue-100 active:scale-95 transition-transform duration-500 group">
+           <div className="w-20 h-20 glass-card rounded-3xl mx-auto flex items-center justify-center shadow-2xl shadow-blue-500/20 active:scale-95 transition-transform duration-500 group">
              <img src="/logo.svg" alt="Cascadenet logo" className="w-12 h-12 group-hover:scale-110 transition-transform" />
           </div>
           <div>
@@ -53,7 +53,7 @@ export function Signup() {
           </div>
         </header>
 
-        <form onSubmit={handleSignup} className="glass-card p-10 rounded-[3rem] shadow-xl border-white/60 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/70 space-y-6 premium-shadow">
+        <form onSubmit={handleSignup} className="glass-card p-10 rounded-[3rem] space-y-6 premium-shadow">
           <div className="space-y-5">
             <div className="space-y-2">
               <label className="text-xs font-semibold text-gray-500 tracking-normal ml-1">Departmental profile</label>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Activity, Droplets, Target, CheckCircle2, Waves, Settings, AlertTriangle, Zap, Wind, Shield, ArrowRight, MapPin } from 'lucide-react';
+import { Activity, Droplets, Target, CheckCircle2, Waves, Settings, AlertTriangle, Zap, Wind, Shield, ArrowRight, MapPin, TrendingUp, BarChart3 } from 'lucide-react';
 import { fetchActiveAlerts, fetchSensorReadings, fetchPredictions } from '../utils/dataFetcher';
 import type { StakeholderAction, SensorReading, ZonePrediction } from '@schema';
 import { getPredictionAlertLevel } from '../utils/schemaHelpers';
@@ -58,11 +58,11 @@ export function DamOperatorDashboard() {
               <div className="text-right">
                 <div className="text-[16px] font-black text-gray-700 uppercase leading-none mb-1">Hydraulic Status</div>
                 <div className={`text-[15px] font-black uppercase ${systemStatus === 'CRITICAL' ? 'text-red-600' :
-                    systemStatus === 'WARNING' ? 'text-orange-600' : 'text-emerald-600'
+                  systemStatus === 'WARNING' ? 'text-orange-600' : 'text-emerald-600'
                   }`}>{systemStatus}</div>
               </div>
               <div className={`w-2 h-2 rounded-full animate-pulse ${systemStatus === 'CRITICAL' ? 'bg-red-600' :
-                  systemStatus === 'WARNING' ? 'bg-orange-600' : 'bg-emerald-600'
+                systemStatus === 'WARNING' ? 'bg-orange-600' : 'bg-emerald-600'
                 }`} />
             </div>
           </div>
@@ -75,9 +75,90 @@ export function DamOperatorDashboard() {
           <StatCard icon={<Wind />} label="Downstream Impact" value={systemStatus} subtext="Lead Window: Active" glassType="glass-card" />
         </div>
 
+        {/* Hydraulic Intelligence Section */}
+        <section className="gsap-appear">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-[14px] font-black text-blue-600/60 uppercase tracking-widest flex items-center gap-2">
+              <BarChart3 size={16} /> Hydraulic Intelligence
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Card 1: Downstream Risk Horizon (Dynamic) */}
+            <div className="glass-card p-6 rounded-[3rem] transition-all">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <div className="text-[16px] font-black text-gray-900 uppercase">Downstream Risk Horizon</div>
+                  <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Cascading Impact Projection</div>
+                </div>
+                <Activity size={20} className="text-red-500 opacity-50" />
+              </div>
+
+              <div className="space-y-4">
+                {(prediction ? [prediction] : []).map((p, i) => (
+                  <div key={p.zone_id} className="space-y-1.5">
+                    <div className="flex justify-between text-[11px] font-black uppercase">
+                      <span className="text-gray-700">{p.zone_name || p.zone_id}</span>
+                      <span className={p.flood_probability > 0.7 ? 'text-red-600' : 'text-emerald-600'}>{(p.flood_probability * 100).toFixed(0)}% Risk</span>
+                    </div>
+                    <div className="w-full h-2 bg-gray-100/50 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full rounded-full transition-all duration-1000 ${p.flood_probability > 0.7 ? 'bg-red-500' : 'bg-emerald-500'
+                          }`}
+                        style={{ width: `${p.flood_probability * 100}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+                {!prediction && (
+                  <div className="text-gray-400 text-[12px] font-bold uppercase py-4 text-center">No Active Sector Risks Detected</div>
+                )}
+              </div>
+            </div>
+
+            {/* Card 2: Capacity Buffer Analysis */}
+            <div className="glass-card p-6 rounded-[3rem] transition-all">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <div className="text-[16px] font-black text-gray-900 uppercase">Critical Saturation Buffer</div>
+                  <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Reservoir Margin of Safety</div>
+                </div>
+                <Target size={20} className="text-blue-500 opacity-50" />
+              </div>
+
+              <div className="flex items-center gap-6">
+                <div className="relative w-16 h-16 flex items-center justify-center">
+                  <svg className="w-16 h-16 transform -rotate-90">
+                    <circle cx="32" cy="32" r="28" className="stroke-gray-100 fill-none" strokeWidth="6" />
+                    <circle
+                      cx="32" cy="32" r="28"
+                      className={`fill-none transition-all duration-1000 ${reservoirGaugePct > 85 ? 'stroke-red-500' : 'stroke-emerald-600'}`}
+                      strokeWidth="6"
+                      strokeDasharray="175.9"
+                      strokeDashoffset={175.9 * (1 - reservoirGaugePct / 100)}
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <span className="absolute text-[12px] font-black text-gray-900">{reservoirGaugePct}%</span>
+                </div>
+                <div className="flex-1 space-y-2">
+                  <div className="text-[11px] font-black text-gray-700 uppercase">Buffer Availability</div>
+                  <div className="w-full h-1.5 bg-gray-100 rounded-full">
+                    <div
+                      className={`h-full rounded-full ${reservoirGaugePct > 85 ? 'bg-red-500' : 'bg-emerald-500'}`}
+                      style={{ width: `${100 - reservoirGaugePct}%` }}
+                    />
+                  </div>
+                  <div className="text-[9px] font-bold text-gray-400 uppercase">Margin: {(100 - reservoirGaugePct).toFixed(1)}% remaining</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-10">
 
-          <section className="lg:col-span-1 glass-card rounded-[3rem] border-white/60 p-6 sm:p-10 shadow-xl flex flex-col items-center justify-center bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/70 premium-shadow">
+          <section className="lg:col-span-1 glass-card rounded-[3rem] p-6 sm:p-10 flex flex-col items-center justify-center premium-shadow">
             <h3 className="text-[16px] font-black text-gray-600 uppercase mb-4">Capacity Saturation</h3>
             <div className="relative w-40 h-40 sm:w-48 sm:h-48 flex items-center justify-center">
               <svg className="w-full h-full transform -rotate-90">
@@ -98,8 +179,8 @@ export function DamOperatorDashboard() {
             <p className="mt-8 text-center text-gray-700 text-[15px] font-bold leading-relaxed italic max-w-[180px]">"Slight vertical margin increase detected by LSTM models."</p>
           </section>
 
-          <section className="glass-card rounded-[3rem] border-white/60 overflow-hidden flex flex-col lg:col-span-2 shadow-xl bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/70 premium-shadow">
-            <div className="p-5 sm:p-8 border-b border-gray-100 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/50 flex items-center justify-between">
+          <section className="glass-card rounded-[3rem] overflow-hidden flex flex-col lg:col-span-2 premium-shadow">
+            <div className="p-5 sm:p-8 flex items-center justify-between glass-header">
               <h2 className="font-black text-gray-950 uppercase text-[15px] flex items-center gap-3">
                 <Shield size={16} className="text-blue-700" /> Administrative Gate Protocols
               </h2>
@@ -112,7 +193,7 @@ export function DamOperatorDashboard() {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <div className={`px-3 py-1 rounded-xl text-[16px] font-black uppercase ${alert.alert_level === 'RED' ? 'glass-red text-red-700' :
-                            (alert.alert_level === 'YELLOW' || alert.alert_level === 'ORANGE' ? 'glass-orange text-orange-700' : 'glass-emerald text-emerald-700')
+                          (alert.alert_level === 'YELLOW' || alert.alert_level === 'ORANGE' ? 'glass-orange text-orange-700' : 'glass-emerald text-emerald-700')
                           }`}>{alert.alert_level}</div>
                         <div className="text-gray-400 font-black text-[15px] uppercase opacity-60">Source: {alert.source}</div>
                       </div>

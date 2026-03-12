@@ -46,16 +46,17 @@ export function ZonePanel({ zoneId, prediction, infrastructure, onClose }: ZoneP
     <div ref={containerRef} className="fixed inset-0 z-[60] flex items-center justify-end p-4 pointer-events-none">
       <div 
         ref={contentRef} 
-        className="w-[calc(100%-1.5rem)] sm:w-[420px] h-[calc(100%-1.5rem)] sm:h-[85vh] bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/70 backdrop-blur-3xl border border-white/80 rounded-[2.5rem] shadow-[0_30px_70px_rgba(0,0,0,0.2)] flex flex-col pointer-events-auto gsap-appear origin-right"
+        className="w-[calc(100%-1.5rem)] sm:w-[420px] h-[calc(100%-1.5rem)] sm:h-[85vh] glass-card rounded-[2.5rem] flex flex-col pointer-events-auto gsap-appear origin-right"
       >
-        <header className="h-24 px-8 border-b border-white/20 flex items-center justify-between bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/20 backdrop-blur-3xl shrink-0">
+        <header className="h-24 px-8 flex items-center justify-between shrink-0 glass-header">
           <div>
             <div className="text-[16px] font-black text-blue-900 uppercase">Astrava Directive Hub</div>
             <div className="text-[13px] font-black text-blue-800/40 uppercase mt-0.5">Sector Command</div>
           </div>
           <button 
             onClick={handleClose} 
-            className="h-10 w-10 flex items-center justify-center rounded-2xl bg-white/40 hover:bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/80 text-blue-900 border border-white/40 transition-all active:scale-90"
+            className="h-10 w-10 flex items-center justify-center rounded-2xl text-blue-900 border border-white/20 transition-all active:scale-90"
+            style={{ background: 'var(--glass-bg)', backdropFilter: 'blur(var(--glass-blur))' }}
           >
             <X size={20} strokeWidth={2.5} />
           </button>
@@ -68,7 +69,7 @@ export function ZonePanel({ zoneId, prediction, infrastructure, onClose }: ZoneP
 
         {prediction && (
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/40 p-6 rounded-[2.2rem] border border-white/60 shadow-sm space-y-2">
+            <div className="glass-card p-6 rounded-[2.2rem] space-y-2">
               <div className="text-3xl font-black text-blue-800 brand-font">
                 {(prediction.flood_probability * 100).toFixed(0)}%
               </div>
@@ -77,7 +78,7 @@ export function ZonePanel({ zoneId, prediction, infrastructure, onClose }: ZoneP
               </div>
             </div>
 
-            <div className="bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/40 p-6 rounded-[2.2rem] border border-white/60 shadow-sm space-y-2">
+            <div className="glass-card p-6 rounded-[2.2rem] space-y-2">
               <div className="text-3xl font-black text-gray-950 brand-font">
                 {infrastructure.length}
               </div>
@@ -96,7 +97,7 @@ export function ZonePanel({ zoneId, prediction, infrastructure, onClose }: ZoneP
         </div>
       </div>
       
-      <div className="p-8 border-t border-white/20 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/30 backdrop-blur-xl shrink-0">
+      <div className="p-8 shrink-0 glass-header border-t-0 border-b-0 border-r-0 border-l-0" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', background: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(var(--glass-blur))' }}>
          <div className="text-[11px] font-black text-blue-800/40 uppercase text-center">
             Tactical Handshake: Secure
          </div>

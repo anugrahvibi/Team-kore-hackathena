@@ -1,13 +1,14 @@
 import React, { useEffect, useMemo, useState, useRef } from 'react';
 // Cascadenet: Advanced Intelligence & Response Control System
 import { BrowserRouter, Routes, Route, useLocation, Navigate, useNavigate } from 'react-router-dom';
-import { Bell, LogOut, X, ArrowRight, Clock } from 'lucide-react';
+import { Bell, LogOut, X, ArrowRight, Clock, Shield, Database, Layout, HardHat, Terminal, Activity, AlertTriangle } from 'lucide-react';
 
 // Dashboards
 import { NdrfDashboard } from './dashboards/NdrfDashboard';
 import { DamOperatorDashboard } from './dashboards/DamOperatorDashboard';
 import { DistrictAdminDashboard } from './dashboards/DistrictAdminDashboard';
 import { HighwayDepartmentDashboard } from './dashboards/HighwayDepartmentDashboard';
+import { DevDashboard } from './dashboards/DevDashboard';
 
 // Components
 import { Login } from './components/Login';
@@ -25,6 +26,7 @@ const roleToAlertDepartment: Record<Exclude<Role, null>, string> = {
   'NDRF': 'ndrf_rescue',
   'District Collector': 'district_admin',
   'Highway Department': 'highway_department',
+  'Developer': 'dev_sys',
 };
 
 const roleToRoute: Record<Exclude<Role, null>, string> = {
@@ -32,6 +34,7 @@ const roleToRoute: Record<Exclude<Role, null>, string> = {
   'NDRF': '/ndrf',
   'District Collector': '/admin',
   'Highway Department': '/highway',
+  'Developer': '/dev',
 };
 
 import { gsap } from 'gsap';
@@ -39,7 +42,7 @@ import { gsap } from 'gsap';
 function Navigation() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { role, logout } = useAuth();
+  const { role, logout, setRoleDirectly, simulationMode, toggleSimulation } = useAuth();
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
   const [notifications, setNotifications] = useState<StakeholderAction[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
@@ -157,27 +160,64 @@ function Navigation() {
 
   return (
     <>
-      <nav ref={navRef} style={{ backdropFilter: 'blur(32px) saturate(200%)', WebkitBackdropFilter: 'blur(32px) saturate(200%)', background: 'rgba(255,255,255,0.6)' }} className="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 w-[94%] sm:w-[92%] max-w-7xl h-14 sm:h-[4.25rem] rounded-[1.4rem] sm:rounded-[1.8rem] flex items-center justify-between px-2 sm:px-3 md:px-4 z-50 shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] border border-white/80">
-        <div className="flex items-center gap-3 md:gap-4">
+      <nav ref={navRef} style={{ backdropFilter: 'blur(var(--glass-blur)) saturate(200%)', WebkitBackdropFilter: 'blur(var(--glass-blur)) saturate(200%)', background: 'var(--glass-bg)', boxShadow: 'var(--glass-shadow)' }} className="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 w-[94%] sm:w-[92%] max-w-7xl h-14 sm:h-[4.25rem] rounded-[1.4rem] sm:rounded-[1.8rem] flex items-center justify-between px-2 sm:px-3 md:px-4 z-50 border border-white/80">
+        <div className="flex items-center gap-3 md:gap-5">
           <div className="flex items-center gap-1.5 sm:gap-2">
             <div className="w-10 h-10 flex items-center justify-center">
               <img src="/logo.svg" alt="Cascadenet logo" className="w-7 h-7" />
             </div>
-            <h1 className="text-lg sm:text-xl font-black text-gray-950 brand-font leading-none">
+            <h1 className="text-lg sm:text-xl font-black text-gray-950 brand-font leading-none cursor-pointer" onClick={() => navigate('/dev')}>
               Cascade<span className="text-blue-700 ending-serif">Net</span>
             </h1>
           </div>
+
+          <div className="hidden xl:flex items-center gap-1 p-1 glass-card rounded-full border border-white/40">
+            {([
+              { r: 'Dam Controller', label: 'Dam' },
+              { r: 'NDRF', label: 'NDRF' },
+              { r: 'District Collector', label: 'Admin' },
+              { r: 'Highway Department', label: 'Highway' },
+              { r: 'Developer', label: 'Dev' }
+            ] as {r: Role, label: string}[]).map(({r, label}) => (
+              <button
+                key={r as string}
+                onClick={() => {
+                  setRoleDirectly(r);
+                  navigate(roleToRoute[r as Exclude<Role, null>]);
+                }}
+                className={`px-4 py-1.5 rounded-full text-[11px] font-black uppercase transition-all ${
+                  role === r ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-600 hover:bg-white/40'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
+
         <div className="flex items-center gap-2 sm:gap-3">
+          <div className="hidden lg:flex items-center gap-3 px-4 py-2 border-r border-black/5 mr-2">
+            <div className="flex flex-col items-end leading-none">
+              <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Global Sync</span>
+              <span className={`text-[12px] font-black uppercase ${simulationMode === 'FLOOD' ? 'text-red-600' : 'text-emerald-600'}`}>{simulationMode}</span>
+            </div>
+            <button 
+              onClick={toggleSimulation}
+              className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all active:scale-90 ${simulationMode === 'FLOOD' ? 'bg-red-50 text-red-600 shadow-sm' : 'bg-emerald-50 text-emerald-600'}`}
+            >
+              {simulationMode === 'FLOOD' ? <AlertTriangle size={14} /> : <Activity size={14} />}
+            </button>
+          </div>
+
           <div className="hidden md:flex flex-col items-end text-right leading-none">
-            <span className="text-[13px] font-black text-gray-800 uppercase">{role}</span>
+            <span className="text-[13px] font-black text-gray-800 uppercase tracking-tight">{role}</span>
           </div>
           <button
             aria-label="Open notifications"
             onClick={toggleNotifications}
             onMouseEnter={(e) => animateNavButtonHover(e.currentTarget, true)}
             onMouseLeave={(e) => animateNavButtonHover(e.currentTarget, false)}
-            className="relative h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-full border border-gray-200/60 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/80 text-gray-700 active:scale-90"
+            className="relative h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-full glass-card text-gray-700 active:scale-90"
           >
             <Bell size={19} strokeWidth={2.4} className={unreadCount > 0 ? 'animate-pulse text-blue-600' : ''} />
             {unreadCount > 0 && (
@@ -190,7 +230,7 @@ function Navigation() {
             onClick={logout} 
             onMouseEnter={(e) => animateNavButtonHover(e.currentTarget, true)}
             onMouseLeave={(e) => animateNavButtonHover(e.currentTarget, false)}
-            className="h-9 sm:h-10 w-9 sm:min-w-[112px] sm:w-auto flex items-center justify-center gap-0 sm:gap-2 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/60 text-gray-800 px-0 sm:px-4 rounded-full font-black text-[12px] uppercase border border-gray-200/80 active:scale-95 shadow-sm"
+            className="h-9 sm:h-10 w-9 sm:min-w-[112px] sm:w-auto flex items-center justify-center gap-0 sm:gap-2 glass-card text-gray-800 px-0 sm:px-4 rounded-full font-black text-[12px] uppercase active:scale-95 shadow-sm"
           >
             <LogOut size={14} className="shrink-0" /> <span className="hidden sm:inline">Logout</span>
           </button>
@@ -199,8 +239,8 @@ function Navigation() {
 
       {isRendered && (
         <>
-          <aside ref={notificationRef} className="fixed top-[5.25rem] sm:top-[6.8rem] right-[3%] sm:right-[4%] md:right-7 w-[380px] max-w-[calc(100vw-1rem)] sm:max-w-[calc(100vw-1.5rem)] max-h-[calc(100dvh-6rem)] sm:max-h-[76vh] z-[60] rounded-[1.5rem] sm:rounded-[2rem] border border-white/80 bg-white/92 backdrop-blur-3xl shadow-[0_22px_56px_rgba(15,23,42,0.18)] overflow-hidden origin-top-right">
-             <header className="px-5 sm:px-6 py-4 border-b border-slate-200/70 bg-white/85 backdrop-blur-2xl">
+          <aside ref={notificationRef} className="fixed top-[5.25rem] sm:top-[6.8rem] right-[3%] sm:right-[4%] md:right-7 w-[380px] max-w-[calc(100vw-1rem)] sm:max-w-[calc(100vw-1.5rem)] max-h-[calc(100dvh-6rem)] sm:max-h-[76vh] z-[60] rounded-[1.5rem] sm:rounded-[2rem] glass-card overflow-hidden origin-top-right">
+             <header className="px-5 sm:px-6 py-4 glass-header">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <div className="text-[13px] font-black tracking-wide text-blue-900 uppercase">Astrava Directive Hub</div>
@@ -227,7 +267,7 @@ function Navigation() {
               </div>
             </header>
 
-            <div className="max-h-[calc(76vh-5.5rem)] overflow-y-auto custom-scrollbar p-3 bg-gradient-to-b from-white/70 to-slate-50/90 space-y-2.5">
+            <div className="max-h-[calc(76vh-5.5rem)] overflow-y-auto custom-scrollbar p-3 space-y-2.5" style={{ background: 'rgba(255,255,255,0.35)', backdropFilter: 'blur(var(--glass-blur))' }}>
               {visibleNotifications.length > 0 ? (
                 visibleNotifications.map((item, idx) => (
                    <button
@@ -281,6 +321,7 @@ function AuthRedirect({ children }: { children: React.ReactNode }) {
   if (effectiveRole === 'NDRF') return <Navigate to="/ndrf" replace />;
   if (effectiveRole === 'District Collector') return <Navigate to="/admin" replace />;
   if (effectiveRole === 'Highway Department') return <Navigate to="/highway" replace />;
+  if (effectiveRole === 'Developer') return <Navigate to="/dev" replace />;
   return <>{children}</>;
 }
 
@@ -322,6 +363,7 @@ function AppContent() {
           <Route path="/dam" element={<ProtectedRoute allowedRole="Dam Controller"><DamOperatorDashboard /></ProtectedRoute>} />
           <Route path="/admin" element={<ProtectedRoute allowedRole="District Collector"><DistrictAdminDashboard /></ProtectedRoute>} />
           <Route path="/highway" element={<ProtectedRoute allowedRole="Highway Department"><HighwayDepartmentDashboard /></ProtectedRoute>} />
+          <Route path="/dev" element={<ProtectedRoute allowedRole="Developer"><DevDashboard /></ProtectedRoute>} />
         </Routes>
       </main>
     </div>

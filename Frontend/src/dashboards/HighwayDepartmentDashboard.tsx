@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Activity, MapPin, AlertTriangle, Hammer, CheckCircle2, Truck, ArrowRightLeft, ShieldCheck, TrendingDown, Radio, Navigation, Clock, Route, ArrowRight, Shield } from 'lucide-react';
+import { Activity, MapPin, AlertTriangle, Hammer, CheckCircle2, Truck, ArrowRightLeft, ShieldCheck, TrendingDown, Radio, Navigation, Clock, Route, ArrowRight, Shield, TrendingUp, BarChart3 } from 'lucide-react';
 import { fetchActiveAlerts, fetchPredictions } from '../utils/dataFetcher';
 import type { StakeholderAction, ZonePrediction } from '@schema';
+import { getPredictionAlertLevel } from '../utils/schemaHelpers';
 import { useGsapAnimations } from '../utils/useGsapAnimations';
 
 export function HighwayDepartmentDashboard() {
@@ -47,7 +48,7 @@ export function HighwayDepartmentDashboard() {
           </div>
           
            <div className="flex items-center gap-3 self-stretch sm:self-auto">
-             <div className="glass-card px-4 sm:px-6 py-3 sm:py-4 rounded-[1.8rem] border-white/60 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/70 flex items-center gap-4 shadow-xl premium-shadow">
+             <div className="glass-card px-4 sm:px-6 py-3 sm:py-4 rounded-[1.8rem] flex items-center gap-4 shadow-xl premium-shadow">
                 <div className="text-right">
                    <div className="text-[16px] font-black text-gray-700 uppercase">Network Status</div>
                    <div className="text-[15px] font-black text-blue-600 uppercase">Connected</div>
@@ -63,9 +64,141 @@ export function HighwayDepartmentDashboard() {
           <StatCard icon={<Shield />} label="Assets Ready" value={assetsReady} subtext="Live Directives" glassType="glass-blue" />
         </div>
 
+        {/* Network Intelligence Area */}
+        <section className="gsap-appear">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-[14px] font-black text-blue-600/60 uppercase tracking-widest flex items-center gap-2">
+              <BarChart3 size={16} /> Grid Network Intelligence
+            </h3>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card 1: Directive Priority Spread (Dynamic) */}
+            <div className="glass-card p-6 rounded-[3rem] transition-all">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <div className="text-[16px] font-black text-gray-900 uppercase">Operational Urgency</div>
+                  <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Live Directive Priority Spread</div>
+                </div>
+                <Radio size={20} className="text-blue-500 opacity-50" />
+              </div>
+              
+              <div className="h-20 flex items-end gap-3 px-1">
+                {[
+                  { label: 'RED', color: '#ef4444', count: predictions.filter(p => getPredictionAlertLevel(p) === 'RED').length },
+                  { label: 'ORANGE', color: '#f97316', count: predictions.filter(p => getPredictionAlertLevel(p) === 'ORANGE').length },
+                  { label: 'YELLOW', color: '#eab308', count: predictions.filter(p => getPredictionAlertLevel(p) === 'YELLOW').length },
+                  { label: 'GREEN', color: '#10b981', count: predictions.filter(p => getPredictionAlertLevel(p) === 'GREEN').length }
+                ].map((stat, i) => (
+                  <div key={i} className="flex-1 flex flex-col items-center gap-2">
+                    <div className="w-full flex items-end h-20 relative">
+                       <div 
+                        className="w-full rounded-t-lg transition-all duration-700 group-hover:opacity-100 origin-bottom"
+                        style={{ 
+                          height: `${Math.max(10, (stat.count / (predictions.length || 1)) * 100)}%`,
+                          backgroundColor: stat.color,
+                          opacity: 0.8
+                        }}
+                      />
+                      {stat.count >= 0 && (
+                        <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-[8px] font-black text-gray-500">{stat.count}</span>
+                      )}
+                    </div>
+                    <span className="text-[8px] font-black text-gray-400">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-3 text-center">
+                <span className="text-[10px] font-black text-gray-400 uppercase">Active Directives: {alerts.length}</span>
+              </div>
+            </div>
+
+            {/* Card 2: Strategic Lead Window */}
+            <div className="glass-card p-6 rounded-[3rem] transition-all">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <div className="text-[16px] font-black text-gray-900 uppercase">Transit Safety Buffer</div>
+                  <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Lead Time per Logistics Node</div>
+                </div>
+                <Clock size={20} className="text-emerald-500 opacity-50" />
+              </div>
+              
+              <div className="space-y-4">
+                {predictions.slice(0, 3).map((p, i) => (
+                  <div key={i} className="space-y-1.5">
+                    <div className="flex justify-between text-[11px] font-black uppercase">
+                      <span className="text-gray-700 truncate max-w-[140px]">{p.zone_name || p.zone_id}</span>
+                      <span className="text-emerald-600">T-{p.lead_time_hours}H</span>
+                    </div>
+                    <div className="w-full h-2 bg-gray-100/50 rounded-full overflow-hidden">
+                      <div 
+                        className="h-full bg-emerald-500 rounded-full transition-all duration-1000" 
+                        style={{ width: `${Math.min(100, (p.lead_time_hours / 48) * 100)}%` }} 
+                      />
+                    </div>
+                  </div>
+                ))}
+                {predictions.length === 0 && (
+                   <div className="text-gray-400 text-[12px] font-bold uppercase py-4 text-center">No Active Transit Risks Detected</div>
+                )}
+              </div>
+            </div>
+
+            {/* Card 3: Network Integrity Horizon */}
+            <div className="glass-card p-6 rounded-[3rem] transition-all md:col-span-2 lg:col-span-1">
+              <div className="flex justify-between items-start mb-4">
+               <div>
+                  <div className="text-[16px] font-black text-gray-900 uppercase">Logistics Connectivity</div>
+                  <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Active Route Integrity</div>
+                </div>
+                <Navigation size={20} className="text-blue-500 opacity-50" />
+              </div>
+              
+              <div className="flex items-center gap-6">
+                <div className="relative w-24 h-24 flex items-center justify-center">
+                  <svg className="w-full h-full transform -rotate-90">
+                    <circle cx="48" cy="48" r="42" className="stroke-gray-100 fill-none" strokeWidth="8" />
+                    <circle
+                      cx="48" cy="48" r="42"
+                      className="fill-none stroke-emerald-600 transition-all duration-1000"
+                      strokeWidth="8"
+                      strokeDasharray="263.89"
+                      strokeDashoffset={263.89 * (1 - (predictions.filter(p => p.flood_probability < 0.4).length / (predictions.length || 1)))}
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <div className="absolute flex flex-col items-center">
+                    <span className="text-xl font-black text-gray-950 tracking-tighter">
+                      {((predictions.filter(p => p.flood_probability < 0.4).length / (predictions.length || 1)) * 100).toFixed(0)}%
+                    </span>
+                    <span className="text-[8px] font-black text-gray-400 uppercase">Reliable</span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-3">
+                  <div className="space-y-1">
+                    <div className="flex justify-between text-[10px] font-black uppercase text-gray-500">
+                      <span>Secure Artery Nodes</span>
+                      <span className="text-emerald-600">{predictions.filter(p => p.flood_probability < 0.4).length} Nodes</span>
+                    </div>
+                    <div className="w-full h-1 bg-gray-100 rounded-full">
+                      <div 
+                        className="h-full bg-emerald-500 transition-all" 
+                        style={{ width: `${(predictions.filter(p => p.flood_probability < 0.4).length / (predictions.length || 1)) * 100}%` }} 
+                      />
+                    </div>
+                  </div>
+                  <p className="text-[10px] font-bold text-gray-400 leading-tight uppercase italic whitespace-normal">
+                    Aggregate cross-node connectivity analysis from telemetry.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-10">
-          <section className="lg:col-span-2 rounded-[3rem] border-white/50 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/50 overflow-hidden flex flex-col h-[500px] sm:h-[600px] shadow-xl premium-shadow">
-             <div className="p-5 sm:p-8 border-b border-gray-100 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/50 flex items-center justify-between">
+          <section className="lg:col-span-2 rounded-[3rem] glass-card overflow-hidden flex flex-col h-[500px] sm:h-[600px] premium-shadow">
+             <div className="p-6 flex items-center justify-between gap-6 transition-all group overflow-hidden relative glass-header">
                 <h2 className="font-black text-gray-900 uppercase text-[15px] flex items-center gap-3">
                    <Navigation size={16} className="text-blue-700" /> Operational Deployment Field
                 </h2>
@@ -112,8 +245,8 @@ export function HighwayDepartmentDashboard() {
                <p className="text-blue-700/60 text-[15px] font-medium leading-relaxed italic">"Model suggests logistics deployment before T-minus 4h for optimal resource retention."</p>
             </div>
             
-            <section className="glass-card rounded-[3rem] border-white/60 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/70 overflow-hidden flex flex-col flex-1 shadow-xl premium-shadow">
-               <div className="p-5 sm:p-8 border-b border-gray-100 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/50">
+            <section className="glass-card rounded-[3rem] overflow-hidden flex flex-col flex-1 premium-shadow">
+               <div className="p-8 transition-all flex flex-col gap-6 glass-header">
                   <h2 className="font-black text-gray-900 uppercase text-[15px] flex items-center gap-3">
                      <div className="w-10 h-10 shrink-0 rounded-full flex items-center justify-center bg-black/5 group-hover:-rotate-45 transition-all duration-300"><ArrowRightLeft size={16} className="text-blue-600" /></div> Rapid Directives
                   </h2>

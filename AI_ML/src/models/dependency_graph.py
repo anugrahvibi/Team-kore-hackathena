@@ -17,8 +17,8 @@ from sklearn.preprocessing import LabelEncoder
 # ─── Paths ───────────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(BASE_DIR, "data")
-INFRA_FILE = os.path.join(DATA_DIR, "kochi_infrastructure.json")
-FAILURES_FILE = os.path.join(DATA_DIR, "historical_failures.csv")
+INFRA_FILE = os.path.join(DATA_DIR, "wayanad_infrastructure.json")
+FAILURES_FILE = os.path.join(DATA_DIR, "historical_failures_wayanad.csv")
 
 
 def _haversine_km(lat1, lon1, lat2, lon2):
@@ -32,7 +32,7 @@ def _haversine_km(lat1, lon1, lat2, lon2):
 
 class DependencyGraph:
     """
-    Directed graph of Kochi infrastructure.
+    Directed graph of Wayanad infrastructure.
 
     Nodes carry:
         - type            : 'substation' | 'water_pump' | 'hospital'

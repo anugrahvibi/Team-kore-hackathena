@@ -13,6 +13,7 @@ import { DevDashboard } from './dashboards/DevDashboard';
 // Components
 import { Login } from './components/Login';
 import { Signup } from './components/Signup';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Context
 import { AuthProvider, useAuth } from './AuthContext';
@@ -153,20 +154,21 @@ function Navigation() {
   };
 
   const getSeverityClasses = (level: string) => {
-    if (level === 'RED') return 'bg-red-50/80 border-red-200/70 border-l-red-600/70';
-    if (level === 'AMBER' || level === 'ORANGE') return 'bg-orange-50/80 border-orange-200/70 border-l-orange-600/70';
-    return 'bg-blue-50/80 border-blue-200/70 border-l-blue-600/70';
+    if (level === 'RED') return 'glass-tint-red';
+    if (level === 'AMBER' || level === 'ORANGE') return 'glass-tint-orange';
+    return 'glass-tint-blue';
   };
 
   return (
     <>
-      <nav ref={navRef} style={{ backdropFilter: 'blur(var(--glass-blur)) saturate(200%)', WebkitBackdropFilter: 'blur(var(--glass-blur)) saturate(200%)', background: 'var(--glass-bg)', boxShadow: 'var(--glass-shadow)' }} className="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 w-[94%] sm:w-[92%] max-w-7xl h-14 sm:h-[4.25rem] rounded-[1.4rem] sm:rounded-[1.8rem] flex items-center justify-between px-2 sm:px-3 md:px-4 z-50 border border-white/80">
+      <nav ref={navRef} className="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 w-[94%] sm:w-[92%] max-w-7xl h-14 sm:h-[4.25rem] rounded-[1.4rem] sm:rounded-[1.8rem] flex items-center justify-between px-2 sm:px-3 md:px-4 z-50 border border-white/80 glass-card overflow-visible [--glass-card-filter:none]">
+        <div className="glass-blur-fix" />
         <div className="flex items-center gap-3 md:gap-5">
           <div className="flex items-center gap-1.5 sm:gap-2">
             <div className="w-10 h-10 flex items-center justify-center">
               <img src="/logo.svg" alt="Cascadenet logo" className="w-7 h-7" />
             </div>
-            <h1 className="text-lg sm:text-xl font-black text-gray-950 brand-font leading-none cursor-pointer" onClick={() => navigate('/dev')}>
+            <h1 className="text-lg sm:text-xl font-black text-gray-950 brand-font leading-none">
               Cascade<span className="text-blue-700 ending-serif">Net</span>
             </h1>
           </div>
@@ -176,8 +178,7 @@ function Navigation() {
               { r: 'Dam Controller', label: 'Dam' },
               { r: 'NDRF', label: 'NDRF' },
               { r: 'District Collector', label: 'Admin' },
-              { r: 'Highway Department', label: 'Highway' },
-              { r: 'Developer', label: 'Dev' }
+              { r: 'Highway Department', label: 'Highway' }
             ] as {r: Role, label: string}[]).map(({r, label}) => (
               <button
                 key={r as string}
@@ -203,7 +204,7 @@ function Navigation() {
             </div>
             <button 
               onClick={toggleSimulation}
-              className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all active:scale-90 ${simulationMode === 'FLOOD' ? 'bg-red-50 text-red-600 shadow-sm' : 'bg-emerald-50 text-emerald-600'}`}
+              className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all active:scale-90 ${simulationMode === 'FLOOD' ? 'glass-tint-red text-red-600' : 'glass-tint-emerald text-emerald-600'}`}
             >
               {simulationMode === 'FLOOD' ? <AlertTriangle size={14} /> : <Activity size={14} />}
             </button>
@@ -243,7 +244,7 @@ function Navigation() {
              <header className="px-5 sm:px-6 py-4 glass-header">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <div className="text-[13px] font-black tracking-wide text-blue-900 uppercase">Astrava Directive Hub</div>
+                  <div className="text-[13px] font-black tracking-wide text-slate-900 uppercase">Astrava Directive Hub</div>
                   <div className="mt-1 text-[12px] font-black text-slate-500 uppercase">Live Sector Sync</div>
                   <div className="mt-2 inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-black uppercase text-slate-600">
                     {notifications.length} Active Alerts
@@ -252,7 +253,7 @@ function Navigation() {
               <div className="flex items-center gap-3">
                 <button
                    onClick={clearNotifications}
-                   className="px-3 py-1.5 rounded-full text-[11px] font-black text-blue-700 hover:text-blue-900 hover:bg-blue-50/70 uppercase transition-all"
+                   className="px-3 py-1.5 rounded-full text-[11px] font-black text-slate-700 hover:text-slate-900 hover:bg-slate-50/70 uppercase transition-all"
                 >
                   Clear Hub
                 </button>
@@ -273,7 +274,7 @@ function Navigation() {
                    <button
                     key={`${item.department}-${idx}`}
                     onClick={onNotificationClick}
-                    className={`w-full text-left p-4 rounded-2xl border border-l-[4px] ${getSeverityClasses(item.alert_level)} hover:shadow-md hover:-translate-y-0.5 transition-all group flex items-center justify-between gap-4`}
+                    className={`w-full text-left p-5 rounded-2xl ${getSeverityClasses(item.alert_level)} hover:shadow-md hover:-translate-y-0.5 transition-all group flex items-center justify-between gap-4`}
                   >
                      <div className="flex-1">
                        <div className="flex items-center justify-between gap-3 mb-1.5">
@@ -287,7 +288,6 @@ function Navigation() {
                          </div>
                        )}
                      </div>
-                     <ArrowRight size={24} className={`shrink-0 opacity-40 group-hover:opacity-100 group-hover:translate-x-1.5 transition-all ${item.alert_level === 'RED' ? 'text-red-700' : (item.alert_level === 'ORANGE' ? 'text-orange-700' : 'text-blue-700')}`} />
                   </button>
                 ))
               ) : (
@@ -356,15 +356,17 @@ function AppContent() {
       {role && <Navigation />}
 
       <main className="flex-1 w-full h-full relative z-10 overflow-hidden">
-        <Routes>
-          <Route path="/" element={<AuthRedirect><Login /></AuthRedirect>} />
-          <Route path="/signup" element={<AuthRedirect><Signup /></AuthRedirect>} />
-          <Route path="/ndrf" element={<ProtectedRoute allowedRole="NDRF"><NdrfDashboard /></ProtectedRoute>} />
-          <Route path="/dam" element={<ProtectedRoute allowedRole="Dam Controller"><DamOperatorDashboard /></ProtectedRoute>} />
-          <Route path="/admin" element={<ProtectedRoute allowedRole="District Collector"><DistrictAdminDashboard /></ProtectedRoute>} />
-          <Route path="/highway" element={<ProtectedRoute allowedRole="Highway Department"><HighwayDepartmentDashboard /></ProtectedRoute>} />
-          <Route path="/dev" element={<ProtectedRoute allowedRole="Developer"><DevDashboard /></ProtectedRoute>} />
-        </Routes>
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<AuthRedirect><Login /></AuthRedirect>} />
+            <Route path="/signup" element={<AuthRedirect><Signup /></AuthRedirect>} />
+            <Route path="/ndrf" element={<ProtectedRoute allowedRole="NDRF"><NdrfDashboard /></ProtectedRoute>} />
+            <Route path="/dam" element={<ProtectedRoute allowedRole="Dam Controller"><DamOperatorDashboard /></ProtectedRoute>} />
+            <Route path="/admin" element={<ProtectedRoute allowedRole="District Collector"><DistrictAdminDashboard /></ProtectedRoute>} />
+            <Route path="/highway" element={<ProtectedRoute allowedRole="Highway Department"><HighwayDepartmentDashboard /></ProtectedRoute>} />
+            <Route path="/dev" element={<ProtectedRoute allowedRole="Developer"><DevDashboard /></ProtectedRoute>} />
+          </Routes>
+        </ErrorBoundary>
       </main>
     </div>
   );

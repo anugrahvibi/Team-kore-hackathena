@@ -11,6 +11,8 @@ interface AuthContextType {
   setRoleDirectly: (role: Role) => void;
   simulationMode: 'NORMAL' | 'FLOOD';
   toggleSimulation: () => void;
+  affectedZone: string;
+  setAffectedZone: (zone: string) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -55,6 +57,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     else localStorage.removeItem('cascade_role');
   };
 
+  const [affectedZone, setAffectedZone] = useState<string>('All Zones');
+
   const toggleSimulation = () => {
     setSimulationMode(prev => prev === 'NORMAL' ? 'FLOOD' : 'NORMAL');
   };
@@ -66,7 +70,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ role, login, logout, setRoleDirectly, simulationMode, toggleSimulation }}>
+    <AuthContext.Provider value={{ role, login, logout, setRoleDirectly, simulationMode, toggleSimulation, affectedZone, setAffectedZone }}>
       {children}
     </AuthContext.Provider>
   );

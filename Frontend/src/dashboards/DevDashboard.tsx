@@ -1,16 +1,29 @@
 import React, { useRef } from 'react';
-import { Terminal, Users, Play, Pause, ChevronRight, Shield, Cpu, Zap, Activity } from 'lucide-react';
+import { Terminal, Users, Play, Pause, ChevronRight, Shield, Cpu, Zap, Activity, MapPin, ChevronDown, Waves, HardHat, Gavel, Truck, Code, ArrowRight } from 'lucide-react';
 import { useAuth } from '../AuthContext';
 import type { Role } from '../AuthContext';
 import { useGsapAnimations } from '../utils/useGsapAnimations';
 
 export function DevDashboard() {
-  const { setRoleDirectly, simulationMode, toggleSimulation } = useAuth();
+  const { setRoleDirectly, simulationMode, toggleSimulation, affectedZone, setAffectedZone } = useAuth();
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   
   useGsapAnimations(containerRef);
 
-  const roles: Role[] = ['Dam Controller', 'NDRF', 'District Collector', 'Highway Department', 'Developer'];
+  const roles: Role[] = ['Dam Controller', 'NDRF', 'District Collector', 'Highway Department'];
+  const zones = ['All Zones', 'Kalpetta Town', 'Sulthan Bathery', 'Mananthavady', 'Vythiri', 'Panamaram', 'Ambalavayal'];
+
+  const getRoleIcon = (r: Role) => {
+    switch (r) {
+      case 'Dam Controller': return <Waves size={20} />;
+      case 'NDRF': return <HardHat size={20} />;
+      case 'District Collector': return <Gavel size={20} />;
+      case 'Highway Department': return <Truck size={20} />;
+      case 'Developer': return <Terminal size={20} />;
+      default: return <Shield size={20} />;
+    }
+  };
 
   return (
     <div ref={containerRef} className="pt-24 sm:pt-28 lg:pt-32 p-4 sm:p-6 h-full bg-transparent overflow-y-auto w-full custom-scrollbar">
@@ -33,50 +46,90 @@ export function DevDashboard() {
             </div>
           </div>
 
-          <div className="glass-card px-6 py-4 rounded-3xl flex items-center gap-6 shadow-xl">
-             <div className="flex flex-col items-end">
-                <div className="text-[12px] font-black text-gray-400 uppercase tracking-widest">Simulation State</div>
-                <div className={`text-[18px] font-black uppercase ${simulationMode === 'FLOOD' ? 'text-red-600' : 'text-emerald-600'}`}>
-                  {simulationMode}
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            <div className="relative">
+              <button 
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="glass-card px-5 py-3.5 rounded-2xl flex items-center gap-4 hover:bg-white/10 transition-all border border-white/20 min-w-[200px] group shadow-lg"
+              >
+                <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                  <MapPin size={16} />
                 </div>
-             </div>
-             <button 
-              onClick={toggleSimulation}
-              className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all active:scale-95 shadow-lg ${
-                simulationMode === 'FLOOD' ? 'bg-red-600 shadow-red-500/30' : 'bg-emerald-600 shadow-emerald-500/30'
-              }`}
-             >
-                {simulationMode === 'FLOOD' ? <Pause className="text-white" fill="white" /> : <Play className="text-white" fill="white" />}
-             </button>
+                <div className="flex-1 text-left">
+                  <div className="text-[10px] font-black text-gray-500 uppercase leading-none mb-1">Impact Target</div>
+                  <div className="text-[14px] font-black text-gray-900 leading-none">{affectedZone}</div>
+                </div>
+                <ChevronDown size={16} className={`text-gray-400 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {isDropdownOpen && (
+                <div className="absolute top-full left-0 right-0 mt-2 glass-card rounded-2xl border border-white/20 shadow-2xl p-2 z-[60] gsap-appear">
+                  {zones.map((z) => (
+                    <button
+                      key={z}
+                      onClick={() => {
+                        setAffectedZone(z);
+                        setIsDropdownOpen(false);
+                      }}
+                      className={`w-full px-4 py-3 rounded-xl text-left text-[13px] font-black uppercase transition-all ${
+                        affectedZone === z ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-black/5'
+                      }`}
+                    >
+                      {z}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="glass-card px-6 py-4 rounded-3xl flex items-center gap-6 shadow-xl border border-white/20">
+               <div className="flex flex-col items-end">
+                  <div className="text-[12px] font-black text-gray-400 uppercase tracking-widest">Simulation State</div>
+                  <div className={`text-[18px] font-black uppercase ${simulationMode === 'FLOOD' ? 'text-red-600' : 'text-emerald-600'}`}>
+                    {simulationMode}
+                  </div>
+               </div>
+               <button 
+                onClick={toggleSimulation}
+                className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all active:scale-95 ${
+                  simulationMode === 'FLOOD' ? 'glass-tint-red text-red-600' : 'glass-tint-emerald text-emerald-600'
+                }`}
+               >
+                  {simulationMode === 'FLOOD' ? <Pause size={24} /> : <Play size={24} />}
+               </button>
+            </div>
           </div>
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           
           {/* Role Switching Panel */}
-          <section className="glass-card rounded-[2.5rem] p-6 space-y-6">
+          <section className="glass-card rounded-[2.5rem] p-6 space-y-6 overflow-visible [--glass-card-filter:none]">
+            <div className="glass-blur-fix" />
             <div className="flex items-center gap-3 border-b border-black/5 pb-4">
               <Users size={24} className="text-blue-600" />
               <h2 className="text-xl font-black text-gray-900 uppercase">Impersonation Matrix</h2>
             </div>
             
             <div className="grid grid-cols-1 gap-4">
-              {roles.map((r) => (
+               {roles.map((r) => (
                 <button
                   key={r}
                   onClick={() => setRoleDirectly(r)}
-                  className="group w-full p-6 glass-card rounded-2xl flex items-center justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 text-left border border-white/10"
+                  className="group w-full p-6 glass-card rounded-[2rem] flex items-center justify-between hover:bg-white/20 hover:-translate-y-1 transition-all duration-500 text-left border border-white/10"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                      <Shield size={20} />
+                  <div className="flex items-center gap-5">
+                    <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                      {getRoleIcon(r)}
                     </div>
                     <div>
-                      <div className="text-[16px] font-black text-gray-900 uppercase leading-none">{r}</div>
-                      <div className="text-[12px] font-bold text-gray-400 uppercase mt-1">Access Level Sync: True</div>
+                      <div className="text-[15px] font-black text-gray-900 uppercase leading-none mb-1">{r}</div>
+                      <div className="text-[11px] font-bold text-gray-400 uppercase tracking-tight">Access Level Sync: Authorized</div>
                     </div>
                   </div>
-                  <ChevronRight size={20} className="text-gray-300 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
+                  <div className="w-10 h-10 rounded-full bg-black/5 flex items-center justify-center group-hover:-rotate-45 transition-all duration-500 group-hover:bg-blue-600/10">
+                    <ArrowRight size={20} className="text-gray-400 group-hover:text-blue-600 transition-colors" />
+                  </div>
                 </button>
               ))}
             </div>
@@ -84,7 +137,8 @@ export function DevDashboard() {
 
           {/* System Simulator */}
           <section className="space-y-6">
-            <div className="glass-card rounded-[2.5rem] p-6 space-y-6 h-full flex flex-col justify-between">
+            <div className="glass-card rounded-[2.5rem] p-6 space-y-6 h-full flex flex-col justify-between overflow-visible [--glass-card-filter:none]">
+              <div className="glass-blur-fix" />
               <div>
                 <div className="flex items-center gap-3 border-b border-black/5 pb-4 mb-6">
                   <Zap size={24} className="text-orange-500" />

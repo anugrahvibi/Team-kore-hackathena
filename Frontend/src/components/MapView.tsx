@@ -124,6 +124,18 @@ export function MapView({ infrastructureNodes, predictions, onZoneClick, selecte
 
       map.whenReady(() => {
         queueMapInvalidate();
+        
+        // Wayanad Geo-Spatial GIF Overlay - Adjusted for 0.01 degree margin in Python Renderer
+        const overlayUrl = '/wayanad_cascade.gif';
+        const bounds: [[number, number], [number, number]] = [
+          [11.451361 - 0.01, 75.773149 - 0.01], 
+          [11.9786826 + 0.01, 76.4435318 + 0.01]
+        ];
+        L.imageOverlay(overlayUrl, bounds, {
+          opacity: 0.65,
+          interactive: false,
+          className: 'geospatial-overlay-sync'
+        }).addTo(map);
       });
     });
 
@@ -280,6 +292,51 @@ export function MapView({ infrastructureNodes, predictions, onZoneClick, selecte
               <span style={{ fontSize: 11, fontWeight: 800, color: '#020617', letterSpacing: '0.05em' }}>{label}</span>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Geospatial Intelligence Card */}
+      <div className="glass-card shadow-2xl overflow-visible border-white/60" style={{
+        position: 'absolute', top: 20, left: 60, zIndex: 1000,
+        borderRadius: 24, padding: '16px',
+        background: 'rgba(255,255,255,0.4)',
+        backdropFilter: 'blur(32px)',
+        width: 220
+      }}>
+        <div className="glass-blur-fix" />
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-8 h-8 rounded-xl bg-blue-600/10 flex items-center justify-center text-blue-600">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21 3 6"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+          </div>
+          <div>
+            <div className="text-[12px] font-black text-gray-950 uppercase leading-none mb-0.5">Geospatial Intelligence</div>
+            <div className="text-[9px] font-bold text-blue-600/60 uppercase tracking-tighter">Cascadenet Engine v1.0</div>
+          </div>
+        </div>
+        
+        <div className="space-y-3">
+          <div className="flex justify-between items-center text-[10px] font-bold">
+            <span className="text-gray-500 uppercase">Projection Mode</span>
+            <span className="text-gray-950 uppercase">Satellite Flood Map</span>
+          </div>
+          <div className="flex justify-between items-center text-[10px] font-bold">
+            <span className="text-gray-500 uppercase">Analysis Target</span>
+            <span className="text-gray-950 uppercase">Wayanad Sector</span>
+          </div>
+          <div className="flex justify-between items-center text-[10px] font-bold">
+            <span className="text-gray-500 uppercase">Temporal Sync</span>
+            <div className="flex items-center gap-1.5">
+               <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+               <span className="text-emerald-600">LIVE RELAY</span>
+            </div>
+          </div>
+          
+          <div className="pt-3 border-t border-black/5">
+             <div className="text-[9px] font-black text-gray-400 uppercase mb-2">Model Confidence Stream</div>
+             <div className="w-full h-1 bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-full bg-blue-600 w-[94%] animate-pulse" />
+             </div>
+          </div>
         </div>
       </div>
 

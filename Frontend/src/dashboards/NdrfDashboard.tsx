@@ -5,7 +5,7 @@ import { CustomSelect } from '../components/CustomSelect';
 import { fetchZones, fetchInfrastructure, fetchPredictions, fetchActiveAlerts, fetchLeadTimes, fetchVulnerabilities, fetchROIRankings } from '../utils/dataFetcher';
 import type { LeadTimeTicker, ZonePrediction, InfrastructureNode, StakeholderAction, VulnerabilityAnalysis, ROIAnalysis } from '@schema';
 import { getPredictionAlertLevel } from '../utils/schemaHelpers';
-import { AlertTriangle, MapPin, ShieldAlert, Navigation, Activity, CheckCircle2, Zap, Shield, Radio, Clock, Target, Info, ShieldCheck, ChevronRight, ArrowRight, BarChart3, TrendingUp, Thermometer } from 'lucide-react';
+import { AlertTriangle, MapPin, ShieldAlert, Navigation, Activity, CheckCircle2, Zap, Shield, Radio, Clock, Target, Info, ShieldCheck, ChevronRight, ArrowRight, BarChart3, TrendingUp, Thermometer, Layers, Activity as Pulse } from 'lucide-react';
 
 import { useGsapAnimations } from '../utils/useGsapAnimations';
 
@@ -68,7 +68,8 @@ export function NdrfDashboard() {
 
   return (
     <div ref={containerRef} className="flex flex-col lg:flex-row h-full w-full bg-transparent pt-20 sm:pt-24 lg:pt-26 p-3 sm:p-4 gap-3 sm:gap-4 overflow-y-auto custom-scrollbar">
-      <div className="w-full lg:w-96 h-auto lg:h-full max-h-[52vh] lg:max-h-none flex flex-col z-10 shrink-0 rounded-[2.5rem] glass-card overflow-hidden">
+      <div className="w-full lg:w-96 h-auto lg:h-full max-h-[52vh] lg:max-h-none flex flex-col z-10 shrink-0 rounded-[2.5rem] glass-card overflow-visible [--glass-card-filter:none]">
+        <div className="glass-blur-fix" />
         <div className="px-5 py-4 sm:px-6 sm:py-5 sticky top-0 z-30 glass-header border-b border-white/10">
           <div className="space-y-5 mb-5">
             <div className="flex flex-col gap-2">
@@ -95,14 +96,14 @@ export function NdrfDashboard() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="glass-red p-4 rounded-3xl relative overflow-hidden group">
+            <div className="glass-red p-6 rounded-3xl relative overflow-hidden group">
               <div className="text-[14px] font-black text-red-600/40 uppercase mb-1">Critical</div>
               <div className="text-2xl font-black text-red-600 leading-none">{sortedRisks.filter(r => getPredictionAlertLevel(r) === 'RED').length}</div>
             </div>
 
-            <div className="glass-blue p-4 rounded-3xl relative overflow-hidden group">
-              <div className="text-[14px] font-black text-blue-600/40 uppercase mb-1">Horizon</div>
-              <div className="text-2xl font-black text-blue-600 leading-none">
+            <div className="glass-amber p-6 rounded-3xl relative overflow-hidden group">
+              <div className="text-[14px] font-black text-slate-700 uppercase mb-1">Horizon</div>
+              <div className="text-2xl font-black text-slate-600 leading-none">
                 {predictions.length > 0 ? (predictions.reduce((acc, p) => acc + p.lead_time_hours, 0) / predictions.length).toFixed(1) : '0'}h
               </div>
             </div>
@@ -113,95 +114,100 @@ export function NdrfDashboard() {
           {/* Graphical Insights Area */}
           <section className="gsap-appear">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-[13px] font-black text-blue-600/60 uppercase tracking-widest flex items-center gap-2">
-                <BarChart3 size={14} /> Tactical Intelligence
+              <h3 className="text-[13px] font-black text-slate-600 uppercase tracking-widest flex items-center gap-2">
+                <BarChart3 size={14} className="opacity-80" /> Tactical Intelligence
               </h3>
             </div>
 
             <div className="grid grid-cols-1 gap-4">
-              {/* Card 1: Risk Probability Distribution */}
-              <div className="glass-card p-5 rounded-[2rem] border border-white/40 shadow-sm group hover:border-blue-200 transition-all">
-                <div className="flex justify-between items-start mb-3">
+              {/* Card 1: Tactical Risk Radar */}
+              <div className="glass-card glass-card-interactive p-6 rounded-[2.5rem] border border-white/40 shadow-sm group hover:border-blue-200 transition-all overflow-visible relative [--glass-card-filter:none]">
+                <div className="glass-blur-fix" />
+                <div className="flex justify-between items-start mb-4">
                   <div>
-                    <div className="text-[14px] font-black text-gray-900 uppercase">Mission Risk Spectrum</div>
-                    <div className="text-[11px] font-bold text-gray-500 uppercase tracking-tight">Zone Probability Variance</div>
+                    <div className="text-[14px] font-black text-gray-900 uppercase">Risk Signature</div>
+                    <div className="text-[11px] font-bold text-gray-500 uppercase tracking-tight italic">Cross-Dimensional Analysis</div>
                   </div>
-                  <TrendingUp size={16} className="text-blue-500 opacity-50" />
+                  <Layers size={16} className="text-blue-600 opacity-70 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500" />
                 </div>
 
-                <div className="flex gap-3 h-24">
-                  {/* Y-Axis Labels */}
-                  <div className="flex flex-col justify-between text-[8px] font-black text-gray-400 h-20 uppercase py-1">
-                    <span>100%</span>
-                    <span>50%</span>
-                    <span>0%</span>
-                  </div>
-
-                  <div className="flex-1 flex flex-col h-full">
-                    <div className="h-20 flex items-end gap-1 px-1 border-l border-b border-gray-100 relative">
-                      {predictions.slice(0, 12).map((p, i) => (
-                        <div
-                          key={p.zone_id}
-                          className="flex-1 rounded-t-sm transition-all duration-500 group-hover:opacity-100 origin-bottom"
-                          style={{
-                            height: `${Math.max(5, p.flood_probability * 100)}%`,
-                            backgroundColor: p.flood_probability > 0.7
-                              ? '#ef4444'
-                              : p.flood_probability > 0.4
-                                ? '#f97316'
-                                : '#10b981',
-                            opacity: 0.7 + (i * 0.02)
-                          }}
-                          title={`${p.zone_id}: ${(p.flood_probability * 100).toFixed(0)}%`}
-                        />
-                      ))}
-                    </div>
-                    {/* X-Axis Labels */}
-                    <div className="flex justify-between mt-1 px-1">
-                      <span className="text-[8px] font-black text-gray-400 uppercase">A1</span>
-                      <span className="text-[8px] font-black text-gray-400 uppercase">Sector Spread ({predictions.slice(0, 12).length})</span>
-                      <span className="text-[8px] font-black text-gray-400 uppercase">L12</span>
-                    </div>
+                <div className="relative h-40 flex items-center justify-center">
+                  <svg viewBox="0 0 100 100" className="w-full h-full transform scale-125 opacity-80">
+                    {[0.25, 0.5, 0.75, 1].map((r) => (
+                      <circle key={r} cx="50" cy="50" r={35 * r} className="fill-none stroke-slate-200/50" strokeWidth="0.5" strokeDasharray="1 1" />
+                    ))}
+                    {[0, 72, 144, 216, 288].map((angle) => (
+                      <line key={angle} x1="50" y1="50" x2={50 + 35 * Math.cos((angle - 90) * Math.PI / 180)} y2={50 + 35 * Math.sin((angle - 90) * Math.PI / 180)} className="stroke-slate-200/50" strokeWidth="0.5" />
+                    ))}
+                    {(() => {
+                      const topRed = predictions.filter(p => getPredictionAlertLevel(p) === 'RED').length;
+                      const total = predictions.length || 1;
+                      const p1 = 0.4 + (topRed / total) * 0.6;
+                      const p2 = 0.3 + (predictions.filter(p => p.flood_probability > 0.6).length / total) * 0.7;
+                      const p3 = 0.5;
+                      const p4 = 0.2 + (predictions.filter(p => p.lead_time_hours < 24).length / total) * 0.8;
+                      const p5 = 0.6;
+                      const points = [p1, p2, p3, p4, p5].map((p, i) => {
+                        const jitter = (Math.random() * 0.04 - 0.02);
+                        const angle = (i * 72 - 90) * Math.PI / 180;
+                        return `${50 + 35 * (p + jitter) * Math.cos(angle)},${50 + 35 * (p + jitter) * Math.sin(angle)}`;
+                      }).join(' ');
+                      return (
+                        <g>
+                          <polygon points={points} className="fill-blue-500/20 stroke-blue-500 transition-all duration-1000" strokeWidth="1.5" />
+                          <circle cx="50" cy="50" r="1" className="fill-blue-600 animate-ping" />
+                        </g>
+                      );
+                    })()}
+                  </svg>
+                  <div className="absolute inset-0 flex flex-col justify-between p-1 pointer-events-none">
+                    <div className="flex justify-between w-full text-[7px] font-black text-slate-600 uppercase"><span>Severity</span><span>Impact</span></div>
+                    <div className="flex justify-between w-full text-[7px] font-black text-slate-600 uppercase mt-auto"><span>Time</span><span>Risk</span></div>
                   </div>
                 </div>
               </div>
 
-              {/* Card 2: Lead Time Horizon Chart */}
-              <div className="glass-card p-5 rounded-[2rem] border border-white/40 shadow-sm group hover:border-amber-200 transition-all">
-                <div className="flex justify-between items-start mb-3">
+              {/* Card 2: Strategic Pulse Stream */}
+              <div className="glass-card glass-card-interactive p-6 rounded-[2.5rem] border border-white/40 shadow-sm group hover:border-slate-300 transition-all overflow-visible relative [--glass-card-filter:none]">
+                <div className="glass-blur-fix" />
+                <div className="flex justify-between items-start mb-4">
                   <div>
-                    <div className="text-[14px] font-black text-gray-900 uppercase">Lead Time Horizon</div>
-                    <div className="text-[11px] font-bold text-gray-500 uppercase tracking-tight">Temporal Safety Buffer</div>
+                    <div className="text-[14px] font-black text-gray-900 uppercase">Operational Pulse</div>
+                    <div className="text-[11px] font-bold text-gray-700 uppercase tracking-tight italic">Live Capacity Modulation</div>
                   </div>
-                  <Clock size={16} className="text-amber-500 opacity-50" />
+                  <Pulse size={16} className="text-slate-700 opacity-70" />
                 </div>
 
-                <div className="relative h-12 flex items-center px-2">
-                  <div className="absolute inset-x-2 h-0.5 bg-gray-100 rounded-full" />
-                  {predictions.slice(0, 8).map((p, i) => (
+                <div className="h-16 flex items-end gap-[2px] px-1 relative">
+                  {predictions.slice(0, 32).map((p, i) => (
                     <div
                       key={p.zone_id}
-                      className="absolute w-3 h-3 rounded-full border-2 border-white shadow-sm transition-all duration-700 hover:scale-150 cursor-help"
+                      className="flex-1 rounded-full animate-pulse-slow"
                       style={{
-                        left: `${(p.lead_time_hours / 48) * 100}%`,
-                        backgroundColor: p.lead_time_hours < 12 ? '#ef4444' : p.lead_time_hours < 24 ? '#f59e0b' : '#10b981',
-                        zIndex: 10 + i
+                        height: `${30 + (p.flood_probability * 70) + (Math.random() * 6 - 3)}%`,
+                        backgroundColor: p.flood_probability > 0.7 ? '#ef4444' : p.flood_probability > 0.4 ? '#f59e0b' : '#94a3b8',
+                        opacity: 0.3 + (i * 0.02),
+                        animationDelay: `${i * 150}ms`,
+                        animationDuration: '2s'
                       }}
                     />
                   ))}
-                  <div className="absolute left-0 bottom-0 text-[9px] font-bold text-red-500 uppercase">Immediate</div>
-                  <div className="absolute right-0 bottom-0 text-[9px] font-bold text-blue-500 uppercase">48h+</div>
+                </div>
+                <div className="mt-4 text-center flex items-center justify-center gap-2 border-t border-black/5 pt-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-slate-500 animate-pulse" />
+                  <span className="text-[10px] font-black text-slate-600 uppercase leading-none tracking-widest">Live Data Stream Sync</span>
                 </div>
               </div>
 
               {/* Card 3: Impact Analysis Gauge */}
-              <div className="glass-card p-5 rounded-[2rem] border border-white/40 shadow-sm group hover:border-red-200 transition-all">
+              <div className="glass-card glass-card-interactive p-6 rounded-[2rem] border border-white/40 shadow-sm group hover:border-red-200 transition-all overflow-visible relative [--glass-card-filter:none]">
+                <div className="glass-blur-fix" />
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <div className="text-[14px] font-black text-gray-900 uppercase">Infrastructure Load</div>
                     <div className="text-[11px] font-bold text-gray-500 uppercase tracking-tight">System Survival Index</div>
                   </div>
-                  <Thermometer size={16} className="text-red-500 opacity-50" />
+                  <Thermometer size={16} className="text-red-700 opacity-70 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500" />
                 </div>
 
                 <div className="flex items-center gap-6">
@@ -239,7 +245,7 @@ export function NdrfDashboard() {
                     <div className="w-full h-1 bg-gray-100 rounded-full overflow-hidden">
                       <div className="h-full bg-red-500 w-[74%]" />
                     </div>
-                    <div className="text-[10px] font-bold text-gray-400 uppercase leading-none">
+                    <div className="text-[10px] font-bold text-gray-600 uppercase leading-none">
                       Calculated from {infra.filter(n => n.status !== 'ACTIVE').length} at-risk nodes
                     </div>
                   </div>
@@ -247,13 +253,14 @@ export function NdrfDashboard() {
               </div>
 
               {/* Card 4: Resource Allocation Efficiency */}
-              <div className="glass-card p-5 rounded-[2rem] border border-white/40 shadow-sm group hover:border-emerald-200 transition-all">
+              <div className="glass-card p-6 rounded-[2rem] border border-white/40 shadow-sm group hover:border-emerald-200 transition-all overflow-visible relative [--glass-card-filter:none]">
+                <div className="glass-blur-fix" />
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <div className="text-[14px] font-black text-gray-900 uppercase">Mitigation Yield</div>
                     <div className="text-[11px] font-bold text-gray-500 uppercase tracking-tight">Lives Saved Per Crore Invested</div>
                   </div>
-                  <ShieldCheck size={16} className="text-emerald-500 opacity-50" />
+                  <ShieldCheck size={16} className="text-emerald-700 opacity-70" />
                 </div>
 
                 <div className="space-y-3">
@@ -306,7 +313,7 @@ export function NdrfDashboard() {
                     onClick={() => setSelectedZone(zone.zone_id)}
                     className={`group p-4 rounded-3xl transition-all duration-300 cursor-pointer gsap-appear ${selectedZone === zone.zone_id
                       ? (getPredictionAlertLevel(zone) === 'RED' ? 'glass-red border-red-300' : (getPredictionAlertLevel(zone) === 'YELLOW' || getPredictionAlertLevel(zone) === 'ORANGE' ? 'glass-orange border-orange-300' : 'glass-amber border-amber-300'))
-                      : 'glass-card border-white/50 hover:border-blue-300/50 hover:shadow-lg'
+                      : 'glass-card border-white/50 hover:border-slate-300/50 hover:shadow-lg'
                       }`}
                   >
                     <div className="flex justify-between items-start mb-2">
@@ -357,7 +364,6 @@ export function NdrfDashboard() {
                         </div>
                         <p className="text-[15px] font-bold text-gray-900 leading-tight">"{strategy}"</p>
                       </div>
-                      <ArrowRight size={32} className={`shrink-0 opacity-30 group-hover:opacity-100 group-hover:translate-x-1.5 transition-all ${criticality === 'CRITICAL' ? 'text-red-600' : criticality === 'SEVERE' ? 'text-orange-600' : 'text-blue-600'}`} />
                     </div>
                   );
                 })}
@@ -396,15 +402,15 @@ export function NdrfDashboard() {
           {alerts.length > 0 && (
             <section className="pt-6 border-t border-gray-100">
               <h3 className="text-[15px] font-black text-gray-700 uppercase mb-4 flex items-center gap-2">
-                <ShieldAlert size={12} className="text-blue-700" /> Operational Directives
+                <ShieldAlert size={12} className="text-slate-600" /> Operational Directives
               </h3>
               <div className="space-y-3">
                 {alerts.map((alert, idx) => (
                   <div key={idx} className="p-5 glass-blue rounded-3xl relative overflow-hidden group hover:shadow-md transition-all gsap-appear">
                     <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
-                      <Navigation size={40} className="text-blue-600" />
+                      <Navigation size={40} className="text-slate-600" />
                     </div>
-                    <div className="text-[16px] font-black text-blue-700 uppercase mb-2 relative z-10">AI Action Router</div>
+                    <div className="text-[16px] font-black text-slate-600 uppercase mb-2 relative z-10">AI Action Router</div>
                     <div className="text-[16px] font-bold leading-relaxed text-gray-950 relative z-10">{alert.action}</div>
                     <div className="mt-3 text-[16px] font-black text-gray-600 uppercase">Priority: {alert.priority}</div>
                   </div>
@@ -415,7 +421,7 @@ export function NdrfDashboard() {
           )}
         </div>
 
-        <div className="glass-card p-4 rounded-3xl relative overflow-hidden group">
+        <div className="glass-card glass-card-interactive p-6 rounded-3xl relative overflow-hidden group">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-500/20 active:scale-95 transition-transform cursor-pointer">
               <Radio size={24} className="animate-pulse" />
@@ -448,11 +454,11 @@ export function NdrfDashboard() {
         {/* Global Stats Overlay for Light Mode */}
         <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 hidden md:flex gap-4 pointer-events-none">
           <div className="glass-card px-6 py-3 rounded-full flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-blue-700 animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-slate-600 animate-pulse" />
             <span className="text-[15px] font-black text-gray-950 uppercase">Predictions: {predictions.length}</span>
           </div>
           <div className="glass-card px-6 py-3 rounded-full flex items-center gap-3">
-            <Info size={14} className="text-blue-700" />
+            <Info size={14} className="text-slate-600" />
             <span className="text-[15px] font-black text-gray-950 uppercase">Infrastructure Nodes: {infra.length}</span>
           </div>
         </div>

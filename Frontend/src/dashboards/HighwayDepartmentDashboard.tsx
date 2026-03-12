@@ -74,13 +74,14 @@ export function HighwayDepartmentDashboard() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Card 1: Directive Priority Spread (Dynamic) */}
-            <div className="glass-card p-6 rounded-[3rem] transition-all">
+            <div className="glass-card glass-card-interactive p-6 rounded-[3rem] transition-all overflow-visible relative group [--glass-card-filter:none]">
+              <div className="glass-blur-fix" />
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <div className="text-[16px] font-black text-gray-900 uppercase">Operational Urgency</div>
                   <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Live Directive Priority Spread</div>
                 </div>
-                <Radio size={20} className="text-blue-500 opacity-50" />
+                <Radio size={20} className="text-blue-500 opacity-50 group-hover:scale-125 group-hover:text-blue-600 transition-all duration-500" />
               </div>
               
               <div className="h-20 flex items-end gap-3 px-1">
@@ -93,9 +94,9 @@ export function HighwayDepartmentDashboard() {
                   <div key={i} className="flex-1 flex flex-col items-center gap-2">
                     <div className="w-full flex items-end h-20 relative">
                        <div 
-                        className="w-full rounded-t-lg transition-all duration-700 group-hover:opacity-100 origin-bottom"
+                        className="w-full rounded-t-lg transition-all duration-1000 group-hover:opacity-100 origin-bottom"
                         style={{ 
-                          height: `${Math.max(10, (stat.count / (predictions.length || 1)) * 100)}%`,
+                          height: `${Math.max(10, (stat.count / (predictions.length || 1)) * 100 + (Math.random() * 5 - 2.5))}%`,
                           backgroundColor: stat.color,
                           opacity: 0.8
                         }}
@@ -108,19 +109,21 @@ export function HighwayDepartmentDashboard() {
                   </div>
                 ))}
               </div>
-              <div className="mt-3 text-center">
-                <span className="text-[10px] font-black text-gray-400 uppercase">Active Directives: {alerts.length}</span>
+              <div className="mt-3 text-center flex items-center justify-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                <span className="text-[10px] font-black text-gray-500 uppercase">Live Network Relay</span>
               </div>
             </div>
 
             {/* Card 2: Strategic Lead Window */}
-            <div className="glass-card p-6 rounded-[3rem] transition-all">
+            <div className="glass-card glass-card-interactive p-6 rounded-[3rem] transition-all overflow-visible relative group [--glass-card-filter:none]">
+              <div className="glass-blur-fix" />
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <div className="text-[16px] font-black text-gray-900 uppercase">Transit Safety Buffer</div>
                   <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Lead Time per Logistics Node</div>
                 </div>
-                <Clock size={20} className="text-emerald-500 opacity-50" />
+                <Clock size={20} className="text-emerald-500 opacity-50 group-hover:scale-125 group-hover:rotate-[30deg] transition-all duration-500" />
               </div>
               
               <div className="space-y-4">
@@ -145,13 +148,14 @@ export function HighwayDepartmentDashboard() {
             </div>
 
             {/* Card 3: Network Integrity Horizon */}
-            <div className="glass-card p-6 rounded-[3rem] transition-all md:col-span-2 lg:col-span-1">
+            <div className="glass-card glass-card-interactive p-6 rounded-[3rem] transition-all md:col-span-2 lg:col-span-1 overflow-visible relative group [--glass-card-filter:none]">
+              <div className="glass-blur-fix" />
               <div className="flex justify-between items-start mb-4">
                <div>
                   <div className="text-[16px] font-black text-gray-900 uppercase">Logistics Connectivity</div>
                   <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Active Route Integrity</div>
                 </div>
-                <Navigation size={20} className="text-blue-500 opacity-50" />
+                <Navigation size={20} className="text-blue-500 opacity-50 group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-500" />
               </div>
               
               <div className="flex items-center gap-6">

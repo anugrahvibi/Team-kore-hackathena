@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { fetchZones, fetchPredictions, fetchActiveAlerts, fetchROIRankings } from '../utils/dataFetcher';
 import type { ZonePrediction, StakeholderAction, ROIAnalysis } from '@schema';
 import { getPredictionAlertLevel } from '../utils/schemaHelpers';
-import { Users, FileText, CheckCircle2, AlertCircle, Shield, ArrowUpRight, BarChart3, Activity, Zap, TrendingUp, Info, Clock, ArrowRight, Target, Thermometer } from 'lucide-react';
+import { Users, FileText, CheckCircle2, AlertCircle, Shield, ArrowUpRight, BarChart3, Activity, Zap, TrendingUp, Info, Clock, ArrowRight, Target, Thermometer, Layers, Activity as Pulse, Sparkles, LayoutGrid } from 'lucide-react';
 import { useGsapAnimations } from '../utils/useGsapAnimations';
 
 export function DistrictAdminDashboard() {
@@ -59,17 +59,17 @@ export function DistrictAdminDashboard() {
             </p>
           </div>
 
-          <div className="glass-blue p-4 sm:p-6 rounded-[2.2rem] flex items-center gap-4 sm:gap-6 shadow-xl relative overflow-hidden group hover:scale-[1.02] transition-transform w-full md:w-auto gsap-appear">
+          <div className="glass-card p-4 sm:p-6 rounded-[2.2rem] flex items-center gap-4 sm:gap-6 shadow-xl relative overflow-hidden group hover:scale-[1.02] transition-transform w-full md:w-auto gsap-appear">
             <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
               <Users size={80} />
             </div>
             <div>
-              <h3 className="text-gray-600 font-black uppercase text-[16px] mb-2">Population Exposure Index</h3>
+              <h3 className="text-gray-700 font-black uppercase text-[16px] mb-2">Population Exposure Index</h3>
               <div className="text-3xl sm:text-4xl font-black text-red-600 flex items-center gap-3 brand-font break-all">
                 {Math.round(totalExposed).toLocaleString()} <Users size={24} className="text-red-500 opacity-40" />
               </div>
             </div>
-            <ArrowUpRight className="text-gray-500" size={24} />
+            <ArrowUpRight className="text-gray-700" size={24} />
           </div>
         </header>
 
@@ -83,13 +83,14 @@ export function DistrictAdminDashboard() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Card 1: Risk Magnitude Spread (Dynamic) */}
-            <div className="glass-card p-6 rounded-[3rem] transition-all">
+            <div className="glass-card glass-card-interactive p-6 rounded-[3rem] transition-all overflow-visible relative group [--glass-card-filter:none]">
+              <div className="glass-blur-fix" />
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <div className="text-[16px] font-black text-gray-900 uppercase">Sector Risk Spread</div>
                   <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Live Prediction Volume</div>
                 </div>
-                <Users size={20} className="text-blue-500 opacity-50" />
+                <Users size={20} className="text-blue-600 opacity-70 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500" />
               </div>
 
               <div className="h-20 flex items-end gap-3 px-1">
@@ -102,34 +103,36 @@ export function DistrictAdminDashboard() {
                   <div key={i} className="flex-1 flex flex-col items-center gap-2">
                     <div className="w-full flex items-end h-20 relative">
                       <div
-                        className="w-full rounded-t-lg transition-all duration-700 group-hover:opacity-100 origin-bottom"
+                        className="w-full rounded-t-lg transition-all duration-1000 group-hover:opacity-100 origin-bottom"
                         style={{
-                          height: `${Math.max(10, (stat.count / (predictions.length || 1)) * 100)}%`,
+                          height: `${Math.max(10, (stat.count / (predictions.length || 1)) * 100 + (Math.random() * 4 - 2))}%`,
                           backgroundColor: stat.color,
                           opacity: 0.8
                         }}
                       />
                       {stat.count >= 0 && (
-                        <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-[8px] font-black text-gray-500">{stat.count}</span>
+                        <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-[8px] font-black text-gray-700">{stat.count}</span>
                       )}
                     </div>
-                    <span className="text-[9px] font-black text-gray-400">{stat.label}</span>
+                    <span className="text-[9px] font-black text-gray-600">{stat.label}</span>
                   </div>
                 ))}
               </div>
-              <div className="mt-3 text-center">
-                <span className="text-[10px] font-black text-gray-400 uppercase leading-none">Total Monitored Sectors: {predictions.length}</span>
+              <div className="mt-3 text-center flex items-center justify-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                <span className="text-[10px] font-black text-gray-600 uppercase leading-none">Live Spectrum Sync</span>
               </div>
             </div>
 
             {/* Card 2: District Resource Efficiency */}
-            <div className="glass-card p-6 rounded-[3rem] transition-all">
+            <div className="glass-card glass-card-interactive p-6 rounded-[3rem] transition-all overflow-visible relative group [--glass-card-filter:none]">
+              <div className="glass-blur-fix" />
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <div className="text-[16px] font-black text-gray-900 uppercase">ROI Allocation Efficiency</div>
                   <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Lives Saved vs. Capital</div>
                 </div>
-                <Shield size={20} className="text-emerald-500 opacity-50" />
+                <Shield size={20} className="text-emerald-600 opacity-70 group-hover:scale-125 group-hover:rotate-[-12deg] transition-transform duration-500" />
               </div>
 
               <div className="space-y-4">
@@ -150,53 +153,39 @@ export function DistrictAdminDashboard() {
               </div>
             </div>
 
-            {/* Card 3: District Vulnerability Index */}
-            <div className="glass-card p-6 rounded-[3rem] transition-all md:col-span-2 lg:col-span-1">
-              <div className="flex justify-between items-start mb-4">
+            {/* Card 3: District Vulnerability Radar */}
+            <div className="glass-card p-6 rounded-[3.5rem] transition-all md:col-span-2 lg:col-span-1 overflow-hidden relative">
+              <div className="flex justify-between items-start mb-6">
                 <div>
-                  <div className="text-[16px] font-black text-gray-900 uppercase">Vulnerability Factor</div>
-                  <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Aggregated Risk Index</div>
+                  <div className="text-[16px] font-black text-gray-900 uppercase">Vulnerability Signature</div>
+                  <div className="text-[12px] font-bold text-gray-500 uppercase tracking-tight italic">Aggregated Risk Dimensions</div>
                 </div>
-                <Thermometer size={20} className="text-orange-500 opacity-50" />
+                <Layers size={20} className="text-blue-600 opacity-70" />
               </div>
 
-              <div className="flex items-center gap-6">
-                <div className="relative w-24 h-24 flex items-center justify-center">
-                  <svg className="w-full h-full transform -rotate-90">
-                    <circle cx="48" cy="48" r="42" className="stroke-gray-100 fill-none" strokeWidth="8" />
-                    <circle
-                      cx="48" cy="48" r="42"
-                      className="fill-none stroke-orange-500 transition-all duration-1000"
-                      strokeWidth="8"
-                      strokeDasharray="263.89"
-                      strokeDashoffset={263.89 * (1 - (predictions.filter(p => ['RED', 'ORANGE'].includes(getPredictionAlertLevel(p))).length / (predictions.length || 1)))}
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                  <div className="absolute flex flex-col items-center">
-                    <span className="text-xl font-black text-gray-950 tracking-tighter">
-                      {((predictions.filter(p => ['RED', 'ORANGE'].includes(getPredictionAlertLevel(p))).length / (predictions.length || 1)) * 100).toFixed(0)}%
-                    </span>
-                    <span className="text-[8px] font-black text-gray-400 uppercase">Load</span>
-                  </div>
-                </div>
-                <div className="flex-1 space-y-3">
-                  <div className="space-y-1">
-                    <div className="flex justify-between text-[10px] font-black uppercase text-gray-500">
-                      <span>Exposed Sectors</span>
-                      <span className="text-orange-600">{predictions.filter(p => ['RED', 'ORANGE'].includes(getPredictionAlertLevel(p))).length} / {predictions.length}</span>
-                    </div>
-                    <div className="w-full h-1 bg-gray-100 rounded-full">
-                      <div
-                        className="h-full bg-orange-500 transition-all"
-                        style={{ width: `${(predictions.filter(p => ['RED', 'ORANGE'].includes(getPredictionAlertLevel(p))).length / (predictions.length || 1)) * 100}%` }}
-                      />
-                    </div>
-                  </div>
-                  <p className="text-[10px] font-bold text-gray-400 leading-tight uppercase italic whitespace-normal">
-                    Index based on real-time zone flood probability distribution.
-                  </p>
-                </div>
+              <div className="relative h-44 flex items-center justify-center">
+                 <svg viewBox="0 0 100 100" className="w-full h-full transform scale-125 opacity-70">
+                   {[0.3, 0.6, 1].map((r) => (
+                     <circle key={r} cx="50" cy="50" r={40 * r} className="fill-none stroke-blue-100/50" strokeWidth="0.5" strokeDasharray="2 2" />
+                   ))}
+                   {(() => {
+                     const total = predictions.length || 1;
+                     const p1 = 0.5 + (predictions.filter(p => ['RED', 'ORANGE'].includes(getPredictionAlertLevel(p))).length / total) * 0.5;
+                     const p2 = 0.4 + (totalExposed / 10000) * 0.6;
+                     const p3 = 0.7;
+                     const p4 = 0.3 + (alerts.length / 10) * 0.7;
+                     const axes = [p1, p2, p3, p4, 0.6];
+                     const points = axes.map((p, i) => {
+                       const angle = (i * 72 - 90) * Math.PI / 180;
+                       return `${50 + 40 * p * Math.cos(angle)},${50 + 40 * p * Math.sin(angle)}`;
+                     }).join(' ');
+                     return <polygon points={points} className="fill-blue-500/20 stroke-blue-600 transition-all duration-1000" strokeWidth="1.5" />;
+                   })()}
+                 </svg>
+                 <div className="absolute inset-0 flex flex-col justify-between p-2 pointer-events-none">
+                    <div className="flex justify-between w-full text-[7px] font-black text-slate-700 uppercase"><span>Exposure</span><span>Risks</span></div>
+                    <div className="flex justify-between w-full text-[7px] font-black text-slate-700 uppercase mt-auto"><span>Impact</span><span>Agility</span></div>
+                 </div>
               </div>
             </div>
           </div>
@@ -204,7 +193,8 @@ export function DistrictAdminDashboard() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
-          <section className="glass-card rounded-[2.5rem] overflow-hidden flex flex-col h-[500px] sm:h-[600px] shadow-xl premium-shadow gsap-appear">
+          <section className="glass-card rounded-[2.5rem] overflow-visible flex flex-col h-[500px] sm:h-[600px] shadow-xl premium-shadow gsap-appear [--glass-card-filter:none]">
+            <div className="glass-blur-fix" />
             <div className="p-5 sm:p-8 flex items-center justify-between glass-header">
               <h2 className="font-black text-gray-900 uppercase text-[15px] flex items-center gap-3">
                 <BarChart3 size={16} className="text-blue-600" /> Administrative Risk Distribution
@@ -243,7 +233,8 @@ export function DistrictAdminDashboard() {
             </div>
           </section>
 
-          <section className="glass-card rounded-[2.5rem] overflow-hidden flex flex-col h-[500px] sm:h-[600px] shadow-xl premium-shadow gsap-appear">
+          <section className="glass-card rounded-[2.5rem] overflow-visible flex flex-col h-[500px] sm:h-[600px] shadow-xl premium-shadow gsap-appear [--glass-card-filter:none]">
+            <div className="glass-blur-fix" />
             <div className="p-5 sm:p-8 flex items-center justify-between glass-header">
               <h2 className="font-black text-gray-900 uppercase text-[15px] flex items-center gap-3">
                 <Zap size={16} className="text-orange-600" /> Operational Directive Queue
@@ -271,7 +262,7 @@ export function DistrictAdminDashboard() {
                         <Target size={12} className="opacity-60" /> Window: {alert.time_window_hours}H
                       </div>
                     </div>
-                    <ArrowRight size={32} className={`shrink-0 opacity-30 group-hover:opacity-100 group-hover:translate-x-2 transition-all ${alert.alert_level === 'RED' ? 'text-red-600' : (alert.alert_level === 'YELLOW' || alert.alert_level === 'ORANGE' ? 'text-orange-600' : 'text-blue-600')}`} />
+                    <div className="w-10 h-10 shrink-0 rounded-full flex items-center justify-center bg-black/5 opacity-40"><Zap size={20} className="text-slate-600" /></div>
                   </div>
                 ))
               ) : (
@@ -299,27 +290,40 @@ export function DistrictAdminDashboard() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {roiRankings.slice(0, 4).map((rank, i) => (
-              <div key={rank.node_id} className="glass-blue p-6 rounded-[2rem] space-y-4 hover:border-blue-400/50 transition-colors group gsap-appear">
-                <div className="flex justify-between items-start">
-                  <div className="w-10 h-10 glass-blue rounded-xl flex items-center justify-center text-blue-600 transition-all">
-                    <Shield size={20} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {roiRankings.slice(0, 8).map((rank, i) => (
+              <div key={rank.node_id} className="glass-card p-6 rounded-[2.5rem] bg-white/5 border border-white/40 shadow-sm hover:border-slate-300/30 transition-all group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-slate-500/5 -mr-12 -mt-12 rounded-full blur-2xl group-hover:bg-slate-500/10 transition-colors" />
+                
+                <div className="flex justify-between items-start mb-6">
+                  <div className="px-3 py-1 bg-slate-100/50 rounded-xl text-[14px] font-black text-slate-700 uppercase">
+                    SEC-{rank.node_id.slice(-3).toUpperCase()}
                   </div>
-                  <div className="text-[15px] font-black text-blue-600 uppercase">Rank #{i + 1}</div>
-                </div>
-                <div>
-                  <div className="text-[16px] font-black text-gray-600 uppercase mb-1">{rank.node_name || rank.node_id.replace(/_/g, ' ')}</div>
-                  <div className="text-lg font-black text-gray-950 brand-font uppercase truncate">{(rank.node_name || rank.node_id).split(' ').slice(-2).join(' ')}</div>
-                </div>
-                <div className="pt-4 border-t border-gray-50 flex justify-between items-end">
-                  <div className="space-y-1">
-                    <div className="text-[15px] font-black text-gray-600 uppercase">ROI (Lives/₹L)</div>
-                    <div className="text-lg font-black text-gray-950">{(rank.lives_saved_per_rupee * 100000).toFixed(2)}</div>
+                  <div className="flex items-center gap-1.5 font-black text-[12px] text-emerald-600">
+                    <TrendingUp size={14} /> {(rank.lives_saved_per_rupee * 100).toFixed(1)}%
                   </div>
-                  <div className="text-right space-y-1">
-                    <div className="text-[15px] font-black text-gray-600 uppercase">Lives Saved</div>
-                    <div className="text-lg font-black text-blue-700">+{rank.approximate_lives_saved}</div>
+                </div>
+
+                <div className="space-y-4">
+                  <div>
+                    <div className="text-[16px] font-black text-gray-900 group-hover:text-slate-700 transition-colors uppercase truncate">
+                      {rank.node_name || rank.node_id.replace(/_/g, ' ')}
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-black/5">
+                    <div>
+                      <div className="text-[14px] font-black text-gray-400 uppercase">ROI Pulse</div>
+                      <div className="flex items-end gap-1 h-6 mt-1">
+                        {[0.4, 0.7, 0.5, 0.9, 0.6].map((h, j) => (
+                           <div key={j} className="w-1.5 bg-slate-500/40 rounded-full" style={{ height: `${h * 100}%` }} />
+                        ))}
+                      </div>
+                    </div>
+                    <div className="text-right">
+                       <div className="text-[14px] font-black text-gray-400 uppercase">Lives</div>
+                       <div className="text-xl font-black text-slate-700">+{rank.approximate_lives_saved}</div>
+                    </div>
                   </div>
                 </div>
               </div>

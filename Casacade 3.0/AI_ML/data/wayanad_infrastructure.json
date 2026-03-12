@@ -1,0 +1,366 @@
+{
+    "nodes": [
+        {
+            "id": "SUB_1",
+            "type": "substation",
+            "name": "Kalpetta Main Substation",
+            "lat": 11.6150,
+            "lon": 76.0820,
+            "flood_threshold": 0.5,
+            "population_impact": 15000,
+            "description": "Primary grid for Kalpetta town"
+        },
+        {
+            "id": "SUB_2",
+            "type": "substation",
+            "name": "Sulthan Bathery Substation",
+            "lat": 11.6620,
+            "lon": 76.2530,
+            "flood_threshold": 0.8,
+            "population_impact": 20000,
+            "description": "Highland transmission hub"
+        },
+        {
+            "id": "SUB_3",
+            "type": "substation",
+            "name": "Mananthavady Substation",
+            "lat": 11.8050,
+            "lon": 75.9750,
+            "flood_threshold": 0.4,
+            "population_impact": 18000,
+            "description": "Feeds northern river valley zone"
+        },
+        {
+            "id": "SUB_4",
+            "type": "substation",
+            "name": "Vythiri Substation",
+            "lat": 11.5520,
+            "lon": 76.0250,
+            "flood_threshold": 0.35,
+            "population_impact": 10000,
+            "description": "Valley-floor substation, vulnerable to flash floods"
+        },
+        {
+            "id": "SUB_5",
+            "type": "substation",
+            "name": "Panamaram Substation",
+            "lat": 11.7950,
+            "lon": 76.0350,
+            "flood_threshold": 0.3,
+            "population_impact": 7000,
+            "description": "Near river banks, high inundation risk"
+        },
+        {
+            "id": "PUMP_1",
+            "type": "water_pump",
+            "name": "Kalpetta North Pump Station",
+            "lat": 11.6200,
+            "lon": 76.0850,
+            "flood_threshold": 0.4,
+            "population_impact": 8000,
+            "description": "Serves Kalpetta residential areas"
+        },
+        {
+            "id": "PUMP_2",
+            "type": "water_pump",
+            "name": "Kalpetta Town Pump Station",
+            "lat": 11.6100,
+            "lon": 76.0780,
+            "flood_threshold": 0.45,
+            "population_impact": 9000,
+            "description": "Supply for main commercial area"
+        },
+        {
+            "id": "PUMP_3",
+            "type": "water_pump",
+            "name": "Bathery East Pump Station",
+            "lat": 11.6600,
+            "lon": 76.2600,
+            "flood_threshold": 0.7,
+            "population_impact": 11000,
+            "description": "Highland water supply, robust against floods"
+        },
+        {
+            "id": "PUMP_4",
+            "type": "water_pump",
+            "name": "Mananthavady River Pump",
+            "lat": 11.8020,
+            "lon": 75.9680,
+            "flood_threshold": 0.25,
+            "population_impact": 12000,
+            "description": "River intake pump, first to fail during floods"
+        },
+        {
+            "id": "PUMP_5",
+            "type": "water_pump",
+            "name": "Bathery Central Pump Station",
+            "lat": 11.6650,
+            "lon": 76.2550,
+            "flood_threshold": 0.75,
+            "population_impact": 10000,
+            "description": "Central supply for Sulthan Bathery"
+        },
+        {
+            "id": "PUMP_6",
+            "type": "water_pump",
+            "name": "Vythiri Valley Pump Station",
+            "lat": 11.5480,
+            "lon": 76.0180,
+            "flood_threshold": 0.3,
+            "population_impact": 6000,
+            "description": "Low-lying pump prone to rapid inundation"
+        },
+        {
+            "id": "PUMP_7",
+            "type": "water_pump",
+            "name": "Lakkidi Intake Pump",
+            "lat": 11.5300,
+            "lon": 76.0100,
+            "flood_threshold": 0.35,
+            "population_impact": 5000,
+            "description": "Near Ghat road, affected by heavy runoff"
+        },
+        {
+            "id": "PUMP_8",
+            "type": "water_pump",
+            "name": "Panamaram Intake Pump",
+            "lat": 11.7850,
+            "lon": 76.0280,
+            "flood_threshold": 0.2,
+            "population_impact": 7000,
+            "description": "At river confluence, extreme flood exposure"
+        },
+        {
+            "id": "PUMP_9",
+            "type": "water_pump",
+            "name": "Mananthavady Town Pump Station",
+            "lat": 11.7980,
+            "lon": 75.9750,
+            "flood_threshold": 0.45,
+            "population_impact": 9000,
+            "description": "Supply for Mananthavady town center"
+        },
+        {
+            "id": "PUMP_10",
+            "type": "water_pump",
+            "name": "Ambalavayal Pump Station",
+            "lat": 11.7220,
+            "lon": 76.1520,
+            "flood_threshold": 0.6,
+            "population_impact": 7000,
+            "description": "Serves Ambalavayal agricultural zone"
+        },
+        {
+            "id": "HOSP_1",
+            "type": "hospital",
+            "name": "Kalpetta General Hospital",
+            "lat": 11.6150,
+            "lon": 76.0850,
+            "flood_threshold": 0.6,
+            "population_impact": 40000,
+            "description": "District headquarters main hospital"
+        },
+        {
+            "id": "HOSP_2",
+            "type": "hospital",
+            "name": "Sulthan Bathery District Hospital",
+            "lat": 11.6680,
+            "lon": 76.2580,
+            "flood_threshold": 0.8,
+            "population_impact": 50000,
+            "description": "Serving eastern Wayanad highland zone"
+        },
+        {
+            "id": "HOSP_3",
+            "type": "hospital",
+            "name": "Mananthavady District Hospital",
+            "lat": 11.8080,
+            "lon": 75.9720,
+            "flood_threshold": 0.45,
+            "population_impact": 35000,
+            "description": "Critical center for northern taluk, near river"
+        },
+        {
+            "id": "ROAD_1",
+            "type": "road",
+            "name": "NH 766 (Kalpetta-Kozhikode)",
+            "lat": 11.5800,
+            "lon": 76.0700,
+            "flood_threshold": 0.4,
+            "population_impact": 60000,
+            "description": "Main artery prone to landslides at Vythiri"
+        },
+        {
+            "id": "ROAD_2",
+            "type": "road",
+            "name": "Sulthan Bathery-Mysore Road",
+            "lat": 11.6800,
+            "lon": 76.2700,
+            "flood_threshold": 0.85,
+            "population_impact": 45000,
+            "description": "Interstate highway cutting through forest"
+        },
+        {
+            "id": "ROAD_3",
+            "type": "road",
+            "name": "Kalpetta-Mananthavady SH",
+            "lat": 11.7500,
+            "lon": 76.0000,
+            "flood_threshold": 0.35,
+            "population_impact": 40000,
+            "description": "Intra-district road traversing Panamaram basin"
+        },
+        {
+            "id": "ROAD_4",
+            "type": "road",
+            "name": "Vythiri Bypass",
+            "lat": 11.5550,
+            "lon": 76.0300,
+            "flood_threshold": 0.25,
+            "population_impact": 20000,
+            "description": "Valley road frequently blocked by flash floods"
+        },
+        {
+            "id": "TOWER_1",
+            "type": "comm_tower",
+            "name": "Kalpetta BSNL Tower",
+            "lat": 11.6180,
+            "lon": 76.0820,
+            "flood_threshold": 0.7,
+            "population_impact": 80000,
+            "description": "Central communications hub for Wayanad"
+        },
+        {
+            "id": "TOWER_2",
+            "type": "comm_tower",
+            "name": "Sulthan Bathery Jio Hub",
+            "lat": 11.6650,
+            "lon": 76.2520,
+            "flood_threshold": 0.85,
+            "population_impact": 70000,
+            "description": "Eastern taluk coverage tower"
+        },
+        {
+            "id": "TOWER_3",
+            "type": "comm_tower",
+            "name": "Mananthavady Airtel Tower",
+            "lat": 11.8020,
+            "lon": 75.9780,
+            "flood_threshold": 0.5,
+            "population_impact": 50000,
+            "description": "Northern coverage, susceptible to heavy winds and rain"
+        }
+    ],
+    "edges": [
+        {
+            "source": "SUB_1",
+            "target": "PUMP_1",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_1",
+            "target": "PUMP_2",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_1",
+            "target": "TOWER_1",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_2",
+            "target": "PUMP_3",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_2",
+            "target": "PUMP_5",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_2",
+            "target": "TOWER_2",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_3",
+            "target": "PUMP_4",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_3",
+            "target": "PUMP_9",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_4",
+            "target": "PUMP_6",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_4",
+            "target": "PUMP_7",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_4",
+            "target": "TOWER_3",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_5",
+            "target": "PUMP_8",
+            "dependency": "power"
+        },
+        {
+            "source": "SUB_5",
+            "target": "PUMP_10",
+            "dependency": "power"
+        },
+        {
+            "source": "PUMP_1",
+            "target": "HOSP_1",
+            "dependency": "water"
+        },
+        {
+            "source": "PUMP_2",
+            "target": "HOSP_1",
+            "dependency": "water"
+        },
+        {
+            "source": "PUMP_3",
+            "target": "HOSP_2",
+            "dependency": "water"
+        },
+        {
+            "source": "PUMP_4",
+            "target": "HOSP_2",
+            "dependency": "water"
+        },
+        {
+            "source": "PUMP_6",
+            "target": "HOSP_3",
+            "dependency": "water"
+        },
+        {
+            "source": "PUMP_7",
+            "target": "HOSP_3",
+            "dependency": "water"
+        },
+        {
+            "source": "ROAD_1",
+            "target": "HOSP_1",
+            "dependency": "access"
+        },
+        {
+            "source": "ROAD_2",
+            "target": "HOSP_2",
+            "dependency": "access"
+        },
+        {
+            "source": "ROAD_3",
+            "target": "HOSP_3",
+            "dependency": "access"
+        }
+    ]
+}

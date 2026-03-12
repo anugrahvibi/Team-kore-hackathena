@@ -1,0 +1,204 @@
+{
+    "stakeholder_actions": {
+        "dam_operator": {
+            "role": "Dam and Reservoir Controller",
+            "authority": "KSEB / Kerala Irrigation Department",
+            "RED": [
+                {
+                    "priority": 1,
+                    "action": "Initiate Banasura Sagar dam release protocol per rule curve",
+                    "deadline_hours": 2.0,
+                    "source": "KSEB EAP 2019"
+                },
+                {
+                    "priority": 2,
+                    "action": "Notify Kabani river monitoring stations at Kalpetta and Vythiri",
+                    "deadline_hours": 4.0,
+                    "source": "CWC Circulars"
+                },
+                {
+                    "priority": 3,
+                    "action": "Activate EAP for Karapuzha Dam due to earthen dam breach risk",
+                    "deadline_hours": 6.0,
+                    "source": "NDMA Dam Break Guidelines"
+                }
+            ],
+            "ORANGE": [
+                {
+                    "priority": 2,
+                    "action": "Increase monitoring frequency and perform controlled pre-releases",
+                    "deadline_hours": 12.0,
+                    "source": "KSEB EAP 2019"
+                }
+            ],
+            "GREEN": [
+                {
+                    "priority": 3,
+                    "action": "Maintain normal operations and routine structural checks",
+                    "deadline_hours": 24.0,
+                    "source": "State Standard Operating Procedure"
+                }
+            ]
+        },
+        "ndrf": {
+            "role": "National Disaster Response Force",
+            "authority": "NDRF 6th Battalion (Kozhikode)",
+            "RED": [
+                {
+                    "priority": 1,
+                    "action": "Deploy rope rescue and collapse survivor teams to Mananthavady river valley and Panamaram",
+                    "deadline_hours": 4.0,
+                    "source": "NDRF Battalion Deployment Plan"
+                },
+                {
+                    "priority": 1,
+                    "action": "Establish Incident Command Point at Kalpetta Collectorate",
+                    "deadline_hours": 6.0,
+                    "source": "NDMA Guidelines"
+                },
+                {
+                    "priority": 2,
+                    "action": "Pre-position technical search teams near major highland landslide zones",
+                    "deadline_hours": 12.0,
+                    "source": "NDRF Battalion Deployment Plan"
+                }
+            ],
+            "ORANGE": [
+                {
+                    "priority": 2,
+                    "action": "Mobilize teams and stage at Kozhikode for rapid ascent to Wayanad",
+                    "deadline_hours": 24.0,
+                    "source": "NDRF Battalion Deployment Plan"
+                }
+            ],
+            "GREEN": [
+                {
+                    "priority": 3,
+                    "action": "Conduct community awareness and mock drills in landslide prone areas",
+                    "deadline_hours": 0.0,
+                    "source": "NDMA Guidelines"
+                }
+            ]
+        },
+        "district_collector": {
+            "role": "District Collector, Wayanad",
+            "authority": "District Disaster Management Authority (DDMA)",
+            "RED": [
+                {
+                    "priority": 1,
+                    "action": "Evacuate high-risk landslide wards (Mundakkai model) utilizing emergency transport",
+                    "deadline_hours": 6.0,
+                    "source": "Kerala DDMP 2022"
+                },
+                {
+                    "priority": 1,
+                    "action": "Activate 89 flood/landslide relief camps across affected panchayats",
+                    "deadline_hours": 12.0,
+                    "source": "Wayanad DM Plan"
+                },
+                {
+                    "priority": 2,
+                    "action": "Coordinate inter-agency response via District Emergency Operations Centre (DEOC)",
+                    "deadline_hours": 4.0,
+                    "source": "Wayanad DM Plan"
+                }
+            ],
+            "ORANGE": [
+                {
+                    "priority": 2,
+                    "action": "Issue advanced warnings and pre-stock relief camps with essential supplies",
+                    "deadline_hours": 24.0,
+                    "source": "Kerala DDMP 2022"
+                }
+            ],
+            "GREEN": [
+                {
+                    "priority": 3,
+                    "action": "Update resource inventories and hazard vulnerability assessments",
+                    "deadline_hours": 0.0,
+                    "source": "Kerala DDMP 2022"
+                }
+            ]
+        },
+        "highway_department": {
+            "role": "Highway and Infrastructure Maintenance",
+            "authority": "PWD & National Highways Authority of India",
+            "RED": [
+                {
+                    "priority": 1,
+                    "action": "Close NH 766 sections prone to landslide (Vythiri Ghat, Lakkidi Pass)",
+                    "deadline_hours": 2.0,
+                    "source": "PWD Emergency Response Plan"
+                },
+                {
+                    "priority": 1,
+                    "action": "Deploy heavy earth-moving equipment at Kalpetta-Mananthavady road cuts",
+                    "deadline_hours": 6.0,
+                    "source": "PWD Emergency Response Plan"
+                },
+                {
+                    "priority": 2,
+                    "action": "Assess bridge structural integrity over Kabini and Chaliyar rivers",
+                    "deadline_hours": 12.0,
+                    "source": "NHAI Bridge Inspection Protocol"
+                }
+            ],
+            "ORANGE": [
+                {
+                    "priority": 2,
+                    "action": "Pre-screen culverts and ensure drainage clearance along major hill roads",
+                    "deadline_hours": 24.0,
+                    "source": "PWD Maintenance Manual"
+                }
+            ],
+            "GREEN": [
+                {
+                    "priority": 3,
+                    "action": "Conduct routine pavement and slope stabilization measures",
+                    "deadline_hours": 0.0,
+                    "source": "PWD Maintenance Manual"
+                }
+            ]
+        },
+        "public": {
+            "role": "General Public & Residents",
+            "authority": "Community Actions",
+            "RED": [
+                {
+                    "priority": 1,
+                    "action": "Evacuate from the 5 most landslide-prone panchayats immediately",
+                    "deadline_hours": 4.0,
+                    "source": "DEOC Advisory"
+                },
+                {
+                    "priority": 1,
+                    "action": "Do NOT shelter under hillslopes or near narrow valley streams",
+                    "deadline_hours": 2.0,
+                    "source": "DEOC Advisory"
+                },
+                {
+                    "priority": 2,
+                    "action": "Dial emergency numbers DEOC 1077 and Wayanad DEOC for rescue",
+                    "deadline_hours": 6.0,
+                    "source": "DDMA Guidelines"
+                }
+            ],
+            "ORANGE": [
+                {
+                    "priority": 2,
+                    "action": "Prepare emergency kits and secure important documents, tune to local alerts",
+                    "deadline_hours": 12.0,
+                    "source": "DDMA Guidelines"
+                }
+            ],
+            "GREEN": [
+                {
+                    "priority": 3,
+                    "action": "Follow routine weather updates and participate in local preparedness programs",
+                    "deadline_hours": 0.0,
+                    "source": "DDMA Guidelines"
+                }
+            ]
+        }
+    }
+}

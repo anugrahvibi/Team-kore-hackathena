@@ -13,8 +13,8 @@ export function HighwayDepartmentDashboard() {
 
   useEffect(() => {
     async function init() {
-      const aData = await fetchActiveAlerts('highway_department', '2018_peak');
-      const pData = await fetchPredictions('2018_peak');
+      const aData = await fetchActiveAlerts('highway_department', '2024_peak');
+      const pData = await fetchPredictions('2024_peak');
       setAlerts(aData);
       setPredictions(pData);
     }

@@ -95,7 +95,7 @@ export async function fetchInfrastructure(): Promise<GraphResponse> {
 }
 
 
-export async function fetchActiveAlerts(role: string, scenario: string = '2018_peak'): Promise<StakeholderAction[]> {
+export async function fetchActiveAlerts(role: string, scenario: string = '2024_peak'): Promise<StakeholderAction[]> {
   const cacheKey = `alerts_${role}_${scenario}`;
   const cached = cacheGet<StakeholderAction[]>(cacheKey);
   if (cached) return cached;
@@ -136,7 +136,7 @@ export async function fetchVulnerabilities(): Promise<VulnerabilityAnalysis | nu
 }
 
 
-export async function fetchLeadTimes(scenario: string = '2018_peak'): Promise<LeadTimeTicker[]> {
+export async function fetchLeadTimes(scenario: string = '2024_peak'): Promise<LeadTimeTicker[]> {
   const cacheKey = `lead_times_${scenario}`;
   const cached = cacheGet<LeadTimeTicker[]>(cacheKey);
   if (cached) return cached;
@@ -163,7 +163,7 @@ export async function fetchROIRankings(): Promise<ROIAnalysis[]> {
   return [];
 }
 
-export async function fetchPredictions(scenario: string = '2018_peak'): Promise<ZonePrediction[]> {
+export async function fetchPredictions(scenario: string = '2024_peak'): Promise<ZonePrediction[]> {
   const cacheKey = `predictions_${scenario}`;
   const cached = cacheGet<ZonePrediction[]>(cacheKey);
   if (cached) return cached;

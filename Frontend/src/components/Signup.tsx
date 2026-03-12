@@ -43,7 +43,7 @@ export function Signup() {
       <div className="w-full max-w-md relative z-10 space-y-8">
         <header className="text-center space-y-4">
            <div className="w-20 h-20 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60 rounded-3xl mx-auto flex items-center justify-center shadow-2xl shadow-blue-500/20 border border-blue-100 active:scale-95 transition-transform duration-500 group">
-             <img src="/logo.svg" alt="CascadeNet logo" className="w-12 h-12 group-hover:scale-110 transition-transform" />
+             <img src="/logo.svg" alt="Cascadenet logo" className="w-12 h-12 group-hover:scale-110 transition-transform" />
           </div>
           <div>
             <h1 className="text-5xl font-black text-gray-900 brand-fonter leading-none">

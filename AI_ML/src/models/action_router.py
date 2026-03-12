@@ -1,5 +1,5 @@
 """
-CascadeNet 2.0 — 5-Stakeholder Action Router
+Cascadenet — 5-Stakeholder Action Router
 When a zone hits RED / ORANGE, automatically generates
 department-specific action items grounded in CWC and NDMA documentation.
 """
@@ -9,15 +9,15 @@ import os
 from datetime import datetime
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "data")
-ACTIONS_FILE = os.path.join(DATA_DIR, "stakeholder_actions.json")
-ZONES_FILE   = os.path.join(DATA_DIR, "kochi_zones.json")
+ACTIONS_FILE = os.path.join(DATA_DIR, "stakeholder_actions_wayanad.json")
+ZONES_FILE   = os.path.join(DATA_DIR, "wayanad_zones.json")
 
 STAKEHOLDERS = ["dam_operator", "ndrf", "district_collector", "highway_department", "public"]
 
 
 class ActionRouter:
     """
-    CascadeNet 2.0 — Actionability Layer
+    Cascadenet — Actionability Layer
     A rules-based engine that maps ML model outputs to auditable government actions.
     Grounded in official CWC, NDMA, and NDRF documentation.
     """
@@ -59,7 +59,6 @@ class ActionRouter:
         dam_priority = "LOW"
         if alert_level == "RED" and reservoir_pct > 90:
             dam_action = "Open all 5 spillway gates at full discharge. Notify EOC."
-            dam_priority = "IMMEDIATE"
         elif alert_level == "RED" and reservoir_pct > 80:
             dam_action = f"Open Gate 2 + Gate 4 at full discharge. Current reservoir: {reservoir_pct}%."
             dam_priority = "IMMEDIATE"
@@ -87,13 +86,13 @@ class ActionRouter:
             ndrf_action = f"Deploy 4 NDRF battalions to {zone_info['name']} coordinates. Pre-position rescue boats."
             ndrf_priority = "IMMEDIATE"
         elif alert_level == "RED":
-            ndrf_action = "Place 2 NDRF companies on 30-min standby at Aluva base."
+            ndrf_action = "Place 2 NDRF companies on 30-min standby at Wayanad Base."
             ndrf_priority = "IMMEDIATE"
         elif alert_level == "ORANGE":
-            ndrf_action = "Stage 1 NDRF company at District Collectorate for rapid deployment."
+            ndrf_action = "Stage 1 NDRF company at Kalpetta Collectorate for rapid deployment."
             ndrf_priority = "URGENT"
         else:
-            ndrf_action = "Maintain standard readiness at NDRF Thrissur base. Check equipment status."
+            ndrf_action = "Maintain standard readiness at NDRF Kozhikode base. Check equipment status."
             ndrf_priority = "ROUTINE"
 
         action_plans.append({
@@ -110,10 +109,10 @@ class ActionRouter:
         coll_priority = "LOW"
         pop_risk = zone_info.get("population", 0)
         if projected_water_level_m > 3.0:
-            coll_action = f"Issue Section 144 CrPC. Total evacuation for wards below 2m elevation. Impact: {pop_risk:,} people."
+            coll_action = f"Issue Section 144 CrPC. Total evacuation for wards below 750m elevation. Impact: {pop_risk:,} people."
             coll_priority = "IMMEDIATE"
         elif projected_water_level_m > 1.5:
-            coll_action = f"Evacuation for coastal wards only. Open 12 relief camps in {zone_info['name']}."
+            coll_action = f"Evacuation for river bank settlements. Open relief camps in {zone_info['name']}."
             coll_priority = "URGENT"
         elif alert_level == "ORANGE" or projected_water_level_m > 0.5:
             coll_action = "Issue early warning via PA systems. Clear local drainage bottlenecks."
@@ -131,17 +130,17 @@ class ActionRouter:
             "priority": coll_priority
         })
 
-        # 4. Highway Department (NHAI)
+        # 4. Highway Department (KWA / PWD)
         road_action = ""
         road_priority = "LOW"
         if projected_water_level_m > 2.0:
-            road_action = f"Immediately close NH66 Vyttila-Aroor stretch. Divert via Seaport-Airport Road."
+            road_action = f"Immediately close Wayanad Ghat Road (Thamarassery Churam). Divert via Kuttiady."
             road_priority = "IMMEDIATE"
         elif projected_water_level_m > 0.8:
-            road_action = "Deploy diesel pumps at Palarivattom and Edapally underpasses. Monitor water logging."
+            road_action = "Deploy diesel pumps at Low-lying areas of Kalpetta and Panamaram. Monitor water logging."
             road_priority = "URGENT"
         else:
-            road_action = "Maintain regular road patrol. Monitor sensor nodes at low-lying crossings."
+            road_action = "Maintain regular road patrol. Monitor sensor nodes at river crossings."
             road_priority = "ROUTINE"
 
         action_plans.append({
@@ -149,7 +148,7 @@ class ActionRouter:
             "alert_level": alert_level,
             "action": road_action,
             "time_window_hours": round(lead_time_hours * 0.4, 1),
-            "source": "NHAI Flood Contingency Plan 2019",
+            "source": "PWD Flood Contingency Plan 2024",
             "priority": road_priority
         })
 
@@ -157,13 +156,13 @@ class ActionRouter:
         pub_action = ""
         pub_priority = "LOW"
         if alert_level == "RED":
-            pub_action = f"EVACUATE IMMEDIATELY. Move to nearest high-ground relief camp in {zone_info['name']}. Follow Western Corridor."
+            pub_action = f"EVACUATE IMMEDIATELY. Move to nearest high-ground relief camp in {zone_info['name']}. Avoid landslide prone slopes."
             pub_priority = "CRITICAL"
         elif alert_level == "ORANGE":
-            pub_action = "Prepare 72-hour emergency kit. Monitor local news. Do not cross flooded roads."
+            pub_action = "Prepare 72-hour emergency kit. Monitor local news. Do not cross flooded river crossings."
             pub_priority = "URGENT"
         else:
-            pub_action = "Stay informed via CM Distress App. Standard rainy season precautions apply."
+            pub_action = "Stay informed via District Disaster App. Standard monsoon precautions apply."
             pub_priority = "ROUTINE"
 
         action_plans.append({

@@ -18,8 +18,8 @@ export function DistrictAdminDashboard() {
     async function init() {
       const [zData, pData, aData, roiData] = await Promise.all([
         fetchZones(),
-        fetchPredictions('2018_peak'),
-        fetchActiveAlerts('district_collector', '2018_peak'),
+        fetchPredictions('2024_peak'),
+        fetchActiveAlerts('district_collector', '2024_peak'),
         fetchROIRankings(),
       ]);
       

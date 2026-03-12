@@ -19,7 +19,7 @@ export function NdrfDashboard() {
   const [vulnerabilities, setVulnerabilities] = useState<VulnerabilityAnalysis | null>(null);
   const [selectedZone, setSelectedZone] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<string>('');
-  const [scenario, setScenario] = useState('2018_peak');
+  const [scenario, setScenario] = useState('2024_peak');
   const [roiRankings, setRoiRankings] = useState<ROIAnalysis[]>([]);
 
 
@@ -88,7 +88,7 @@ export function NdrfDashboard() {
                 options={[
                   { value: 'current', label: 'Current State' },
                   { value: 'moderate', label: 'Moderate Rain' },
-                  { value: '2018_peak', label: '2018 Peak Flood' }
+                  { value: '2024_peak', label: '2024 Peak Flood' }
                 ]}
               />
             </div>

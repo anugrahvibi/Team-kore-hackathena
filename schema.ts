@@ -1,5 +1,5 @@
 /**
- * CascadeNet 2.0 — Shared Type Definitions
+ * Cascadenet — Shared Type Definitions
  * This file defines the structured data models for communication 
  * between the Python backend and the TypeScript/JavaScript frontend.
  */

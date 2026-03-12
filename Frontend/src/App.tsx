@@ -18,7 +18,7 @@ import { Signup } from './components/Signup';
 import { AuthProvider, useAuth } from './AuthContext';
 import type { Role } from './AuthContext';
 import { fetchActiveAlerts } from './utils/dataFetcher';
-import type { Alert } from './utils/dataFetcher';
+import type { StakeholderAction } from '@schema';
 import { useGsapAnimations } from './utils/useGsapAnimations';
 
 const roleToAlertDepartment: Record<Exclude<Role, null>, string> = {
@@ -44,7 +44,7 @@ function Navigation() {
   const navigate = useNavigate();
   const { role, logout } = useAuth();
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
-  const [notifications, setNotifications] = useState<Alert[]>([]);
+  const [notifications, setNotifications] = useState<StakeholderAction[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [isRendered, setIsRendered] = useState(false);
   const navRef = useRef<HTMLElement>(null);
@@ -83,9 +83,8 @@ function Navigation() {
     const syncNotifications = async () => {
       const items = await fetchActiveAlerts(departmentKey);
       if (!isMounted) return;
-      const sorted = [...items].sort((a, b) => +new Date(b.created_at) - +new Date(a.created_at));
-      setNotifications(sorted);
-      setUnreadCount(isNotificationsOpen ? 0 : sorted.length);
+      setNotifications(items);
+      setUnreadCount(isNotificationsOpen ? 0 : items.length);
     };
 
     syncNotifications();
@@ -214,25 +213,25 @@ function Navigation() {
 
             <div className="max-h-[calc(76vh-3.5rem)] overflow-y-auto custom-scrollbar p-3.5 space-y-2.5 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/20">
               {visibleNotifications.length > 0 ? (
-                visibleNotifications.map((item) => (
+                visibleNotifications.map((item, idx) => (
                    <button
-                    key={item.id}
+                    key={`${item.department}-${idx}`}
                     onClick={onNotificationClick}
                     className={`w-full text-left p-5 rounded-[2.2rem] border border-white/40 border-l-[4px] ${getSeverityClasses(item.alert_level)} hover:shadow-lg transition-all backdrop-blur-xl group flex items-center justify-between gap-5 gsap-appear`}
                   >
                      <div className="flex-1">
                        <div className="flex items-center justify-between gap-3 mb-2">
-                         <span className={`text-[15px] font-black uppercase truncate ${item.alert_level === 'RED' ? 'text-red-700' : (item.alert_level === 'AMBER' || item.alert_level === 'ORANGE' ? 'text-orange-700' : 'text-emerald-700')}`}>{item.zone_id}</span>
-                         <span className={`px-2 py-0.5 rounded-full text-[13px] font-black uppercase ${item.alert_level === 'RED' ? 'bg-red-600/10 text-red-700' : (item.alert_level === 'AMBER' || item.alert_level === 'ORANGE' ? 'bg-orange-600/10 text-orange-700' : 'bg-emerald-600/10 text-emerald-700')}`}>{item.alert_level}</span>
+                         <span className={`text-[15px] font-black uppercase truncate ${item.alert_level === 'RED' ? 'text-red-700' : (item.alert_level === 'ORANGE' ? 'text-orange-700' : 'text-emerald-700')}`}>{item.department}</span>
+                         <span className={`px-2 py-0.5 rounded-full text-[13px] font-black uppercase ${item.alert_level === 'RED' ? 'bg-red-600/10 text-red-700' : (item.alert_level === 'ORANGE' ? 'bg-orange-600/10 text-orange-700' : 'bg-emerald-600/10 text-emerald-700')}`}>{item.alert_level}</span>
                        </div>
-                       <p className="text-[16px] font-bold leading-snug text-gray-900 line-clamp-2 italic">"{item.action_text}"</p>
-                       {item.deadline_hrs !== undefined && (
+                       <p className="text-[16px] font-bold leading-snug text-gray-900 line-clamp-2 italic">"{item.action}"</p>
+                       {item.time_window_hours !== undefined && (
                          <div className="mt-3 text-[14px] font-black text-gray-500 uppercase flex items-center gap-2">
-                           <Clock size={12} className="opacity-40" /> T-{item.deadline_hrs}H
+                           <Clock size={12} className="opacity-40" /> T-{item.time_window_hours}H
                          </div>
                        )}
                      </div>
-                     <ArrowRight size={32} className={`shrink-0 opacity-40 group-hover:opacity-100 group-hover:translate-x-2 transition-all ${item.alert_level === 'RED' ? 'text-red-700' : (item.alert_level === 'AMBER' || item.alert_level === 'ORANGE' ? 'text-orange-700' : 'text-emerald-700')}`} />
+                     <ArrowRight size={32} className={`shrink-0 opacity-40 group-hover:opacity-100 group-hover:translate-x-2 transition-all ${item.alert_level === 'RED' ? 'text-red-700' : (item.alert_level === 'ORANGE' ? 'text-orange-700' : 'text-emerald-700')}`} />
                   </button>
                 ))
               ) : (

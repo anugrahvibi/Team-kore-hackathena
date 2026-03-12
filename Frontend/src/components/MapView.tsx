@@ -30,6 +30,58 @@ export function MapView({ infrastructureNodes, predictions, onZoneClick, selecte
   const circleLayersRef = useRef<any[]>([]);
   const nodeLayersRef = useRef<any[]>([]);
   const LRef = useRef<any>(null);
+  const invalidateTimersRef = useRef<number[]>([]);
+
+  const queueMapInvalidate = () => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    // Clear pending retries so we only keep the latest request cycle.
+    invalidateTimersRef.current.forEach((id) => window.clearTimeout(id));
+    invalidateTimersRef.current = [];
+
+    [0, 80, 180, 360].forEach((delay) => {
+      const id = window.setTimeout(() => {
+        if (mapRef.current) {
+          mapRef.current.invalidateSize({ pan: false, animate: false });
+        }
+      }, delay);
+      invalidateTimersRef.current.push(id);
+    });
+  };
+
+  useEffect(() => {
+    let frame = 0;
+
+    const invalidateMapSize = () => {
+      const map = mapRef.current;
+      if (!map) return;
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        queueMapInvalidate();
+      });
+    };
+
+    const observer = new ResizeObserver(() => invalidateMapSize());
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+      if (containerRef.current.parentElement) {
+        observer.observe(containerRef.current.parentElement);
+      }
+    }
+
+    window.addEventListener('resize', invalidateMapSize);
+    window.addEventListener('orientationchange', invalidateMapSize);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+      window.removeEventListener('resize', invalidateMapSize);
+      window.removeEventListener('orientationchange', invalidateMapSize);
+      invalidateTimersRef.current.forEach((id) => window.clearTimeout(id));
+      invalidateTimersRef.current = [];
+    };
+  }, []);
 
   // ── Init map once ────────────────────────────────────────────────────────────
   useEffect(() => {
@@ -69,6 +121,10 @@ export function MapView({ infrastructureNodes, predictions, onZoneClick, selecte
         attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         maxZoom: 19,
       }).addTo(map);
+
+      map.whenReady(() => {
+        queueMapInvalidate();
+      });
     });
 
     return () => {
@@ -78,6 +134,10 @@ export function MapView({ infrastructureNodes, predictions, onZoneClick, selecte
       }
     };
   }, []);
+
+  useEffect(() => {
+    queueMapInvalidate();
+  }, [predictions.length, infrastructureNodes.length, selectedZoneId]);
 
   // ── Re-draw zone circles when predictions update ────────────────────────────
   useEffect(() => {

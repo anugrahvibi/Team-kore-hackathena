@@ -7,7 +7,6 @@ import { Bell, LogOut, X, ArrowRight, Clock } from 'lucide-react';
 import { NdrfDashboard } from './dashboards/NdrfDashboard';
 import { DamOperatorDashboard } from './dashboards/DamOperatorDashboard';
 import { DistrictAdminDashboard } from './dashboards/DistrictAdminDashboard';
-import { PublicPortal } from './dashboards/PublicPortal';
 import { HighwayDepartmentDashboard } from './dashboards/HighwayDepartmentDashboard';
 
 // Components
@@ -26,7 +25,6 @@ const roleToAlertDepartment: Record<Exclude<Role, null>, string> = {
   'NDRF': 'ndrf_rescue',
   'District Collector': 'district_admin',
   'Highway Department': 'highway_department',
-  'Public': 'Public',
 };
 
 const roleToRoute: Record<Exclude<Role, null>, string> = {
@@ -34,7 +32,6 @@ const roleToRoute: Record<Exclude<Role, null>, string> = {
   'NDRF': '/ndrf',
   'District Collector': '/admin',
   'Highway Department': '/highway',
-  'Public': '/public',
 };
 
 import { gsap } from 'gsap';
@@ -142,10 +139,20 @@ function Navigation() {
     setUnreadCount(0);
   };
 
+  const animateNavButtonHover = (element: HTMLElement, isEntering: boolean) => {
+    gsap.to(element, {
+      y: isEntering ? -2 : 0,
+      scale: isEntering ? 1.04 : 1,
+      duration: isEntering ? 0.18 : 0.2,
+      ease: 'power2.out',
+      overwrite: 'auto'
+    });
+  };
+
   const getSeverityClasses = (level: string) => {
-    if (level === 'RED') return 'glass-red border-l-red-600/60 shadow-red-500/5';
-    if (level === 'AMBER' || level === 'ORANGE') return 'glass-orange border-l-orange-600/60 shadow-orange-500/5';
-    return 'glass-blue border-l-blue-600/60 shadow-blue-500/5';
+    if (level === 'RED') return 'bg-red-50/80 border-red-200/70 border-l-red-600/70';
+    if (level === 'AMBER' || level === 'ORANGE') return 'bg-orange-50/80 border-orange-200/70 border-l-orange-600/70';
+    return 'bg-blue-50/80 border-blue-200/70 border-l-blue-600/70';
   };
 
   return (
@@ -168,6 +175,8 @@ function Navigation() {
           <button
             aria-label="Open notifications"
             onClick={toggleNotifications}
+            onMouseEnter={(e) => animateNavButtonHover(e.currentTarget, true)}
+            onMouseLeave={(e) => animateNavButtonHover(e.currentTarget, false)}
             className="relative h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-full border border-gray-200/60 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/80 text-gray-700 active:scale-90"
           >
             <Bell size={19} strokeWidth={2.4} className={unreadCount > 0 ? 'animate-pulse text-blue-600' : ''} />
@@ -179,6 +188,8 @@ function Navigation() {
           </button>
           <button 
             onClick={logout} 
+            onMouseEnter={(e) => animateNavButtonHover(e.currentTarget, true)}
+            onMouseLeave={(e) => animateNavButtonHover(e.currentTarget, false)}
             className="h-9 sm:h-10 w-9 sm:min-w-[112px] sm:w-auto flex items-center justify-center gap-0 sm:gap-2 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/60 text-gray-800 px-0 sm:px-4 rounded-full font-black text-[12px] uppercase border border-gray-200/80 active:scale-95 shadow-sm"
           >
             <LogOut size={14} className="shrink-0" /> <span className="hidden sm:inline">Logout</span>
@@ -188,55 +199,60 @@ function Navigation() {
 
       {isRendered && (
         <>
-          <aside ref={notificationRef} className="fixed top-[5.25rem] sm:top-[6.8rem] right-[3%] sm:right-[4%] md:right-7 w-[360px] max-w-[calc(100vw-1rem)] sm:max-w-[calc(100vw-1.5rem)] max-h-[calc(100dvh-6rem)] sm:max-h-[76vh] z-[60] rounded-[1.5rem] sm:rounded-[2rem] border border-white/80 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/60 shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden origin-top-right backdrop-blur-3xl">
-             <header className="h-16 px-6 border-b border-white/20 flex items-center justify-between bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/20 backdrop-blur-3xl">
-              <div>
-                 <div className="text-[14px] font-black text-blue-900 uppercase">Astrava Directive Hub</div>
-                 <div className="text-[12px] font-black text-blue-800/40 uppercase mt-0.5">Live Sector Sync</div>
-              </div>
+          <aside ref={notificationRef} className="fixed top-[5.25rem] sm:top-[6.8rem] right-[3%] sm:right-[4%] md:right-7 w-[380px] max-w-[calc(100vw-1rem)] sm:max-w-[calc(100vw-1.5rem)] max-h-[calc(100dvh-6rem)] sm:max-h-[76vh] z-[60] rounded-[1.5rem] sm:rounded-[2rem] border border-white/80 bg-white/92 backdrop-blur-3xl shadow-[0_22px_56px_rgba(15,23,42,0.18)] overflow-hidden origin-top-right">
+             <header className="px-5 sm:px-6 py-4 border-b border-slate-200/70 bg-white/85 backdrop-blur-2xl">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <div className="text-[13px] font-black tracking-wide text-blue-900 uppercase">Astrava Directive Hub</div>
+                  <div className="mt-1 text-[12px] font-black text-slate-500 uppercase">Live Sector Sync</div>
+                  <div className="mt-2 inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-black uppercase text-slate-600">
+                    {notifications.length} Active Alerts
+                  </div>
+                </div>
               <div className="flex items-center gap-3">
                 <button
                    onClick={clearNotifications}
-                   className="px-4 py-1.5 rounded-full text-[14px] font-black text-blue-700 hover:text-blue-900 hover:bg-blue-50/50 uppercase transition-all gsap-header"
+                   className="px-3 py-1.5 rounded-full text-[11px] font-black text-blue-700 hover:text-blue-900 hover:bg-blue-50/70 uppercase transition-all"
                 >
                   Clear Hub
                 </button>
                 <button
                   aria-label="Close directive hub"
                   onClick={toggleNotifications}
-                  className="h-9 w-9 rounded-2xl border border-white/40 text-blue-900 hover:bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/80 flex items-center justify-center transition-all active:scale-90"
+                  className="h-9 w-9 rounded-xl border border-slate-200/70 text-slate-700 hover:bg-slate-100/80 flex items-center justify-center transition-all active:scale-90"
                 >
                   <X size={16} />
                 </button>
               </div>
+              </div>
             </header>
 
-            <div className="max-h-[calc(76vh-3.5rem)] overflow-y-auto custom-scrollbar p-3.5 space-y-2.5 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/20">
+            <div className="max-h-[calc(76vh-5.5rem)] overflow-y-auto custom-scrollbar p-3 bg-gradient-to-b from-white/70 to-slate-50/90 space-y-2.5">
               {visibleNotifications.length > 0 ? (
                 visibleNotifications.map((item, idx) => (
                    <button
                     key={`${item.department}-${idx}`}
                     onClick={onNotificationClick}
-                    className={`w-full text-left p-5 rounded-[2.2rem] border border-white/40 border-l-[4px] ${getSeverityClasses(item.alert_level)} hover:shadow-lg transition-all backdrop-blur-xl group flex items-center justify-between gap-5 gsap-appear`}
+                    className={`w-full text-left p-4 rounded-2xl border border-l-[4px] ${getSeverityClasses(item.alert_level)} hover:shadow-md hover:-translate-y-0.5 transition-all group flex items-center justify-between gap-4`}
                   >
                      <div className="flex-1">
-                       <div className="flex items-center justify-between gap-3 mb-2">
-                         <span className={`text-[15px] font-black uppercase truncate ${item.alert_level === 'RED' ? 'text-red-700' : (item.alert_level === 'ORANGE' ? 'text-orange-700' : 'text-emerald-700')}`}>{item.department}</span>
-                         <span className={`px-2 py-0.5 rounded-full text-[13px] font-black uppercase ${item.alert_level === 'RED' ? 'bg-red-600/10 text-red-700' : (item.alert_level === 'ORANGE' ? 'bg-orange-600/10 text-orange-700' : 'bg-emerald-600/10 text-emerald-700')}`}>{item.alert_level}</span>
+                       <div className="flex items-center justify-between gap-3 mb-1.5">
+                         <span className={`text-[13px] font-black uppercase tracking-wide truncate ${item.alert_level === 'RED' ? 'text-red-700' : (item.alert_level === 'ORANGE' ? 'text-orange-700' : 'text-blue-700')}`}>{item.department}</span>
+                         <span className={`px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wide ${item.alert_level === 'RED' ? 'bg-red-100 text-red-700' : (item.alert_level === 'ORANGE' ? 'bg-orange-100 text-orange-700' : 'bg-blue-100 text-blue-700')}`}>{item.alert_level}</span>
                        </div>
-                       <p className="text-[16px] font-bold leading-snug text-gray-900 line-clamp-2 italic">"{item.action}"</p>
+                       <p className="text-[14px] font-semibold leading-snug text-slate-800 line-clamp-2">{item.action}</p>
                        {item.time_window_hours !== undefined && (
-                         <div className="mt-3 text-[14px] font-black text-gray-500 uppercase flex items-center gap-2">
-                           <Clock size={12} className="opacity-40" /> T-{item.time_window_hours}H
+                         <div className="mt-2 text-[11px] font-black text-slate-500 uppercase flex items-center gap-1.5 tracking-wide">
+                           <Clock size={12} className="opacity-50" /> T-{item.time_window_hours}H
                          </div>
                        )}
                      </div>
-                     <ArrowRight size={32} className={`shrink-0 opacity-40 group-hover:opacity-100 group-hover:translate-x-2 transition-all ${item.alert_level === 'RED' ? 'text-red-700' : (item.alert_level === 'ORANGE' ? 'text-orange-700' : 'text-emerald-700')}`} />
+                     <ArrowRight size={24} className={`shrink-0 opacity-40 group-hover:opacity-100 group-hover:translate-x-1.5 transition-all ${item.alert_level === 'RED' ? 'text-red-700' : (item.alert_level === 'ORANGE' ? 'text-orange-700' : 'text-blue-700')}`} />
                   </button>
                 ))
               ) : (
-                <div className="py-12 px-6 text-center rounded-2xl border border-dashed border-white/80 bg-white/95 backdrop-blur-3xl shadow-xl border border-white/60/40 backdrop-blur-sm">
-                  <p className="text-[15px] font-semibold text-gray-400">No active notifications</p>
+                <div className="py-10 px-6 text-center rounded-2xl border border-dashed border-slate-300/80 bg-white/70 backdrop-blur-md">
+                  <p className="text-[14px] font-semibold text-slate-500">No active notifications</p>
                 </div>
               )}
             </div>
@@ -265,7 +281,6 @@ function AuthRedirect({ children }: { children: React.ReactNode }) {
   if (effectiveRole === 'NDRF') return <Navigate to="/ndrf" replace />;
   if (effectiveRole === 'District Collector') return <Navigate to="/admin" replace />;
   if (effectiveRole === 'Highway Department') return <Navigate to="/highway" replace />;
-  if (effectiveRole === 'Public') return <Navigate to="/public" replace />;
   return <>{children}</>;
 }
 
@@ -278,7 +293,6 @@ function AppContent() {
       '/': 'Cascadenet | Login',
       '/login': 'Cascadenet | Login',
       '/signup': 'Cascadenet | Sign Up',
-      '/public': 'Cascadenet | Public Dashboard',
       '/ndrf': 'Cascadenet | NDRF Dashboard',
       '/dam': 'Cascadenet | Dam Controller Dashboard',
       '/admin': 'Cascadenet | District Collector Dashboard',
@@ -308,7 +322,6 @@ function AppContent() {
           <Route path="/dam" element={<ProtectedRoute allowedRole="Dam Controller"><DamOperatorDashboard /></ProtectedRoute>} />
           <Route path="/admin" element={<ProtectedRoute allowedRole="District Collector"><DistrictAdminDashboard /></ProtectedRoute>} />
           <Route path="/highway" element={<ProtectedRoute allowedRole="Highway Department"><HighwayDepartmentDashboard /></ProtectedRoute>} />
-          <Route path="/public" element={<ProtectedRoute allowedRole="Public"><PublicPortal /></ProtectedRoute>} />
         </Routes>
       </main>
     </div>

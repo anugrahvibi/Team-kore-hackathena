@@ -702,7 +702,7 @@ def get_lead_times(scenario: str = 'current'):
         predictions = lstm.simulate_scenario(scenario)
     else:
         predictions = lstm.predict_all_zones()
-    stakeholder_deadlines = {'dam_operator': 2, 'ndrf': 3, 'district_collector': 3, 'highway_department': 4, 'public': 6}
+    stakeholder_deadlines = {'dam_operator': 2, 'ndrf': 3, 'district_collector': 3, 'highway_department': 4}
     tickers = []
     for pred in predictions:
         lead = pred['lead_time_hours']

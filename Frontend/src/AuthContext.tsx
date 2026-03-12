@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 import type { ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export type Role = 'Dam Controller' | 'NDRF' | 'District Collector' | 'Highway Department' | 'Public' | null;
+export type Role = 'Dam Controller' | 'NDRF' | 'District Collector' | 'Highway Department' | null;
 
 interface AuthContextType {
   role: Role;
@@ -23,7 +23,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const registeredRole = localStorage.getItem('registered_role') as Role;
     
     // If no role is provided at login, use the registered one
-    const loginRole = r || registeredRole || 'Public';
+    const loginRole = r || registeredRole || null;
+
+    if (!loginRole) {
+      alert('No registered role found. Please sign up first.');
+      return null;
+    }
 
     // If a specific role was provided but doesn't match registration
     if (r && registeredRole && registeredRole !== r) {

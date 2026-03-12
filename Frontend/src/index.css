@@ -149,7 +149,7 @@
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: rgba(37, 99, 235, 0.35) rgba(15, 23, 42, 0.06);
-  scrollbar-gutter: stable;
+  scrollbar-gutter: auto;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -177,9 +177,19 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scrollbar-gutter: auto;
 }
 
 .no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar.no-scrollbar {
+  scrollbar-width: none;
+  scrollbar-gutter: auto;
+}
+
+.custom-scrollbar.no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 

@@ -159,46 +159,6 @@
                     "source": "PWD Maintenance Manual"
                 }
             ]
-        },
-        "public": {
-            "role": "General Public & Residents",
-            "authority": "Community Actions",
-            "RED": [
-                {
-                    "priority": 1,
-                    "action": "Evacuate from the 5 most landslide-prone panchayats immediately",
-                    "deadline_hours": 4.0,
-                    "source": "DEOC Advisory"
-                },
-                {
-                    "priority": 1,
-                    "action": "Do NOT shelter under hillslopes or near narrow valley streams",
-                    "deadline_hours": 2.0,
-                    "source": "DEOC Advisory"
-                },
-                {
-                    "priority": 2,
-                    "action": "Dial emergency numbers DEOC 1077 and Wayanad DEOC for rescue",
-                    "deadline_hours": 6.0,
-                    "source": "DDMA Guidelines"
-                }
-            ],
-            "ORANGE": [
-                {
-                    "priority": 2,
-                    "action": "Prepare emergency kits and secure important documents, tune to local alerts",
-                    "deadline_hours": 12.0,
-                    "source": "DDMA Guidelines"
-                }
-            ],
-            "GREEN": [
-                {
-                    "priority": 3,
-                    "action": "Follow routine weather updates and participate in local preparedness programs",
-                    "deadline_hours": 0.0,
-                    "source": "DDMA Guidelines"
-                }
-            ]
         }
     }
 }

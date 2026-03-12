@@ -15,7 +15,7 @@ export function Signup() {
   const [password, setPassword] = useState('');
 
   useGsapAnimations(containerRef);
-  const [role, setRole] = useState('Public');
+  const [role, setRole] = useState('Dam Controller');
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,11 +26,11 @@ export function Signup() {
       else if (signedRole === 'Dam Controller') navigate('/dam', { replace: true });
       else if (signedRole === 'District Collector') navigate('/admin', { replace: true });
       else if (signedRole === 'Highway Department') navigate('/highway', { replace: true });
-      else navigate('/public', { replace: true });
+      else navigate('/', { replace: true });
     }
   };
 
-  const roles = ['Dam Controller', 'NDRF', 'District Collector', 'Highway Department', 'Public'];
+  const roles = ['Dam Controller', 'NDRF', 'District Collector', 'Highway Department'];
 
   return (
     <div ref={containerRef} className="min-h-screen w-full flex items-center justify-center p-6 relative bg-[#f8fafc] overflow-hidden">

@@ -27,7 +27,7 @@ export function Login() {
       else if (userRole === 'Dam Controller') navigate('/dam', { replace: true });
       else if (userRole === 'District Collector') navigate('/admin', { replace: true });
       else if (userRole === 'Highway Department') navigate('/highway', { replace: true });
-      else navigate('/public', { replace: true });
+      else navigate('/', { replace: true });
     } else {
       setError('Authentication failed. Check access level.');
     }

@@ -101,16 +101,22 @@ export function CustomSelect({ options, value, onChange, className = '', placeho
               key={opt.value}
               onClick={() => handleSelect(opt.value)}
               onMouseEnter={(e) => {
-                gsap.to(e.currentTarget, { backgroundColor: 'rgba(59, 130, 246, 0.08)', x: 4, duration: 0.2 });
+                const label = e.currentTarget.querySelector('span');
+                if (label) {
+                  gsap.to(label, { x: 4, duration: 0.2, ease: 'power2.out' });
+                }
               }}
               onMouseLeave={(e) => {
-                gsap.to(e.currentTarget, { backgroundColor: 'transparent', x: 0, duration: 0.2 });
+                const label = e.currentTarget.querySelector('span');
+                if (label) {
+                  gsap.to(label, { x: 0, duration: 0.2, ease: 'power2.out' });
+                }
               }}
-              className={`px-4 ${variant === 'compact' ? 'py-1.5 text-[14px]' : 'py-2.5 text-[15px]'} font-bold cursor-pointer transition-colors
-                ${value === opt.value ? 'bg-blue-50/50 text-blue-700' : 'text-gray-700 hover:text-gray-900'}
+              className={`mx-1 rounded-xl px-4 ${variant === 'compact' ? 'py-1.5 text-[14px]' : 'py-2.5 text-[15px]'} font-bold cursor-pointer transition-colors
+                ${value === opt.value ? 'text-blue-700' : 'text-gray-700'} hover:bg-blue-50/50 hover:text-blue-700
               `}
             >
-              {opt.label}
+              <span className="inline-block">{opt.label}</span>
             </div>
           ))}
         </div>

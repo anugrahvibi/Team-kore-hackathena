@@ -41,7 +41,7 @@ async def calculate_roi(node_id: str, cost_rupees: float = 1000000):
 async def get_lead_times(scenario: str = 'current'):
     """Get lead times for all zones."""
     predictions = ai_ml_service.predict_zones(scenario)
-    stakeholder_deadlines = {'dam_operator': 2, 'ndrf': 3, 'district_collector': 3, 'highway_department': 4, 'public': 6}
+    stakeholder_deadlines = {'dam_operator': 2, 'ndrf': 3, 'district_collector': 3, 'highway_department': 4}
     tickers = []
     for pred in predictions:
         lead = pred['lead_time_hours']

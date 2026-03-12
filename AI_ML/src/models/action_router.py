@@ -1,5 +1,5 @@
 """
-Cascadenet — 5-Stakeholder Action Router
+Cascadenet — 4-Stakeholder Action Router
 When a zone hits RED / ORANGE, automatically generates
 department-specific action items grounded in CWC and NDMA documentation.
 """
@@ -12,7 +12,7 @@ DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__
 ACTIONS_FILE = os.path.join(DATA_DIR, "stakeholder_actions_wayanad.json")
 ZONES_FILE   = os.path.join(DATA_DIR, "wayanad_zones.json")
 
-STAKEHOLDERS = ["dam_operator", "ndrf", "district_collector", "highway_department", "public"]
+STAKEHOLDERS = ["dam_operator", "ndrf", "district_collector", "highway_department"]
 
 
 class ActionRouter:
@@ -38,7 +38,7 @@ class ActionRouter:
                     projected_water_level_m: float,
                     reservoir_pct: float = None) -> dict:
         """
-        Runs five simultaneous truth table lookups to generate structured action items.
+        Runs four simultaneous truth table lookups to generate structured action items.
         """
         # If no reservoir_pct provided, simulate a realistic value based on the alert_level
         if reservoir_pct is None:
@@ -150,28 +150,6 @@ class ActionRouter:
             "time_window_hours": round(lead_time_hours * 0.4, 1),
             "source": "PWD Flood Contingency Plan 2024",
             "priority": road_priority
-        })
-
-        # 5. Public
-        pub_action = ""
-        pub_priority = "LOW"
-        if alert_level == "RED":
-            pub_action = f"EVACUATE IMMEDIATELY. Move to nearest high-ground relief camp in {zone_info['name']}. Avoid landslide prone slopes."
-            pub_priority = "CRITICAL"
-        elif alert_level == "ORANGE":
-            pub_action = "Prepare 72-hour emergency kit. Monitor local news. Do not cross flooded river crossings."
-            pub_priority = "URGENT"
-        else:
-            pub_action = "Stay informed via District Disaster App. Standard monsoon precautions apply."
-            pub_priority = "ROUTINE"
-
-        action_plans.append({
-            "department": "public_advisory",
-            "alert_level": alert_level,
-            "action": pub_action,
-            "time_window_hours": round(lead_time_hours * 0.3, 1),
-            "source": "Kerala DDMP Public Advisory Template",
-            "priority": pub_priority
         })
 
         return {
